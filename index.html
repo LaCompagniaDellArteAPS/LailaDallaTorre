@@ -17,13 +17,7 @@
 
   <style>
 
-    /* ==========================================================
-       LAILA DALLA TORRE
-       EXECUTIVE PERSONAL WEBSITE
-       ========================================================== */
-
     :root {
-
       --bg: #061b1d;
       --bg-deep: #031416;
       --bg-soft: #0a2528;
@@ -43,7 +37,6 @@
       --line-strong: rgba(220, 230, 230, 0.24);
 
       --max-width: 1660px;
-
     }
 
 
@@ -62,7 +55,6 @@
     }
 
     body {
-
       background: var(--bg);
       color: var(--text);
 
@@ -78,7 +70,6 @@
       -webkit-font-smoothing: antialiased;
 
       overflow-x: hidden;
-
     }
 
     a {
@@ -92,10 +83,8 @@
     }
 
     .container {
-
       width: min(96%, var(--max-width));
       margin: 0 auto;
-
     }
 
 
@@ -104,7 +93,6 @@
        ========================================================== */
 
     nav {
-
       position: fixed;
 
       top: 0;
@@ -120,12 +108,9 @@
       -webkit-backdrop-filter: blur(18px);
 
       border-bottom: 1px solid var(--line);
-
     }
 
-
     .nav-inner {
-
       min-height: 92px;
 
       display: flex;
@@ -133,32 +118,23 @@
       justify-content: space-between;
 
       gap: 30px;
-
     }
 
-
     .brand {
-
       display: flex;
       align-items: center;
 
       gap: 16px;
-
     }
 
-
     .brand-logo {
-
       width: 51px;
       height: 51px;
 
       object-fit: contain;
-
     }
 
-
     .brand-name {
-
       font-size: 0.98rem;
 
       letter-spacing: 0.15em;
@@ -166,12 +142,9 @@
       text-transform: uppercase;
 
       color: var(--text-soft);
-
     }
 
-
     .nav-links {
-
       display: flex;
       align-items: center;
 
@@ -182,26 +155,19 @@
       letter-spacing: 0.09em;
 
       text-transform: uppercase;
-
     }
 
-
     .nav-links a {
-
       color: var(--muted);
 
       transition: color 0.25s ease;
-
     }
-
 
     .nav-links a:hover {
       color: var(--text);
     }
 
-
     .connect {
-
       color: var(--text) !important;
 
       border: 1px solid var(--line-strong);
@@ -211,17 +177,13 @@
       transition:
         background 0.25s ease,
         border-color 0.25s ease !important;
-
     }
 
-
     .connect:hover {
-
       background: var(--teal);
       border-color: var(--teal);
 
       color: white !important;
-
     }
 
 
@@ -230,7 +192,6 @@
        ========================================================== */
 
     .hero {
-
       min-height: 100vh;
 
       position: relative;
@@ -253,16 +214,9 @@
           var(--bg-deep),
           var(--bg) 64%
         );
-
     }
 
-
-    /*
-       LARGE SUBTLE GEOMETRIC ELEMENT
-    */
-
     .hero::before {
-
       content: "";
 
       position: absolute;
@@ -280,15 +234,12 @@
       pointer-events: none;
 
       z-index: 1;
-
     }
 
-
     .hero-inner {
-
       position: relative;
 
-      z-index: 3;
+      z-index: 10;
 
       width: 100%;
 
@@ -296,15 +247,9 @@
 
       display: grid;
 
-      /*
-         More space for the statement.
-         Portrait begins later.
-      */
-
       grid-template-columns: 53% 47%;
 
       align-items: center;
-
     }
 
 
@@ -313,18 +258,14 @@
        ========================================================== */
 
     .hero-copy-side {
-
       position: relative;
 
-      z-index: 10;
+      z-index: 20;
 
       padding-right: 50px;
-
     }
 
-
     .eyebrow {
-
       color: var(--teal-light);
 
       text-transform: uppercase;
@@ -334,12 +275,9 @@
       font-size: 0.68rem;
 
       margin-bottom: 42px;
-
     }
 
-
     .hero h1 {
-
       font-size: clamp(4rem, 6.5vw, 7.1rem);
 
       line-height: 0.99;
@@ -349,22 +287,17 @@
       max-width: 780px;
 
       font-weight: 400;
-
     }
-
 
     .hero h1 .accent {
       color: var(--teal-light);
     }
 
-
     .hero h1 .quiet {
       color: #8c999a;
     }
 
-
     .hero-description {
-
       margin-top: 58px;
 
       max-width: 810px;
@@ -376,12 +309,9 @@
       font-weight: 300;
 
       line-height: 1.75;
-
     }
 
-
     .hero-meta {
-
       margin-top: 38px;
 
       display: flex;
@@ -396,19 +326,15 @@
       letter-spacing: 0.14em;
 
       color: var(--muted);
-
     }
 
-
     .hero-actions {
-
       margin-top: 42px;
 
       display: flex;
       flex-wrap: wrap;
 
       gap: 14px;
-
     }
 
 
@@ -417,33 +343,27 @@
        ========================================================== */
 
     .hero-image-side {
-
-      /*
-         Important:
-         overflow extends toward the right edge of viewport.
-      */
-
       position: absolute;
 
       z-index: 2;
 
-      top: 80px;
+      top: 92px;
       right: 0;
       bottom: 0;
 
       /*
-         Portrait area starts farther right than before.
+         IMPORTANT:
+         The photo canvas begins earlier than the visible
+         portrait. This gives us enough room for a long,
+         seamless transition.
       */
 
-      left: 54%;
+      left: 48%;
 
       overflow: hidden;
-
     }
 
-
     .hero-image-frame {
-
       position: absolute;
 
       inset: 0;
@@ -451,12 +371,9 @@
       overflow: hidden;
 
       background: var(--bg);
-
     }
 
-
     .hero-image {
-
       position: absolute;
 
       inset: 0;
@@ -467,13 +384,8 @@
       object-fit: cover;
 
       /*
-         THIS MOVES YOU RIGHT.
-
-         Higher first percentage = image content moves
-         visually toward the right side.
-
-         If you want even more:
-         change 67% to 72%.
+         Keeps Laila visually toward the right even though
+         the photograph itself begins much farther left.
       */
 
       object-position: 67% center;
@@ -482,23 +394,14 @@
         brightness(0.79)
         contrast(1.04)
         saturate(0.88);
-
     }
 
 
     /* ==========================================================
-       PRIMARY LEFT → IMAGE TRANSITION
-
-       This is deliberately VERY wide.
-
-       Instead of ending the gradient before the person,
-       it continues across hair, shoulder and blazer.
-
-       That makes the photograph feel embedded in the site.
+       VERY SMOOTH PHOTO TRANSITION
        ========================================================== */
 
     .hero-image-frame::before {
-
       content: "";
 
       position: absolute;
@@ -512,10 +415,14 @@
       background:
 
         /*
-           MAIN TEAL FADE
+           MAIN LEFT → RIGHT TRANSITION
 
-           The solid background reaches into the photograph.
-           The fade only becomes transparent around the middle.
+           The important point here is that there is no
+           specific vertical point where the photograph
+           suddenly becomes visible.
+
+           The transition happens progressively across
+           almost the entire left two thirds of the photo.
         */
 
         linear-gradient(
@@ -523,125 +430,111 @@
 
           #061b1d 0%,
 
-          #061b1d 5%,
+          rgba(6, 27, 29, 0.98) 4%,
 
-          rgba(6, 27, 29, 0.995) 10%,
+          rgba(6, 27, 29, 0.93) 9%,
 
-          rgba(6, 27, 29, 0.97) 15%,
+          rgba(6, 27, 29, 0.84) 15%,
 
-          rgba(6, 27, 29, 0.91) 21%,
+          rgba(6, 27, 29, 0.72) 22%,
 
-          rgba(6, 27, 29, 0.80) 27%,
+          rgba(6, 27, 29, 0.58) 29%,
 
-          rgba(6, 27, 29, 0.65) 33%,
+          rgba(6, 27, 29, 0.44) 36%,
 
-          rgba(6, 27, 29, 0.47) 39%,
+          rgba(6, 27, 29, 0.32) 43%,
 
-          rgba(6, 27, 29, 0.30) 45%,
+          rgba(6, 27, 29, 0.22) 50%,
 
-          rgba(6, 27, 29, 0.17) 51%,
+          rgba(6, 27, 29, 0.14) 58%,
 
-          rgba(6, 27, 29, 0.08) 58%,
+          rgba(6, 27, 29, 0.08) 66%,
 
-          rgba(6, 27, 29, 0.025) 66%,
+          rgba(6, 27, 29, 0.035) 75%,
 
-          transparent 75%
+          rgba(6, 27, 29, 0.01) 84%,
 
+          transparent 94%
         ),
 
         /*
-           BOTTOM FADE
+           BOTTOM TRANSITION
         */
 
         linear-gradient(
           0deg,
 
-          rgba(6, 27, 29, 0.95) 0%,
+          rgba(6, 27, 29, 0.82) 0%,
 
-          rgba(6, 27, 29, 0.62) 5%,
+          rgba(6, 27, 29, 0.50) 6%,
 
-          rgba(6, 27, 29, 0.25) 12%,
+          rgba(6, 27, 29, 0.22) 13%,
 
-          rgba(6, 27, 29, 0.06) 22%,
+          rgba(6, 27, 29, 0.07) 21%,
 
-          transparent 35%
-
+          transparent 34%
         ),
 
         /*
-           TOP FADE
+           TOP TRANSITION
         */
 
         linear-gradient(
           180deg,
 
-          rgba(6, 27, 29, 0.45) 0%,
+          rgba(6, 27, 29, 0.28) 0%,
 
-          rgba(6, 27, 29, 0.17) 8%,
+          rgba(6, 27, 29, 0.12) 8%,
 
-          rgba(6, 27, 29, 0.03) 18%,
+          rgba(6, 27, 29, 0.035) 17%,
 
           transparent 28%
-
         );
-
     }
 
 
     /* ==========================================================
-       SECONDARY ATMOSPHERIC TEAL OVERLAY
-
-       This softens the boundary even further and gives the
-       image the same teal atmosphere as the site.
+       SOFT TEAL ATMOSPHERE
        ========================================================== */
 
     .portrait-atmosphere {
-
       position: absolute;
 
       z-index: 6;
 
       pointer-events: none;
 
-      top: 0;
-      bottom: 0;
+      top: -10%;
+      bottom: -10%;
 
-      /*
-         Starts outside image and reaches across the body.
-      */
+      left: -24%;
 
-      left: -16%;
-      width: 66%;
+      width: 72%;
 
       background:
-
         radial-gradient(
-          ellipse at 20% 52%,
+          ellipse at 22% 50%,
 
-          rgba(7, 74, 79, 0.55) 0%,
+          rgba(7, 71, 76, 0.24) 0%,
 
-          rgba(7, 62, 67, 0.40) 24%,
+          rgba(7, 61, 66, 0.18) 25%,
 
-          rgba(6, 45, 49, 0.24) 45%,
+          rgba(6, 48, 52, 0.11) 45%,
 
-          rgba(6, 27, 29, 0.08) 68%,
+          rgba(6, 35, 38, 0.05) 62%,
 
-          transparent 82%
-
+          transparent 80%
         );
 
-      filter: blur(18px);
-
+      filter: blur(45px);
     }
 
 
-    /*
-       A subtle dark vignette on the far right keeps
-       the whole composition cinematic.
-    */
+    /* ==========================================================
+       RIGHT VIGNETTE
+       ========================================================== */
 
     .portrait-vignette {
-
       position: absolute;
 
       z-index: 6;
@@ -651,21 +544,18 @@
       inset: 0;
 
       background:
-
         linear-gradient(
           270deg,
 
-          rgba(2, 13, 15, 0.25) 0%,
+          rgba(2, 13, 15, 0.16) 0%,
 
-          transparent 19%
+          rgba(2, 13, 15, 0.06) 10%,
 
+          transparent 24%
         );
-
     }
 
-
     .image-caption {
-
       position: absolute;
 
       z-index: 8;
@@ -684,7 +574,6 @@
       writing-mode: vertical-rl;
 
       transform: rotate(180deg);
-
     }
 
 
@@ -693,7 +582,6 @@
        ========================================================== */
 
     .button {
-
       display: inline-flex;
 
       align-items: center;
@@ -716,38 +604,28 @@
         border 0.25s ease,
         color 0.25s ease,
         transform 0.25s ease;
-
     }
 
-
     .button:hover {
-
       border-color: var(--teal-light);
 
       transform: translateY(-2px);
-
     }
 
-
     .button.primary {
-
       background: var(--teal);
 
       border-color: var(--teal);
 
       color: white;
-
     }
 
-
     .button.primary:hover {
-
       background: var(--teal-light);
 
       border-color: var(--teal-light);
 
       color: var(--bg-deep);
-
     }
 
 
@@ -756,16 +634,12 @@
        ========================================================== */
 
     section {
-
       padding: 135px 0;
 
       border-top: 1px solid var(--line);
-
     }
 
-
     .section-number {
-
       color: var(--teal-light);
 
       font-size: 0.66rem;
@@ -775,12 +649,9 @@
       margin-bottom: 22px;
 
       text-transform: uppercase;
-
     }
 
-
     .section-title {
-
       font-size: clamp(2.8rem, 6vw, 5.6rem);
 
       line-height: 0.96;
@@ -790,12 +661,9 @@
       font-weight: 400;
 
       margin-bottom: 32px;
-
     }
 
-
     .section-intro {
-
       max-width: 720px;
 
       color: var(--muted);
@@ -803,7 +671,6 @@
       font-size: 1.12rem;
 
       margin-bottom: 78px;
-
     }
 
 
@@ -812,18 +679,14 @@
        ========================================================== */
 
     .capabilities {
-
       display: grid;
 
       grid-template-columns: repeat(2, 1fr);
 
       border-top: 1px solid var(--line);
-
     }
 
-
     .capability {
-
       min-height: 235px;
 
       padding: 48px 45px 48px 0;
@@ -831,66 +694,47 @@
       border-bottom: 1px solid var(--line);
 
       transition: background 0.3s ease;
-
     }
 
-
     .capability:nth-child(odd) {
-
       border-right: 1px solid var(--line);
 
       padding-right: 55px;
-
     }
-
 
     .capability:nth-child(even) {
-
       padding-left: 55px;
-
     }
 
-
     .capability:hover {
-
       background:
         linear-gradient(
           90deg,
           rgba(7,155,178,0.035),
           transparent
         );
-
     }
 
-
     .capability-number {
-
       color: var(--teal-light);
 
       font-size: 0.67rem;
 
       margin-bottom: 30px;
-
     }
 
-
     .capability h3 {
-
       font-size: 1.55rem;
 
       font-weight: 400;
 
       margin-bottom: 14px;
-
     }
 
-
     .capability p {
-
       color: var(--muted);
 
       max-width: 520px;
-
     }
 
 
@@ -902,9 +746,7 @@
       background: var(--bg-soft);
     }
 
-
     .transformation-row {
-
       display: grid;
 
       grid-template-columns: 0.72fr 1.28fr;
@@ -914,17 +756,13 @@
       padding: 70px 0;
 
       border-top: 1px solid var(--line);
-
     }
-
 
     .transformation-row:last-child {
       border-bottom: 1px solid var(--line);
     }
 
-
     .transformation-label {
-
       color: var(--teal-light);
 
       text-transform: uppercase;
@@ -934,12 +772,9 @@
       font-size: 0.66rem;
 
       margin-bottom: 17px;
-
     }
 
-
     .transformation-row h3 {
-
       font-size: clamp(2rem, 4vw, 3.5rem);
 
       line-height: 1.02;
@@ -947,12 +782,9 @@
       letter-spacing: -0.045em;
 
       font-weight: 400;
-
     }
 
-
     .transformation-copy p {
-
       color: var(--text-soft);
 
       font-size: 1.05rem;
@@ -960,12 +792,9 @@
       margin-bottom: 25px;
 
       max-width: 680px;
-
     }
 
-
     .tags {
-
       display: flex;
 
       flex-wrap: wrap;
@@ -973,12 +802,9 @@
       gap: 8px;
 
       margin-top: 32px;
-
     }
 
-
     .tag {
-
       border: 1px solid var(--line-strong);
 
       border-radius: 30px;
@@ -988,7 +814,6 @@
       font-size: 0.66rem;
 
       color: var(--muted);
-
     }
 
 
@@ -997,7 +822,6 @@
        ========================================================== */
 
     .principle {
-
       display: grid;
 
       grid-template-columns: 90px 1fr 1.4fr;
@@ -1009,39 +833,28 @@
       border-top: 1px solid var(--line);
 
       align-items: start;
-
     }
-
 
     .principle:last-child {
       border-bottom: 1px solid var(--line);
     }
 
-
     .principle-number {
-
       color: var(--teal-light);
 
       font-size: 0.69rem;
-
     }
 
-
     .principle h3 {
-
       font-size: 1.35rem;
 
       font-weight: 400;
-
     }
 
-
     .principle p {
-
       color: var(--muted);
 
       max-width: 600px;
-
     }
 
 
@@ -1053,20 +866,15 @@
       background: var(--bg-deep);
     }
 
-
     .articles {
-
       display: grid;
 
       grid-template-columns: repeat(3, 1fr);
 
       gap: 17px;
-
     }
 
-
     .article-card {
-
       min-height: 370px;
 
       padding: 34px;
@@ -1089,12 +897,9 @@
         transform 0.3s ease,
         border-color 0.3s ease,
         background 0.3s ease;
-
     }
 
-
     .article-card::after {
-
       content: "";
 
       position: absolute;
@@ -1110,32 +915,23 @@
       transform: rotate(45deg);
 
       transition: transform 0.4s ease;
-
     }
 
-
     .article-card:hover {
-
       transform: translateY(-5px);
 
       border-color: rgba(66,181,195,0.4);
 
       background: var(--card-hover);
-
     }
 
-
     .article-card:hover::after {
-
       transform:
         rotate(45deg)
         scale(1.25);
-
     }
 
-
     .article-category {
-
       color: var(--teal-light);
 
       font-size: 0.65rem;
@@ -1143,12 +939,9 @@
       text-transform: uppercase;
 
       letter-spacing: 0.14em;
-
     }
 
-
     .article-card h3 {
-
       font-size: 1.6rem;
 
       line-height: 1.18;
@@ -1158,16 +951,12 @@
       letter-spacing: -0.025em;
 
       max-width: 310px;
-
     }
 
-
     .article-bottom {
-
       color: var(--muted);
 
       font-size: 0.74rem;
-
     }
 
 
@@ -1176,27 +965,20 @@
        ========================================================== */
 
     #speaking {
-
       position: relative;
 
       overflow: hidden;
-
     }
 
-
     .speaking-grid {
-
       display: grid;
 
       grid-template-columns: 1fr 1fr;
 
       gap: 90px;
-
     }
 
-
     .speaking-statement {
-
       font-size: clamp(2rem, 4vw, 3.8rem);
 
       line-height: 1.06;
@@ -1206,36 +988,25 @@
       max-width: 620px;
 
       font-weight: 400;
-
     }
 
-
     .speaking-copy {
-
       color: var(--text-soft);
 
       font-size: 1.04rem;
-
     }
-
 
     .speaking-topics {
-
       margin-top: 38px;
-
     }
 
-
     .speaking-topic {
-
       padding: 17px 0;
 
       border-top: 1px solid var(--line);
 
       color: var(--text-soft);
-
     }
-
 
     .speaking-topic:last-child {
       border-bottom: 1px solid var(--line);
@@ -1250,20 +1021,15 @@
       background: var(--bg-soft);
     }
 
-
     .about-grid {
-
       display: grid;
 
       grid-template-columns: 0.8fr 1.2fr;
 
       gap: 100px;
-
     }
 
-
     .about-big {
-
       font-size: clamp(2.3rem, 4vw, 4rem);
 
       line-height: 1.05;
@@ -1271,31 +1037,23 @@
       letter-spacing: -0.045em;
 
       font-weight: 400;
-
     }
 
-
     .about-copy {
-
       color: var(--text-soft);
 
       font-size: 1.05rem;
-
     }
-
 
     .about-copy p {
       margin-bottom: 26px;
     }
 
-
     .career {
       margin-top: 55px;
     }
 
-
     .career-item {
-
       display: grid;
 
       grid-template-columns: 145px 1fr;
@@ -1303,36 +1061,26 @@
       padding: 22px 0;
 
       border-top: 1px solid var(--line);
-
     }
 
-
     .career-year {
-
       color: var(--teal-light);
 
       font-size: 0.69rem;
-
     }
 
-
     .career-item strong {
-
       display: block;
 
       margin-bottom: 4px;
 
       font-weight: 500;
-
     }
 
-
     .career-item span {
-
       color: var(--muted);
 
       font-size: 0.88rem;
-
     }
 
 
@@ -1341,7 +1089,6 @@
        ========================================================== */
 
     .contact {
-
       min-height: 72vh;
 
       display: flex;
@@ -1349,18 +1096,14 @@
       align-items: center;
 
       background:
-
         radial-gradient(
           circle at 75% 55%,
           rgba(7,155,178,0.12),
           transparent 30%
         );
-
     }
 
-
     .contact h2 {
-
       font-size: clamp(3.7rem, 8vw, 8rem);
 
       line-height: 0.9;
@@ -1370,17 +1113,13 @@
       font-weight: 400;
 
       max-width: 1000px;
-
     }
-
 
     .contact h2 span {
       color: var(--teal-light);
     }
 
-
     .contact-links {
-
       margin-top: 58px;
 
       display: flex;
@@ -1388,7 +1127,6 @@
       flex-wrap: wrap;
 
       gap: 15px;
-
     }
 
 
@@ -1397,7 +1135,6 @@
        ========================================================== */
 
     footer {
-
       border-top: 1px solid var(--line);
 
       padding: 38px 0;
@@ -1407,12 +1144,9 @@
       font-size: 0.69rem;
 
       background: var(--bg-deep);
-
     }
 
-
     .footer-inner {
-
       display: flex;
 
       justify-content: space-between;
@@ -1420,28 +1154,21 @@
       align-items: center;
 
       gap: 20px;
-
     }
 
-
     .footer-brand {
-
       display: flex;
 
       align-items: center;
 
       gap: 12px;
-
     }
 
-
     .footer-logo {
-
       width: 30px;
       height: 30px;
 
       object-fit: contain;
-
     }
 
 
@@ -1450,7 +1177,6 @@
        ========================================================== */
 
     .reveal {
-
       opacity: 0;
 
       transform: translateY(25px);
@@ -1458,16 +1184,12 @@
       transition:
         opacity 0.8s ease,
         transform 0.8s ease;
-
     }
 
-
     .reveal.visible {
-
       opacity: 1;
 
       transform: translateY(0);
-
     }
 
 
@@ -1478,21 +1200,15 @@
     @media (max-width: 1100px) {
 
       .hero h1 {
-
         font-size: clamp(3.7rem, 7vw, 6rem);
-
       }
 
       .hero-image-side {
-
-        left: 51%;
-
+        left: 47%;
       }
 
       .hero-image {
-
-        object-position: 62% center;
-
+        object-position: 65% center;
       }
 
     }
@@ -1500,45 +1216,32 @@
 
     @media (max-width: 900px) {
 
-
       .nav-links a:not(.connect) {
         display: none;
       }
-
 
       .brand-name {
         display: none;
       }
 
-
       .hero {
-
         min-height: auto;
 
         padding-top: 125px;
-
       }
 
-
       .hero-inner {
-
         display: block;
 
         min-height: auto;
-
       }
-
 
       .hero-copy-side {
-
         padding-right: 0;
         padding-bottom: 70px;
-
       }
 
-
       .hero-image-side {
-
         position: relative;
 
         top: auto;
@@ -1550,24 +1253,13 @@
         height: 620px;
 
         margin-left: calc(-50vw + 50%);
-
       }
-
 
       .hero-image {
-
         object-position: 58% center;
-
       }
 
-
-      /*
-         On mobile the fade changes from horizontal
-         to primarily vertical.
-      */
-
       .hero-image-frame::before {
-
         background:
 
           linear-gradient(
@@ -1584,7 +1276,6 @@
             rgba(6,27,29,0.08) 34%,
 
             transparent 45%
-
           ),
 
           linear-gradient(
@@ -1597,75 +1288,52 @@
             rgba(6,27,29,0.12) 20%,
 
             transparent 33%
-
           );
-
       }
-
 
       .portrait-atmosphere {
-
         left: -20%;
         width: 70%;
-
       }
-
 
       section {
         padding: 95px 0;
       }
 
-
       .capabilities,
       .articles,
       .speaking-grid,
       .about-grid {
-
         grid-template-columns: 1fr;
-
       }
 
-
       .capability:nth-child(odd) {
-
         border-right: none;
 
         padding-right: 0;
-
       }
-
 
       .capability:nth-child(even) {
         padding-left: 0;
       }
 
-
       .transformation-row {
-
         grid-template-columns: 1fr;
 
         gap: 32px;
-
       }
-
 
       .principle {
-
         grid-template-columns: 50px 1fr;
-
       }
-
 
       .principle p {
         grid-column: 2;
       }
 
-
       .about-grid,
       .speaking-grid {
-
         gap: 55px;
-
       }
 
     }
@@ -1673,42 +1341,32 @@
 
     @media (max-width: 600px) {
 
-
       .hero h1 {
         font-size: 3.3rem;
       }
-
 
       .hero-description {
         margin-top: 38px;
       }
 
-
       .hero-image-side {
         height: 500px;
       }
-
 
       .hero-image {
         object-position: 58% center;
       }
 
-
       .career-item {
-
         grid-template-columns: 1fr;
 
         gap: 7px;
-
       }
 
-
       .footer-inner {
-
         flex-direction: column;
 
         align-items: flex-start;
-
       }
 
     }
@@ -1721,9 +1379,7 @@
 <body>
 
 
-  <!-- ========================================================
-       NAVIGATION
-       ======================================================== -->
+  <!-- NAVIGATION -->
 
   <nav>
 
@@ -1746,29 +1402,17 @@
 
       <div class="nav-links">
 
-        <a href="#leadership">
-          Leadership
-        </a>
+        <a href="#leadership">Leadership</a>
 
-        <a href="#transformation">
-          Transformation
-        </a>
+        <a href="#transformation">Transformation</a>
 
-        <a href="#perspectives">
-          Perspectives
-        </a>
+        <a href="#perspectives">Perspectives</a>
 
-        <a href="#speaking">
-          Speaking
-        </a>
+        <a href="#speaking">Speaking</a>
 
-        <a href="#about">
-          About
-        </a>
+        <a href="#about">About</a>
 
-        <a href="#contact" class="connect">
-          Connect
-        </a>
+        <a href="#contact" class="connect">Connect</a>
 
       </div>
 
@@ -1778,14 +1422,10 @@
 
 
 
-  <!-- ========================================================
-       HERO
-       ======================================================== -->
+  <!-- HERO -->
 
   <header class="hero" id="top">
 
-
-    <!-- PORTRAIT BEHIND CONTENT -->
 
     <div class="hero-image-side">
 
@@ -1803,9 +1443,7 @@
 
 
         <div class="image-caption">
-
           Leadership · Transformation · Ideas
-
         </div>
 
       </div>
@@ -1813,8 +1451,6 @@
     </div>
 
 
-
-    <!-- HERO CONTENT -->
 
     <div class="container">
 
@@ -1825,9 +1461,7 @@
 
 
           <div class="eyebrow">
-
             Laila Dalla Torre · Leadership · Transformation · Intelligence
-
           </div>
 
 
@@ -1840,10 +1474,8 @@
             into <span class="accent">direction.</span><br>
 
             <span class="quiet">
-
               Direction into<br>
               execution.
-
             </span>
 
           </h1>
@@ -1876,17 +1508,11 @@
 
           <div class="hero-actions">
 
-            <a
-              href="#leadership"
-              class="button primary"
-            >
+            <a href="#leadership" class="button primary">
               Explore my work
             </a>
 
-            <a
-              href="#perspectives"
-              class="button"
-            >
+            <a href="#perspectives" class="button">
               Read perspectives
             </a>
 
@@ -1904,9 +1530,7 @@
 
 
 
-  <!-- ========================================================
-       LEADERSHIP
-       ======================================================== -->
+  <!-- LEADERSHIP -->
 
   <section id="leadership">
 
@@ -1938,20 +1562,14 @@
 
         <div class="capability">
 
-          <div class="capability-number">
-            01
-          </div>
+          <div class="capability-number">01</div>
 
-          <h3>
-            Strategy → Execution
-          </h3>
+          <h3>Strategy → Execution</h3>
 
           <p>
-
             Translating strategic ambition into priorities,
             portfolios, ownership, measurable outcomes and
             disciplined execution.
-
           </p>
 
         </div>
@@ -1960,20 +1578,14 @@
 
         <div class="capability">
 
-          <div class="capability-number">
-            02
-          </div>
+          <div class="capability-number">02</div>
 
-          <h3>
-            Transformation Leadership
-          </h3>
+          <h3>Transformation Leadership</h3>
 
           <p>
-
             Leading complex global transformation across
             functions, processes, technology and
             organizational boundaries.
-
           </p>
 
         </div>
@@ -1982,20 +1594,14 @@
 
         <div class="capability">
 
-          <div class="capability-number">
-            03
-          </div>
+          <div class="capability-number">03</div>
 
-          <h3>
-            Procurement Excellence
-          </h3>
+          <h3>Procurement Excellence</h3>
 
           <p>
-
             Building scalable procurement capabilities
             across operating models, processes, governance,
             supplier management and performance.
-
           </p>
 
         </div>
@@ -2004,20 +1610,14 @@
 
         <div class="capability">
 
-          <div class="capability-number">
-            04
-          </div>
+          <div class="capability-number">04</div>
 
-          <h3>
-            Digital & AI
-          </h3>
+          <h3>Digital & AI</h3>
 
           <p>
-
             Connecting business problems with data,
             analytics, automation and artificial intelligence
             to create practical and scalable value.
-
           </p>
 
         </div>
@@ -2026,20 +1626,14 @@
 
         <div class="capability">
 
-          <div class="capability-number">
-            05
-          </div>
+          <div class="capability-number">05</div>
 
-          <h3>
-            Operating Models
-          </h3>
+          <h3>Operating Models</h3>
 
           <p>
-
             Designing governance, process ownership,
             decision rights, performance systems and
             organizational structures that enable scale.
-
           </p>
 
         </div>
@@ -2048,20 +1642,14 @@
 
         <div class="capability">
 
-          <div class="capability-number">
-            06
-          </div>
+          <div class="capability-number">06</div>
 
-          <h3>
-            People & Change
-          </h3>
+          <h3>People & Change</h3>
 
           <p>
-
             Building teams, aligning senior stakeholders
             and turning transformation from a program
             into an adopted way of working.
-
           </p>
 
         </div>
@@ -2075,9 +1663,7 @@
 
 
 
-  <!-- ========================================================
-       TRANSFORMATION
-       ======================================================== -->
+  <!-- TRANSFORMATION -->
 
   <section id="transformation">
 
@@ -2090,10 +1676,8 @@
 
 
       <h2 class="section-title">
-
         From ambition<br>
         to impact.
-
       </h2>
 
 
@@ -2125,19 +1709,15 @@
         <div class="transformation-copy">
 
           <p>
-
             Translating strategic ambition into a transformation
             architecture with clear priorities, outcomes,
             ownership and governance.
-
           </p>
 
           <p>
-
             The objective is not to create more initiatives,
             but to connect initiatives into a coherent system
             capable of delivering measurable change.
-
           </p>
 
 
@@ -2177,19 +1757,15 @@
         <div class="transformation-copy">
 
           <p>
-
             Transformation becomes sustainable when
             accountability, processes, governance,
             capabilities and technology reinforce each other.
-
           </p>
 
           <p>
-
             I focus on creating structures that make
             organizations easier to navigate, easier to
             measure and better able to adapt.
-
           </p>
 
 
@@ -2229,19 +1805,15 @@
         <div class="transformation-copy">
 
           <p>
-
             Technology creates value when it improves
             how people understand situations, make decisions
             and execute work.
-
           </p>
 
           <p>
-
             My focus is therefore not technology for its own
             sake, but the connection between process,
             data, analytics, automation and AI.
-
           </p>
 
 
@@ -2269,9 +1841,7 @@
 
 
 
-  <!-- ========================================================
-       HOW I LEAD
-       ======================================================== -->
+  <!-- MANAGEMENT PHILOSOPHY -->
 
   <section id="how-i-lead">
 
@@ -2307,11 +1877,9 @@
           <h3>Understand the system</h3>
 
           <p>
-
             Before optimizing individual processes,
             understand how decisions, information,
             incentives and people interact.
-
           </p>
 
         </div>
@@ -2325,10 +1893,8 @@
           <h3>Create clarity</h3>
 
           <p>
-
             Translate complexity into priorities,
             ownership, decisions and measurable outcomes.
-
           </p>
 
         </div>
@@ -2342,11 +1908,9 @@
           <h3>Build the structure</h3>
 
           <p>
-
             Governance, processes and technology should
             enable people — not compensate for unclear
             accountability.
-
           </p>
 
         </div>
@@ -2360,11 +1924,9 @@
           <h3>Mobilize people</h3>
 
           <p>
-
             Transformation succeeds when people understand
             the purpose, contribute to the solution and
             adopt the change.
-
           </p>
 
         </div>
@@ -2378,11 +1940,9 @@
           <h3>Measure what changed</h3>
 
           <p>
-
             Activity is not impact. Define baselines,
             targets, ownership and clear measures
             of success.
-
           </p>
 
         </div>
@@ -2396,11 +1956,9 @@
           <h3>Scale what works</h3>
 
           <p>
-
             Turn successful solutions into repeatable
             organizational capabilities rather than
             isolated projects.
-
           </p>
 
         </div>
@@ -2414,9 +1972,7 @@
 
 
 
-  <!-- ========================================================
-       PERSPECTIVES
-       ======================================================== -->
+  <!-- PERSPECTIVES -->
 
   <section id="perspectives">
 
@@ -2429,10 +1985,8 @@
 
 
       <h2 class="section-title">
-
         Ideas worth<br>
         challenging.
-
       </h2>
 
 
@@ -2567,9 +2121,7 @@
 
 
 
-  <!-- ========================================================
-       SPEAKING
-       ======================================================== -->
+  <!-- SPEAKING -->
 
   <section id="speaking">
 
@@ -2637,10 +2189,7 @@
 
           <div style="margin-top: 38px;">
 
-            <a
-              href="#contact"
-              class="button"
-            >
+            <a href="#contact" class="button">
               Invite me to speak
             </a>
 
@@ -2656,9 +2205,7 @@
 
 
 
-  <!-- ========================================================
-       ABOUT
-       ======================================================== -->
+  <!-- ABOUT -->
 
   <section id="about">
 
@@ -2814,9 +2361,7 @@
 
 
 
-  <!-- ========================================================
-       CONTACT
-       ======================================================== -->
+  <!-- CONTACT -->
 
   <section class="contact" id="contact">
 
@@ -2870,9 +2415,7 @@
 
 
 
-  <!-- ========================================================
-       FOOTER
-       ======================================================== -->
+  <!-- FOOTER -->
 
   <footer>
 
@@ -2908,21 +2451,13 @@
 
 
 
-  <!-- ========================================================
-       JAVASCRIPT
-       ======================================================== -->
+  <!-- JAVASCRIPT -->
 
   <script>
-
-
-    /* CURRENT YEAR */
 
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
-
-
-    /* SCROLL REVEAL */
 
     const revealElements =
       document.querySelectorAll(".reveal");
@@ -2957,7 +2492,6 @@
       observer.observe(element);
 
     });
-
 
   </script>
 
