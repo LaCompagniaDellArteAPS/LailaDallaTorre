@@ -12,7 +12,7 @@
     content="Laila Dalla Torre — Global transformation and procurement leader working at the intersection of strategy, operating models, digital, data and AI."
   >
 
-  <!-- LOGO / BROWSER THUMBNAIL -->
+  <!-- FAVICON -->
   <link rel="icon" type="image/png" href="LDTlogo.png">
   <link rel="apple-touch-icon" href="LDTlogo.png">
 
@@ -20,10 +20,7 @@
 
     /* ==========================================================
        LAILA DALLA TORRE
-       Personal Executive Website
-
-       COLOR PALETTE
-       Dark Teal + Cool Light Grey + Turquoise Accent
+       PERSONAL EXECUTIVE WEBSITE
        ========================================================== */
 
     :root {
@@ -44,7 +41,7 @@
       --line: rgba(220, 230, 230, 0.12);
       --line-strong: rgba(220, 230, 230, 0.24);
 
-      --max-width: 1280px;
+      --max-width: 1320px;
 
     }
 
@@ -95,7 +92,6 @@
     .container {
 
       width: min(91%, var(--max-width));
-
       margin: 0 auto;
 
     }
@@ -116,7 +112,7 @@
 
       z-index: 1000;
 
-      background: rgba(7, 27, 29, 0.88);
+      background: rgba(4, 19, 21, 0.84);
 
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
@@ -131,9 +127,7 @@
       min-height: 82px;
 
       display: flex;
-
       align-items: center;
-
       justify-content: space-between;
 
       gap: 30px;
@@ -141,12 +135,9 @@
     }
 
 
-    /* BRAND */
-
     .brand {
 
       display: flex;
-
       align-items: center;
 
       gap: 14px;
@@ -156,10 +147,10 @@
 
     .brand-logo {
 
-      width: 46px;
-      height: 46px;
+      width: 43px;
+      height: 43px;
 
-      object-fit: cover;
+      object-fit: contain;
 
     }
 
@@ -177,12 +168,9 @@
     }
 
 
-    /* LINKS */
-
     .nav-links {
 
       display: flex;
-
       align-items: center;
 
       gap: 28px;
@@ -230,7 +218,6 @@
     .connect:hover {
 
       background: var(--teal);
-
       border-color: var(--teal);
 
       color: white !important;
@@ -246,24 +233,21 @@
 
       min-height: 100vh;
 
-      display: flex;
-
-      align-items: center;
-
-      padding: 165px 0 105px;
-
       position: relative;
+
+      display: flex;
+      align-items: center;
 
       overflow: hidden;
 
-      background:
+      padding: 145px 0 85px;
 
+      background:
         radial-gradient(
           circle at 82% 38%,
-          rgba(7, 155, 178, 0.13),
-          transparent 29%
+          rgba(7, 155, 178, 0.10),
+          transparent 32%
         ),
-
         linear-gradient(
           135deg,
           var(--bg-deep),
@@ -273,7 +257,7 @@
     }
 
 
-    /* SUBTLE GEOMETRY INSPIRED BY LOGO */
+    /* LOGO-INSPIRED GEOMETRY */
 
     .hero::before {
 
@@ -281,43 +265,47 @@
 
       position: absolute;
 
-      width: 540px;
-      height: 540px;
+      width: 510px;
+      height: 510px;
 
-      right: -180px;
-      top: 150px;
+      right: -210px;
+      top: 120px;
 
-      border: 1px solid rgba(7, 155, 178, 0.13);
+      border: 1px solid rgba(7, 155, 178, 0.10);
 
       transform: rotate(45deg);
+
+      z-index: 1;
 
     }
 
 
-    .hero::after {
-
-      content: "";
-
-      position: absolute;
-
-      width: 350px;
-      height: 350px;
-
-      right: -75px;
-      top: 245px;
-
-      border: 1px solid rgba(220, 230, 230, 0.07);
-
-      transform: rotate(45deg);
-
-    }
-
-
-    .hero-content {
+    .hero-inner {
 
       position: relative;
 
-      z-index: 2;
+      z-index: 3;
+
+      width: 100%;
+
+      display: grid;
+
+      grid-template-columns: 1.08fr 0.92fr;
+
+      gap: 45px;
+
+      align-items: center;
+
+    }
+
+
+    /* HERO COPY */
+
+    .hero-copy-side {
+
+      position: relative;
+
+      z-index: 5;
 
     }
 
@@ -328,24 +316,24 @@
 
       text-transform: uppercase;
 
-      letter-spacing: 0.2em;
+      letter-spacing: 0.20em;
 
-      font-size: 0.67rem;
+      font-size: 0.66rem;
 
-      margin-bottom: 36px;
+      margin-bottom: 34px;
 
     }
 
 
     .hero h1 {
 
-      font-size: clamp(4rem, 8vw, 8.2rem);
+      font-size: clamp(3.8rem, 6.8vw, 7.4rem);
 
       line-height: 0.91;
 
       letter-spacing: -0.065em;
 
-      max-width: 1120px;
+      max-width: 800px;
 
       font-weight: 400;
 
@@ -366,13 +354,13 @@
     }
 
 
-    .hero-copy {
+    .hero-description {
 
-      margin-top: 58px;
+      margin-top: 48px;
 
-      max-width: 710px;
+      max-width: 640px;
 
-      font-size: clamp(1.05rem, 1.8vw, 1.35rem);
+      font-size: clamp(1rem, 1.45vw, 1.25rem);
 
       color: var(--text-soft);
 
@@ -385,15 +373,14 @@
 
     .hero-meta {
 
-      margin-top: 50px;
+      margin-top: 40px;
 
       display: flex;
-
       flex-wrap: wrap;
 
-      gap: 12px 27px;
+      gap: 10px 24px;
 
-      font-size: 0.67rem;
+      font-size: 0.65rem;
 
       text-transform: uppercase;
 
@@ -406,13 +393,156 @@
 
     .hero-actions {
 
-      margin-top: 50px;
+      margin-top: 42px;
 
       display: flex;
-
       flex-wrap: wrap;
 
       gap: 14px;
+
+    }
+
+
+    /* ==========================================================
+       HERO IMAGE
+       ========================================================== */
+
+    .hero-image-side {
+
+      position: relative;
+
+      min-height: 670px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+    }
+
+
+    .hero-image-frame {
+
+      position: relative;
+
+      width: 100%;
+      height: 670px;
+
+      overflow: hidden;
+
+    }
+
+
+    .hero-image {
+
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      /*
+        Keeps you prominent while leaving
+        some visual space toward the screen.
+      */
+
+      object-position: 42% center;
+
+      filter:
+        brightness(0.83)
+        contrast(1.05)
+        saturate(0.90);
+
+    }
+
+
+    /* Fade image into site background */
+
+    .hero-image-frame::before {
+
+      content: "";
+
+      position: absolute;
+
+      inset: 0;
+
+      z-index: 2;
+
+      background:
+
+        linear-gradient(
+          90deg,
+          var(--bg) 0%,
+          rgba(7, 27, 29, 0.58) 9%,
+          rgba(7, 27, 29, 0.06) 32%,
+          rgba(7, 27, 29, 0.00) 70%
+        ),
+
+        linear-gradient(
+          0deg,
+          var(--bg) 0%,
+          rgba(7, 27, 29, 0.12) 14%,
+          transparent 38%
+        ),
+
+        linear-gradient(
+          180deg,
+          rgba(7, 27, 29, 0.22) 0%,
+          transparent 22%
+        );
+
+      pointer-events: none;
+
+    }
+
+
+    /* TEAL GLOW */
+
+    .hero-image-frame::after {
+
+      content: "";
+
+      position: absolute;
+
+      z-index: 3;
+
+      left: 8%;
+      bottom: 6%;
+
+      width: 170px;
+      height: 1px;
+
+      background: var(--teal-light);
+
+      box-shadow:
+        0 0 22px rgba(66, 181, 195, 0.6);
+
+    }
+
+
+    .image-caption {
+
+      position: absolute;
+
+      z-index: 5;
+
+      right: 8px;
+      bottom: 17px;
+
+      color: rgba(229, 232, 232, 0.58);
+
+      font-size: 0.58rem;
+
+      letter-spacing: 0.16em;
+
+      text-transform: uppercase;
+
+      writing-mode: vertical-rl;
+
+      transform: rotate(180deg);
 
     }
 
@@ -426,7 +556,6 @@
       display: inline-flex;
 
       align-items: center;
-
       justify-content: center;
 
       min-height: 52px;
@@ -435,7 +564,7 @@
 
       border: 1px solid var(--line-strong);
 
-      font-size: 0.69rem;
+      font-size: 0.68rem;
 
       text-transform: uppercase;
 
@@ -699,8 +828,6 @@
     }
 
 
-    /* TAGS */
-
     .tags {
 
       display: flex;
@@ -785,7 +912,7 @@
 
 
     /* ==========================================================
-       PERSPECTIVES
+       PERSPECTIVES / AUTHORING
        ========================================================== */
 
     #perspectives {
@@ -916,6 +1043,15 @@
        SPEAKING
        ========================================================== */
 
+    #speaking {
+
+      position: relative;
+
+      overflow: hidden;
+
+    }
+
+
     .speaking-grid {
 
       display: grid;
@@ -1026,8 +1162,6 @@
 
     }
 
-
-    /* CAREER */
 
     .career {
 
@@ -1184,7 +1318,7 @@
       width: 30px;
       height: 30px;
 
-      object-fit: cover;
+      object-fit: contain;
 
     }
 
@@ -1216,8 +1350,35 @@
 
 
     /* ==========================================================
-       MOBILE
+       RESPONSIVE
        ========================================================== */
+
+    @media (max-width: 1050px) {
+
+      .hero-inner {
+
+        grid-template-columns: 1fr 0.82fr;
+
+      }
+
+
+      .hero h1 {
+
+        font-size: clamp(3.6rem, 7vw, 6rem);
+
+      }
+
+
+      .hero-image-side,
+      .hero-image-frame {
+
+        min-height: 590px;
+        height: 590px;
+
+      }
+
+    }
+
 
     @media (max-width: 900px) {
 
@@ -1240,9 +1401,72 @@
 
         min-height: auto;
 
-        padding-top: 165px;
+        padding-top: 135px;
 
-        padding-bottom: 110px;
+        padding-bottom: 0;
+
+      }
+
+
+      .hero-inner {
+
+        grid-template-columns: 1fr;
+
+        gap: 65px;
+
+      }
+
+
+      .hero-copy-side {
+
+        padding-bottom: 0;
+
+      }
+
+
+      .hero-image-side {
+
+        min-height: 570px;
+
+        width: 100vw;
+
+        margin-left: calc(-50vw + 50%);
+
+      }
+
+
+      .hero-image-frame {
+
+        width: 100%;
+        height: 570px;
+
+      }
+
+
+      .hero-image {
+
+        object-position: center center;
+
+      }
+
+
+      .hero-image-frame::before {
+
+        background:
+
+          linear-gradient(
+            180deg,
+            var(--bg) 0%,
+            rgba(7,27,29,0.12) 16%,
+            transparent 35%
+          ),
+
+          linear-gradient(
+            0deg,
+            var(--bg) 0%,
+            rgba(7,27,29,0.08) 18%,
+            transparent 36%
+          );
 
       }
 
@@ -1316,16 +1540,39 @@
     @media (max-width: 600px) {
 
 
-      .hero h1 {
+      .hero {
 
-        font-size: 3.55rem;
+        padding-top: 125px;
 
       }
 
 
-      .hero-copy {
+      .hero h1 {
 
-        margin-top: 40px;
+        font-size: 3.35rem;
+
+      }
+
+
+      .hero-description {
+
+        margin-top: 38px;
+
+      }
+
+
+      .hero-image-side,
+      .hero-image-frame {
+
+        min-height: 470px;
+        height: 470px;
+
+      }
+
+
+      .hero-image {
+
+        object-position: 45% center;
 
       }
 
@@ -1364,7 +1611,6 @@
   <nav>
 
     <div class="container nav-inner">
-
 
       <a href="#top" class="brand">
 
@@ -1421,79 +1667,112 @@
 
   <header class="hero" id="top">
 
-    <div class="container hero-content">
+    <div class="container">
+
+      <div class="hero-inner">
 
 
-      <div class="eyebrow">
+        <!-- LEFT / MESSAGE -->
 
-        Laila Dalla Torre · Leadership · Transformation · Intelligence
+        <div class="hero-copy-side">
 
-      </div>
+          <div class="eyebrow">
 
+            Laila Dalla Torre · Leadership · Transformation · Intelligence
 
-      <h1>
-
-        Turning complexity<br>
-
-        into <span class="accent">direction.</span><br>
-
-        <span class="quiet">
-          Direction into execution.
-        </span>
-
-      </h1>
+          </div>
 
 
-      <p class="hero-copy">
+          <h1>
 
-        I lead at the intersection of strategy, transformation
-        and technology — building the structures, capabilities
-        and momentum that turn ambitious ideas into measurable
-        business outcomes.
+            Turning complexity<br>
 
-      </p>
+            into <span class="accent">direction.</span><br>
 
+            <span class="quiet">
+              Direction into execution.
+            </span>
 
-      <div class="hero-meta">
-
-        <span>
-          Global Leadership
-        </span>
-
-        <span>
-          Transformation
-        </span>
-
-        <span>
-          Procurement
-        </span>
-
-        <span>
-          Operating Models
-        </span>
-
-        <span>
-          Digital & AI
-        </span>
-
-      </div>
+          </h1>
 
 
-      <div class="hero-actions">
+          <p class="hero-description">
 
-        <a
-          href="#leadership"
-          class="button primary"
-        >
-          Explore my work
-        </a>
+            I lead at the intersection of strategy,
+            transformation and technology — building the
+            structures, capabilities and momentum that turn
+            ambitious ideas into measurable business outcomes.
 
-        <a
-          href="#perspectives"
-          class="button"
-        >
-          Read perspectives
-        </a>
+          </p>
+
+
+          <div class="hero-meta">
+
+            <span>
+              Global Leadership
+            </span>
+
+            <span>
+              Transformation
+            </span>
+
+            <span>
+              Procurement
+            </span>
+
+            <span>
+              Operating Models
+            </span>
+
+            <span>
+              Digital & AI
+            </span>
+
+          </div>
+
+
+          <div class="hero-actions">
+
+            <a
+              href="#leadership"
+              class="button primary"
+            >
+              Explore my work
+            </a>
+
+            <a
+              href="#perspectives"
+              class="button"
+            >
+              Read perspectives
+            </a>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- RIGHT / IMAGE -->
+
+        <div class="hero-image-side">
+
+          <div class="hero-image-frame">
+
+            <img
+              src="LDTonSTAGE.png"
+              alt="Laila Dalla Torre speaking on stage"
+              class="hero-image"
+            >
+
+            <div class="image-caption">
+              Leadership · Transformation · Ideas
+            </div>
+
+          </div>
+
+        </div>
+
 
       </div>
 
@@ -1706,8 +1985,6 @@
 
 
 
-      <!-- TRANSFORMATION STRATEGY -->
-
       <div class="transformation-row">
 
         <div>
@@ -1744,21 +2021,13 @@
 
           <div class="tags">
 
-            <span class="tag">
-              Strategy
-            </span>
+            <span class="tag">Strategy</span>
 
-            <span class="tag">
-              Portfolio Management
-            </span>
+            <span class="tag">Portfolio Management</span>
 
-            <span class="tag">
-              Governance
-            </span>
+            <span class="tag">Governance</span>
 
-            <span class="tag">
-              Value Creation
-            </span>
+            <span class="tag">Value Creation</span>
 
           </div>
 
@@ -1767,8 +2036,6 @@
       </div>
 
 
-
-      <!-- OPERATING MODEL -->
 
       <div class="transformation-row">
 
@@ -1806,21 +2073,13 @@
 
           <div class="tags">
 
-            <span class="tag">
-              Operating Models
-            </span>
+            <span class="tag">Operating Models</span>
 
-            <span class="tag">
-              Process Ownership
-            </span>
+            <span class="tag">Process Ownership</span>
 
-            <span class="tag">
-              Organization
-            </span>
+            <span class="tag">Organization</span>
 
-            <span class="tag">
-              Performance
-            </span>
+            <span class="tag">Performance</span>
 
           </div>
 
@@ -1829,8 +2088,6 @@
       </div>
 
 
-
-      <!-- DIGITAL -->
 
       <div class="transformation-row">
 
@@ -1868,25 +2125,15 @@
 
           <div class="tags">
 
-            <span class="tag">
-              Digital
-            </span>
+            <span class="tag">Digital</span>
 
-            <span class="tag">
-              Data
-            </span>
+            <span class="tag">Data</span>
 
-            <span class="tag">
-              Analytics
-            </span>
+            <span class="tag">Analytics</span>
 
-            <span class="tag">
-              Automation
-            </span>
+            <span class="tag">Automation</span>
 
-            <span class="tag">
-              AI
-            </span>
+            <span class="tag">AI</span>
 
           </div>
 
