@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Laila Dalla Torre | Leadership · Transformation · AI</title>
+
+  <meta
+    name="description"
+    content="Laila Dalla Torre — Global procurement and transformation leader working at the intersection of strategy, operating models, digital, data and AI."
+  />
+
+  <style>
+    /* =========================================================
+       LAILA DALLA TORRE — PERSONAL WEBSITE
+       Executive / Editorial / Minimal
+       ========================================================= */
+
+    :root {
+      --bg: #0b0c0e;
+      --bg-soft: #111317;
+      --card: #14171b;
+      --text: #f4f2ed;
+      --muted: #a8adb4;
+      --line: rgba(255,255,255,0.12);
+      --accent: #d8dde3;
+      --accent-soft: #8f9baa;
+      --max-width: 1280px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    .container {
+      width: min(92%, var(--max-width));
+      margin: 0 auto;
+    }
+
+    /* =========================================================
+       NAVIGATION
+       ========================================================= */
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(11, 12, 14, 0.82);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-inner {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .brand {
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      transition: color 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .connect {
+      border: 1px solid var(--line);
+      padding: 11px 18px;
+      color: var(--text) !important;
+    }
+
+    /* =========================================================
+       HERO
+       ========================================================= */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 150px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      right: -250px;
+      top: 120px;
+      background:
+        radial-gradient(
+          circle,
+          rgba(160, 175, 195, 0.12),
+          transparent 68%
+        );
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.72rem;
+      margin-bottom: 28px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.8rem, 8.5vw, 8.5rem);
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+      max-width: 1100px;
+      font-weight: 500;
+    }
+
+    .hero h1 span {
+      color: var(--muted);
+    }
+
+    .hero-copy {
+      margin-top: 55px;
+      max-width: 650px;
+      font-size: clamp(1.1rem, 2vw, 1.45rem);
+      color: var(--muted);
+      font-weight: 300;
+    }
+
+    .hero-meta {
+      margin-top: 55px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 28px;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      color: var(--muted);
+    }
+
+    .hero-actions {
+      margin-top: 55px;
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 24px;
+      border: 1px solid var(--line);
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: all 0.25s ease;
+    }
+
+    .button:hover {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    .button.primary {
+      background: var(--text);
+      color: var(--bg);
+    }
+
+    .button.primary:hover {
+      background: var(--accent-soft);
+      color: var(--text);
+    }
+
+    /* =========================================================
+       GENERAL SECTIONS
+       ========================================================= */
+
+    section {
+      padding: 130px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section-number {
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: clamp(2.7rem, 6vw, 5.5rem);
+      line-height: 0.95;
+      letter-spacing: -0.05em;
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+
+    .section-intro {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 1.15rem;
+      margin-bottom: 75px;
+    }
+
+    /* =========================================================
+       LEADERSHIP
+       ========================================================= */
+
+    .capabilities {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid var(--line);
+    }
+
+    .capability {
+      padding: 45px 35px 45px 0;
+      border-bottom: 1px solid var(--line);
+      min-height: 220px;
+    }
+
+    .capability:nth-child(odd) {
+      border-right: 1px solid var(--line);
+      padding-right: 50px;
+    }
+
+    .capability:nth-child(even) {
+      padding-left: 50px;
+    }
+
+    .capability-number {
+      color: var(--muted);
+      font-size: 0.72rem;
+      margin-bottom: 28px;
+    }
+
+    .capability h3 {
+      font-size: 1.6rem;
+      font-weight: 500;
+      margin-bottom: 14px;
+    }
+
+    .capability p {
+      color: var(--muted);
+      max-width: 520px;
+    }
+
+    /* =========================================================
+       TRANSFORMATIONS
+       ========================================================= */
+
+    .transformation {
+      display: grid;
+      grid-template-columns: 0.7fr 1.3fr;
+      gap: 70px;
+      padding: 65px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .transformation:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .transformation-label {
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.7rem;
+      margin-bottom: 15px;
+    }
+
+    .transformation h3 {
+      font-size: clamp(2rem, 4vw, 3.4rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      font-weight: 500;
+    }
+
+    .transformation-copy p {
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin-bottom: 25px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 30px;
+    }
+
+    .tag {
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      padding: 8px 13px;
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    /* =========================================================
+       MANAGEMENT MODEL
+       ========================================================= */
+
+    .principles {
+      counter-reset: principle;
+    }
+
+    .principle {
+      display: grid;
+      grid-template-columns: 100px 1fr 1.4fr;
+      gap: 35px;
+      padding: 38px 0;
+      border-top: 1px solid var(--line);
+      align-items: start;
+    }
+
+    .principle:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .principle-number {
+      color: var(--muted);
+      font-size: 0.75rem;
+    }
+
+    .principle h3 {
+      font-size: 1.4rem;
+      font-weight: 500;
+    }
+
+    .principle p {
+      color: var(--muted);
+    }
+
+    /* =========================================================
+       PERSPECTIVES
+       ========================================================= */
+
+    .articles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .article-card {
+      background: var(--card);
+      min-height: 360px;
+      padding: 32px;
+      border: 1px solid transparent;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition:
+        transform 0.25s ease,
+        border-color 0.25s ease;
+    }
+
+    .article-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--line);
+    }
+
+    .article-category {
+      color: var(--muted);
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+    }
+
+    .article-card h3 {
+      font-size: 1.65rem;
+      line-height: 1.15;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    .article-bottom {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    /* =========================================================
+       SPEAKING
+       ========================================================= */
+
+    .speaking-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+    }
+
+    .speaking-statement {
+      font-size: clamp(2rem, 4vw, 3.8rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      max-width: 600px;
+    }
+
+    .speaking-copy {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .speaking-topics {
+      margin-top: 35px;
+    }
+
+    .speaking-topic {
+      padding: 16px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .speaking-topic:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    /* =========================================================
+       ABOUT
+       ========================================================= */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 100px;
+    }
+
+    .about-big {
+      font-size: clamp(2.2rem, 4vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+    }
+
+    .about-copy {
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .about-copy p {
+      margin-bottom: 25px;
+    }
+
+    .career {
+      margin-top: 50px;
+    }
+
+    .career-item {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      padding: 20px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .career-year {
+      color: var(--muted);
+      font-size: 0.78rem;
+    }
+
+    .career-item strong {
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .career-item span {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* =========================================================
+       CONTACT
+       ========================================================= */
+
+    .contact {
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .contact h2 {
+      font-size: clamp(3.5rem, 8vw, 8rem);
+      line-height: 0.9;
+      letter-spacing: -0.06em;
+      font-weight: 500;
+      max-width: 1000px;
+    }
+
+    .contact h2 span {
+      color: var(--muted);
+    }
+
+    .contact-links {
+      margin-top: 55px;
+      display: flex;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 35px 0;
+      color: var(--muted);
+      font-size: 0.75rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    /* =========================================================
+       REVEAL ANIMATION
+       ========================================================= */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(25px);
+      transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* =========================================================
+       RESPONSIVE
+       ========================================================= */
+
+    @media (max-width: 900px) {
+
+      .nav-links a:not(.connect) {
+        display: none;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 170px;
+        padding-bottom: 110px;
+      }
+
+      section {
+        padding: 90px 0;
+      }
+
+      .capabilities,
+      .articles,
+      .speaking-grid,
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .capability:nth-child(odd) {
+        border-right: none;
+        padding-right: 0;
+      }
+
+      .capability:nth-child(even) {
+        padding-left: 0;
+      }
+
+      .transformation {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .principle {
+        grid-template-columns: 50px 1fr;
+      }
+
+      .principle p {
+        grid-column: 2;
+      }
+
+      .about-grid {
+        gap: 50px;
+      }
+
+      .speaking-grid {
+        gap: 50px;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .hero h1 {
+        font-size: 3.8rem;
+      }
+
+      .career-item {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- =======================================================
+       NAVIGATION
+       ======================================================= -->
+
+  <nav>
+    <div class="container nav-inner">
+
+      <a href="#top" class="brand">LDT</a>
+
+      <div class="nav-links">
+        <a href="#leadership">Leadership</a>
+        <a href="#transformations">Transformations</a>
+        <a href="#perspectives">Perspectives</a>
+        <a href="#speaking">Speaking</a>
+        <a href="#about">About</a>
+        <a href="#contact" class="connect">Connect</a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- =======================================================
+       HERO
+       ======================================================= -->
+
+  <header class="hero" id="top">
+
+    <div class="container">
+
+      <div class="eyebrow">
+        Laila Dalla Torre · Leadership / Transformation / Intelligence
+      </div>
+
+      <h1>
+        Turning complexity<br>
+        into <span>direction.</span><br>
+        Direction into <span>execution.</span>
+      </h1>
+
+      <p class="hero-copy">
+        I lead at the intersection of strategy, transformation and
+        technology — building the structures, capabilities and momentum
+        that turn ambitious ideas into measurable business outcomes.
+      </p>
+
+      <div class="hero-meta">
+        <span>Global Procurement</span>
+        <span>Transformation</span>
+        <span>Operating Models</span>
+        <span>Digital & AI</span>
+        <span>Leadership</span>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#transformations" class="button primary">
+          Explore my work
+        </a>
+
+        <a href="#perspectives" class="button">
+          Read perspectives
+        </a>
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =======================================================
+       LEADERSHIP
+       ======================================================= -->
+
+  <section id="leadership">
+
+    <div class="container reveal">
+
+      <div class="section-number">01 / LEADERSHIP</div>
+
+      <h2 class="section-title">
+        What I lead.
+      </h2>
+
+      <p class="section-intro">
+        My work sits where strategy needs to become operational reality:
+        across organizations, processes, technology, data and people.
+      </p>
+
+
+      <div class="capabilities">
+
+        <div class="capability">
+          <div class="capability-number">01</div>
+          <h3>Strategy → Execution</h3>
+          <p>
+            Translating strategic ambition into priorities, portfolios,
+            ownership, measurable outcomes and disciplined execution.
+          </p>
+        </div>
+
+        <div class="capability">
+          <div class="capability-number">02</div>
+          <h3>Transformation Leadership</h3>
+          <p>
+            Leading complex global transformation across functions,
+            processes, technology and organizational boundaries.
+          </p>
+        </div>
+
+        <div class="capability">
+          <div class="capability-number">03</div>
+          <h3>Procurement Excellence</h3>
+          <p>
+            Building procurement capabilities across COE, category
+            management, SRM, S2P, governance, risk, sustainability
+            and performance.
+          </p>
+        </div>
+
+        <div class="capability">
+          <div class="capability-number">04</div>
+          <h3>Digital & AI</h3>
+          <p>
+            Connecting business problems with data, analytics,
+            automation and AI to create practical and scalable value.
+          </p>
+        </div>
+
+        <div class="capability">
+          <div class="capability-number">05</div>
+          <h3>Operating Models</h3>
+          <p>
+            Designing governance, process ownership, decision rights,
+            KPIs and organizational structures that enable scale.
+          </p>
+        </div>
+
+        <div class="capability">
+          <div class="capability-number">06</div>
+          <h3>People & Change</h3>
+          <p>
+            Building teams, aligning senior stakeholders and turning
+            transformation from a program into an adopted way of working.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       TRANSFORMATIONS
+       ======================================================= -->
+
+  <section id="transformations">
+
+    <div class="container reveal">
+
+      <div class="section-number">02 / TRANSFORMATIONS</div>
+
+      <h2 class="section-title">
+        From ambition<br>to impact.
+      </h2>
+
+      <p class="section-intro">
+        Selected transformation themes from my work across procurement,
+        operating models, technology and organizational capability.
+      </p>
+
+
+      <!-- NEXUS -->
+
+      <article class="transformation">
+
+        <div>
+          <div class="transformation-label">
+            Procurement Intelligence
+          </div>
+
+          <h3>NEXUS</h3>
+        </div>
+
+        <div class="transformation-copy">
+
+          <p>
+            Building a procurement intelligence platform designed to
+            connect fragmented internal and external information and
+            enable faster, better-informed decisions.
+          </p>
+
+          <p>
+            The ambition moves beyond dashboards: establish the data and
+            intelligence foundation first, then progressively enable
+            advanced analytics, AI and agentic capabilities.
+          </p>
+
+          <div class="tags">
+            <span class="tag">Data Spine</span>
+            <span class="tag">Market Intelligence</span>
+            <span class="tag">Should Cost</span>
+            <span class="tag">Risk</span>
+            <span class="tag">AI</span>
+            <span class="tag">Decision Intelligence</span>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- COE -->
+
+      <article class="transformation">
+
+        <div>
+          <div class="transformation-label">
+            Global Procurement
+          </div>
+
+          <h3>
+            Building the engine behind procurement performance.
+          </h3>
+        </div>
+
+        <div class="transformation-copy">
+
+          <p>
+            Leading a global Procurement Center of Excellence and
+            transformation portfolio spanning strategy execution,
+            processes, systems, analytics, governance, sustainability,
+            risk and compliance.
+          </p>
+
+          <p>
+            The focus: create the infrastructure that allows procurement
+            to operate consistently, measure performance and scale
+            successful capabilities globally.
+          </p>
+
+          <div class="tags">
+            <span class="tag">COE</span>
+            <span class="tag">PMO</span>
+            <span class="tag">Governance</span>
+            <span class="tag">Analytics</span>
+            <span class="tag">SRM</span>
+            <span class="tag">Sustainability</span>
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- PLATFORM -->
+
+      <article class="transformation">
+
+        <div>
+          <div class="transformation-label">
+            Digital Transformation
+          </div>
+
+          <h3>
+            Procurement platform transformation.
+          </h3>
+        </div>
+
+        <div class="transformation-copy">
+
+          <p>
+            Leading global procurement process and technology
+            transformation across processes, tools, governance and
+            stakeholder groups.
+          </p>
+
+          <p>
+            Combining process harmonization with technology enablement
+            to move procurement toward a more integrated and scalable
+            operating model.
+          </p>
+
+          <div class="tags">
+            <span class="tag">S2P</span>
+            <span class="tag">Processes</span>
+            <span class="tag">Technology</span>
+            <span class="tag">Global Rollout</span>
+            <span class="tag">Change</span>
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       HOW I LEAD
+       ======================================================= -->
+
+  <section>
+
+    <div class="container reveal">
+
+      <div class="section-number">03 / MANAGEMENT SYSTEM</div>
+
+      <h2 class="section-title">
+        How I lead.
+      </h2>
+
+      <p class="section-intro">
+        Transformation becomes sustainable when clarity, structure,
+        people and measurement reinforce each other.
+      </p>
+
+
+      <div class="principles">
+
+        <div class="principle">
+          <div class="principle-number">01</div>
+          <h3>Understand the system</h3>
+          <p>
+            Before optimizing individual processes, understand how
+            decisions, information, incentives and people interact.
+          </p>
+        </div>
+
+        <div class="principle">
+          <div class="principle-number">02</div>
+          <h3>Create clarity</h3>
+          <p>
+            Translate complexity into priorities, ownership,
+            decisions and measurable outcomes.
+          </p>
+        </div>
+
+        <div class="principle">
+          <div class="principle-number">03</div>
+          <h3>Build the structure</h3>
+          <p>
+            Governance, processes and technology should enable people —
+            not compensate for unclear accountability.
+          </p>
+        </div>
+
+        <div class="principle">
+          <div class="principle-number">04</div>
+          <h3>Mobilize people</h3>
+          <p>
+            Transformation succeeds when people understand the purpose,
+            contribute to the solution and adopt the change.
+          </p>
+        </div>
+
+        <div class="principle">
+          <div class="principle-number">05</div>
+          <h3>Measure what changed</h3>
+          <p>
+            Activity is not impact. Establish baselines, targets,
+            ownership and acceptance criteria.
+          </p>
+        </div>
+
+        <div class="principle">
+          <div class="principle-number">06</div>
+          <h3>Scale what works</h3>
+          <p>
+            Turn successful solutions into repeatable organizational
+            capabilities rather than isolated projects.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       PERSPECTIVES
+       ======================================================= -->
+
+  <section id="perspectives">
+
+    <div class="container reveal">
+
+      <div class="section-number">04 / PERSPECTIVES</div>
+
+      <h2 class="section-title">
+        Ideas worth<br>challenging.
+      </h2>
+
+      <p class="section-intro">
+        Perspectives on procurement, transformation, leadership,
+        data and artificial intelligence.
+      </p>
+
+
+      <div class="articles">
+
+        <a href="#" class="article-card">
+          <div class="article-category">Artificial Intelligence</div>
+
+          <h3>
+            AI will not fix broken procurement.
+          </h3>
+
+          <div class="article-bottom">
+            Perspective → Coming soon
+          </div>
+        </a>
+
+
+        <a href="#" class="article-card">
+          <div class="article-category">Transformation</div>
+
+          <h3>
+            Why transformation programs confuse activity with progress.
+          </h3>
+
+          <div class="article-bottom">
+            Perspective → Coming soon
+          </div>
+        </a>
+
+
+        <a href="#" class="article-card">
+          <div class="article-category">Procurement Intelligence</div>
+
+          <h3>
+            From procurement data to procurement intelligence.
+          </h3>
+
+          <div class="article-bottom">
+            Perspective → Coming soon
+          </div>
+        </a>
+
+
+        <a href="#" class="article-card">
+          <div class="article-category">Operating Model</div>
+
+          <h3>
+            The Procurement COE is changing.
+          </h3>
+
+          <div class="article-bottom">
+            Perspective → Coming soon
+          </div>
+        </a>
+
+
+        <a href="#" class="article-card">
+          <div class="article-category">AI</div>
+
+          <h3>
+            Agentic procurement: what should actually become autonomous?
+          </h3>
+
+          <div class="article-bottom">
+            Perspective → Coming soon
+          </div>
+        </a>
+
+
+        <a href="#" class="article-card">
+          <div class="article-category">Leadership</div>
+
+          <h3>
+            What leaders get wrong about change.
+          </h3>
+
+          <div class="article-bottom">
+            Perspective → Coming soon
+          </div>
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       SPEAKING
+       ======================================================= -->
+
+  <section id="speaking">
+
+    <div class="container reveal">
+
+      <div class="section-number">05 / SPEAKING</div>
+
+      <div class="speaking-grid">
+
+        <div>
+          <div class="speaking-statement">
+            Conversations about what procurement and transformation
+            become next.
+          </div>
+        </div>
+
+        <div class="speaking-copy">
+
+          <p>
+            I speak and facilitate discussions around the evolution of
+            procurement, digital transformation, artificial intelligence
+            and the organizational capabilities required to turn
+            technology into business value.
+          </p>
+
+          <div class="speaking-topics">
+            <div class="speaking-topic">AI in Procurement</div>
+            <div class="speaking-topic">Procurement Intelligence</div>
+            <div class="speaking-topic">Transformation Leadership</div>
+            <div class="speaking-topic">Future Procurement Operating Models</div>
+            <div class="speaking-topic">From Data to Decisions</div>
+          </div>
+
+          <div style="margin-top:35px;">
+            <a href="#contact" class="button">
+              Invite me to speak
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       ABOUT
+       ======================================================= -->
+
+  <section id="about">
+
+    <div class="container reveal">
+
+      <div class="section-number">06 / ABOUT</div>
+
+      <div class="about-grid">
+
+        <div>
+          <div class="about-big">
+            I build organizations capable of change.
+          </div>
+        </div>
+
+        <div class="about-copy">
+
+          <p>
+            My career has evolved from procurement and process
+            management into global transformation leadership —
+            connecting strategy, operating models, technology,
+            data and people.
+          </p>
+
+          <p>
+            Today, my focus is increasingly on how organizations can
+            move beyond digitization toward intelligence: using data,
+            analytics and AI to improve how decisions are made while
+            building the governance and capabilities required to
+            make that change sustainable.
+          </p>
+
+          <p>
+            I am particularly interested in the point where ambitious
+            ideas meet organizational reality — because that is where
+            transformation either becomes impact or remains a slide.
+          </p>
+
+
+          <div class="career">
+
+            <div class="career-item">
+              <div class="career-year">2023 — NOW</div>
+              <div>
+                <strong>Bekaert</strong>
+                <span>
+                  Global Procurement COE & PMO Director
+                </span>
+              </div>
+            </div>
+
+            <div class="career-item">
+              <div class="career-year">2021 — 2022</div>
+              <div>
+                <strong>Schindler</strong>
+                <span>
+                  Head of Global Procurement Processes & Tools
+                </span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       CONTACT
+       ======================================================= -->
+
+  <section class="contact" id="contact">
+
+    <div class="container reveal">
+
+      <div class="section-number">07 / CONNECT</div>
+
+      <h2>
+        Let's exchange<br>
+        <span>ideas.</span>
+      </h2>
+
+      <div class="contact-links">
+
+        <!-- Replace # with your actual LinkedIn URL -->
+        <a href="#" class="button primary">
+          LinkedIn
+        </a>
+
+        <!-- Replace with your email -->
+        <a href="mailto:YOUR-EMAIL-HERE" class="button">
+          Email
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =======================================================
+       FOOTER
+       ======================================================= -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div>
+        © <span id="year"></span> Laila Dalla Torre
+      </div>
+
+      <div>
+        Leadership · Transformation · Intelligence
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- =======================================================
+       JAVASCRIPT
+       ======================================================= -->
+
+  <script>
+
+    // Automatic year
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+
+    // Subtle reveal-on-scroll animation
+    const revealElements =
+      document.querySelectorAll(".reveal");
+
+    const observer =
+      new IntersectionObserver(
+        (entries) => {
+
+          entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+
+          });
+
+        },
+        {
+          threshold: 0.12
+        }
+      );
+
+    revealElements.forEach((element) => {
+      observer.observe(element);
+    });
+
+  </script>
+
+</body>
+</html>
