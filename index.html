@@ -12,7 +12,6 @@
     content="Laila Dalla Torre — Global transformation and procurement leader working at the intersection of strategy, operating models, digital, data and AI."
   >
 
-  <!-- FAVICON -->
   <link rel="icon" type="image/png" href="LDTlogo.png">
   <link rel="apple-touch-icon" href="LDTlogo.png">
 
@@ -20,28 +19,30 @@
 
     /* ==========================================================
        LAILA DALLA TORRE
-       PERSONAL EXECUTIVE WEBSITE
+       EXECUTIVE PERSONAL WEBSITE
        ========================================================== */
 
     :root {
 
-      --bg: #071b1d;
-      --bg-deep: #041315;
-      --bg-soft: #0b2427;
+      --bg: #061b1d;
+      --bg-deep: #031416;
+      --bg-soft: #0a2528;
+
       --card: #0d292c;
       --card-hover: #103236;
 
-      --text: #e5e8e8;
-      --text-soft: #c5cbcc;
-      --muted: #8e9b9c;
+      --text: #e7eaea;
+      --text-soft: #c8cecf;
+      --muted: #8d9b9c;
 
       --teal: #079bb2;
-      --teal-light: #42b5c3;
+      --teal-light: #43b7c5;
+      --teal-deep: #07383d;
 
       --line: rgba(220, 230, 230, 0.12);
       --line-strong: rgba(220, 230, 230, 0.24);
 
-      --max-width: 1320px;
+      --max-width: 1660px;
 
     }
 
@@ -68,6 +69,7 @@
       font-family:
         Inter,
         "Helvetica Neue",
+        Helvetica,
         Arial,
         sans-serif;
 
@@ -91,7 +93,7 @@
 
     .container {
 
-      width: min(91%, var(--max-width));
+      width: min(96%, var(--max-width));
       margin: 0 auto;
 
     }
@@ -112,7 +114,7 @@
 
       z-index: 1000;
 
-      background: rgba(4, 19, 21, 0.84);
+      background: rgba(3, 20, 22, 0.91);
 
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
@@ -124,7 +126,7 @@
 
     .nav-inner {
 
-      min-height: 82px;
+      min-height: 92px;
 
       display: flex;
       align-items: center;
@@ -140,15 +142,15 @@
       display: flex;
       align-items: center;
 
-      gap: 14px;
+      gap: 16px;
 
     }
 
 
     .brand-logo {
 
-      width: 43px;
-      height: 43px;
+      width: 51px;
+      height: 51px;
 
       object-fit: contain;
 
@@ -157,9 +159,9 @@
 
     .brand-name {
 
-      font-size: 0.74rem;
+      font-size: 0.98rem;
 
-      letter-spacing: 0.17em;
+      letter-spacing: 0.15em;
 
       text-transform: uppercase;
 
@@ -173,11 +175,11 @@
       display: flex;
       align-items: center;
 
-      gap: 28px;
+      gap: 37px;
 
-      font-size: 0.68rem;
+      font-size: 0.78rem;
 
-      letter-spacing: 0.11em;
+      letter-spacing: 0.09em;
 
       text-transform: uppercase;
 
@@ -194,9 +196,7 @@
 
 
     .nav-links a:hover {
-
       color: var(--text);
-
     }
 
 
@@ -206,7 +206,7 @@
 
       border: 1px solid var(--line-strong);
 
-      padding: 10px 17px;
+      padding: 13px 22px;
 
       transition:
         background 0.25s ease,
@@ -240,24 +240,26 @@
 
       overflow: hidden;
 
-      padding: 145px 0 85px;
+      padding: 92px 0 0;
 
       background:
         radial-gradient(
-          circle at 82% 38%,
+          circle at 78% 36%,
           rgba(7, 155, 178, 0.10),
-          transparent 32%
+          transparent 35%
         ),
         linear-gradient(
           135deg,
           var(--bg-deep),
-          var(--bg) 62%
+          var(--bg) 64%
         );
 
     }
 
 
-    /* LOGO-INSPIRED GEOMETRY */
+    /*
+       LARGE SUBTLE GEOMETRIC ELEMENT
+    */
 
     .hero::before {
 
@@ -265,15 +267,17 @@
 
       position: absolute;
 
-      width: 510px;
-      height: 510px;
+      width: 620px;
+      height: 620px;
 
-      right: -210px;
-      top: 120px;
+      right: -290px;
+      top: 50px;
 
       border: 1px solid rgba(7, 155, 178, 0.10);
 
       transform: rotate(45deg);
+
+      pointer-events: none;
 
       z-index: 1;
 
@@ -288,24 +292,33 @@
 
       width: 100%;
 
+      min-height: calc(100vh - 92px);
+
       display: grid;
 
-      grid-template-columns: 1.08fr 0.92fr;
+      /*
+         More space for the statement.
+         Portrait begins later.
+      */
 
-      gap: 45px;
+      grid-template-columns: 53% 47%;
 
       align-items: center;
 
     }
 
 
-    /* HERO COPY */
+    /* ==========================================================
+       HERO COPY
+       ========================================================== */
 
     .hero-copy-side {
 
       position: relative;
 
-      z-index: 5;
+      z-index: 10;
+
+      padding-right: 50px;
 
     }
 
@@ -318,22 +331,22 @@
 
       letter-spacing: 0.20em;
 
-      font-size: 0.66rem;
+      font-size: 0.68rem;
 
-      margin-bottom: 34px;
+      margin-bottom: 42px;
 
     }
 
 
     .hero h1 {
 
-      font-size: clamp(3.8rem, 6.8vw, 7.4rem);
+      font-size: clamp(4rem, 6.5vw, 7.1rem);
 
-      line-height: 0.91;
+      line-height: 0.99;
 
-      letter-spacing: -0.065em;
+      letter-spacing: -0.067em;
 
-      max-width: 800px;
+      max-width: 780px;
 
       font-weight: 400;
 
@@ -341,39 +354,35 @@
 
 
     .hero h1 .accent {
-
       color: var(--teal-light);
-
     }
 
 
     .hero h1 .quiet {
-
-      color: var(--muted);
-
+      color: #8c999a;
     }
 
 
     .hero-description {
 
-      margin-top: 48px;
+      margin-top: 58px;
 
-      max-width: 640px;
+      max-width: 810px;
 
-      font-size: clamp(1rem, 1.45vw, 1.25rem);
+      font-size: clamp(1rem, 1.35vw, 1.27rem);
 
       color: var(--text-soft);
 
       font-weight: 300;
 
-      line-height: 1.65;
+      line-height: 1.75;
 
     }
 
 
     .hero-meta {
 
-      margin-top: 40px;
+      margin-top: 38px;
 
       display: flex;
       flex-wrap: wrap;
@@ -404,31 +413,44 @@
 
 
     /* ==========================================================
-       HERO IMAGE
+       HERO PORTRAIT
        ========================================================== */
 
     .hero-image-side {
 
-      position: relative;
+      /*
+         Important:
+         overflow extends toward the right edge of viewport.
+      */
 
-      min-height: 670px;
+      position: absolute;
 
-      display: flex;
+      z-index: 2;
 
-      align-items: center;
-      justify-content: center;
+      top: 80px;
+      right: 0;
+      bottom: 0;
+
+      /*
+         Portrait area starts farther right than before.
+      */
+
+      left: 54%;
+
+      overflow: hidden;
 
     }
 
 
     .hero-image-frame {
 
-      position: relative;
+      position: absolute;
 
-      width: 100%;
-      height: 670px;
+      inset: 0;
 
       overflow: hidden;
+
+      background: var(--bg);
 
     }
 
@@ -445,21 +467,35 @@
       object-fit: cover;
 
       /*
-        Keeps you prominent while leaving
-        some visual space toward the screen.
+         THIS MOVES YOU RIGHT.
+
+         Higher first percentage = image content moves
+         visually toward the right side.
+
+         If you want even more:
+         change 67% to 72%.
       */
 
-      object-position: 42% center;
+      object-position: 67% center;
 
       filter:
-        brightness(0.83)
-        contrast(1.05)
-        saturate(0.90);
+        brightness(0.79)
+        contrast(1.04)
+        saturate(0.88);
 
     }
 
 
-    /* Fade image into site background */
+    /* ==========================================================
+       PRIMARY LEFT → IMAGE TRANSITION
+
+       This is deliberately VERY wide.
+
+       Instead of ending the gradient before the person,
+       it continues across hair, shoulder and blazer.
+
+       That makes the photograph feel embedded in the site.
+       ========================================================== */
 
     .hero-image-frame::before {
 
@@ -467,58 +503,163 @@
 
       position: absolute;
 
+      z-index: 5;
+
       inset: 0;
 
-      z-index: 2;
+      pointer-events: none;
 
       background:
 
+        /*
+           MAIN TEAL FADE
+
+           The solid background reaches into the photograph.
+           The fade only becomes transparent around the middle.
+        */
+
         linear-gradient(
           90deg,
-          var(--bg) 0%,
-          rgba(7, 27, 29, 0.58) 9%,
-          rgba(7, 27, 29, 0.06) 32%,
-          rgba(7, 27, 29, 0.00) 70%
+
+          #061b1d 0%,
+
+          #061b1d 5%,
+
+          rgba(6, 27, 29, 0.995) 10%,
+
+          rgba(6, 27, 29, 0.97) 15%,
+
+          rgba(6, 27, 29, 0.91) 21%,
+
+          rgba(6, 27, 29, 0.80) 27%,
+
+          rgba(6, 27, 29, 0.65) 33%,
+
+          rgba(6, 27, 29, 0.47) 39%,
+
+          rgba(6, 27, 29, 0.30) 45%,
+
+          rgba(6, 27, 29, 0.17) 51%,
+
+          rgba(6, 27, 29, 0.08) 58%,
+
+          rgba(6, 27, 29, 0.025) 66%,
+
+          transparent 75%
+
         ),
+
+        /*
+           BOTTOM FADE
+        */
 
         linear-gradient(
           0deg,
-          var(--bg) 0%,
-          rgba(7, 27, 29, 0.12) 14%,
-          transparent 38%
+
+          rgba(6, 27, 29, 0.95) 0%,
+
+          rgba(6, 27, 29, 0.62) 5%,
+
+          rgba(6, 27, 29, 0.25) 12%,
+
+          rgba(6, 27, 29, 0.06) 22%,
+
+          transparent 35%
+
         ),
+
+        /*
+           TOP FADE
+        */
 
         linear-gradient(
           180deg,
-          rgba(7, 27, 29, 0.22) 0%,
-          transparent 22%
-        );
 
-      pointer-events: none;
+          rgba(6, 27, 29, 0.45) 0%,
+
+          rgba(6, 27, 29, 0.17) 8%,
+
+          rgba(6, 27, 29, 0.03) 18%,
+
+          transparent 28%
+
+        );
 
     }
 
 
-    /* TEAL GLOW */
+    /* ==========================================================
+       SECONDARY ATMOSPHERIC TEAL OVERLAY
 
-    .hero-image-frame::after {
+       This softens the boundary even further and gives the
+       image the same teal atmosphere as the site.
+       ========================================================== */
 
-      content: "";
+    .portrait-atmosphere {
 
       position: absolute;
 
-      z-index: 3;
+      z-index: 6;
 
-      left: 8%;
-      bottom: 6%;
+      pointer-events: none;
 
-      width: 170px;
-      height: 1px;
+      top: 0;
+      bottom: 0;
 
-      background: var(--teal-light);
+      /*
+         Starts outside image and reaches across the body.
+      */
 
-      box-shadow:
-        0 0 22px rgba(66, 181, 195, 0.6);
+      left: -16%;
+      width: 66%;
+
+      background:
+
+        radial-gradient(
+          ellipse at 20% 52%,
+
+          rgba(7, 74, 79, 0.55) 0%,
+
+          rgba(7, 62, 67, 0.40) 24%,
+
+          rgba(6, 45, 49, 0.24) 45%,
+
+          rgba(6, 27, 29, 0.08) 68%,
+
+          transparent 82%
+
+        );
+
+      filter: blur(18px);
+
+    }
+
+
+    /*
+       A subtle dark vignette on the far right keeps
+       the whole composition cinematic.
+    */
+
+    .portrait-vignette {
+
+      position: absolute;
+
+      z-index: 6;
+
+      pointer-events: none;
+
+      inset: 0;
+
+      background:
+
+        linear-gradient(
+          270deg,
+
+          rgba(2, 13, 15, 0.25) 0%,
+
+          transparent 19%
+
+        );
 
     }
 
@@ -527,10 +668,10 @@
 
       position: absolute;
 
-      z-index: 5;
+      z-index: 8;
 
-      right: 8px;
-      bottom: 17px;
+      right: 20px;
+      bottom: 30px;
 
       color: rgba(229, 232, 232, 0.58);
 
@@ -713,7 +854,6 @@
     .capability:hover {
 
       background:
-
         linear-gradient(
           90deg,
           rgba(7,155,178,0.035),
@@ -759,9 +899,7 @@
        ========================================================== */
 
     #transformation {
-
       background: var(--bg-soft);
-
     }
 
 
@@ -781,9 +919,7 @@
 
 
     .transformation-row:last-child {
-
       border-bottom: 1px solid var(--line);
-
     }
 
 
@@ -878,9 +1014,7 @@
 
 
     .principle:last-child {
-
       border-bottom: 1px solid var(--line);
-
     }
 
 
@@ -912,13 +1046,11 @@
 
 
     /* ==========================================================
-       PERSPECTIVES / AUTHORING
+       PERSPECTIVES
        ========================================================== */
 
     #perspectives {
-
       background: var(--bg-deep);
-
     }
 
 
@@ -1106,9 +1238,7 @@
 
 
     .speaking-topic:last-child {
-
       border-bottom: 1px solid var(--line);
-
     }
 
 
@@ -1117,9 +1247,7 @@
        ========================================================== */
 
     #about {
-
       background: var(--bg-soft);
-
     }
 
 
@@ -1157,16 +1285,12 @@
 
 
     .about-copy p {
-
       margin-bottom: 26px;
-
     }
 
 
     .career {
-
       margin-top: 55px;
-
     }
 
 
@@ -1251,9 +1375,7 @@
 
 
     .contact h2 span {
-
       color: var(--teal-light);
-
     }
 
 
@@ -1324,7 +1446,7 @@
 
 
     /* ==========================================================
-       REVEAL ANIMATION
+       REVEAL
        ========================================================== */
 
     .reveal {
@@ -1353,27 +1475,23 @@
        RESPONSIVE
        ========================================================== */
 
-    @media (max-width: 1050px) {
-
-      .hero-inner {
-
-        grid-template-columns: 1fr 0.82fr;
-
-      }
-
+    @media (max-width: 1100px) {
 
       .hero h1 {
 
-        font-size: clamp(3.6rem, 7vw, 6rem);
+        font-size: clamp(3.7rem, 7vw, 6rem);
 
       }
 
+      .hero-image-side {
 
-      .hero-image-side,
-      .hero-image-frame {
+        left: 51%;
 
-        min-height: 590px;
-        height: 590px;
+      }
+
+      .hero-image {
+
+        object-position: 62% center;
 
       }
 
@@ -1384,16 +1502,12 @@
 
 
       .nav-links a:not(.connect) {
-
         display: none;
-
       }
 
 
       .brand-name {
-
         display: none;
-
       }
 
 
@@ -1401,54 +1515,56 @@
 
         min-height: auto;
 
-        padding-top: 135px;
-
-        padding-bottom: 0;
+        padding-top: 125px;
 
       }
 
 
       .hero-inner {
 
-        grid-template-columns: 1fr;
+        display: block;
 
-        gap: 65px;
+        min-height: auto;
 
       }
 
 
       .hero-copy-side {
 
-        padding-bottom: 0;
+        padding-right: 0;
+        padding-bottom: 70px;
 
       }
 
 
       .hero-image-side {
 
-        min-height: 570px;
+        position: relative;
+
+        top: auto;
+        right: auto;
+        bottom: auto;
+        left: auto;
 
         width: 100vw;
+        height: 620px;
 
         margin-left: calc(-50vw + 50%);
 
       }
 
 
-      .hero-image-frame {
-
-        width: 100%;
-        height: 570px;
-
-      }
-
-
       .hero-image {
 
-        object-position: center center;
+        object-position: 58% center;
 
       }
 
+
+      /*
+         On mobile the fade changes from horizontal
+         to primarily vertical.
+      */
 
       .hero-image-frame::before {
 
@@ -1456,25 +1572,47 @@
 
           linear-gradient(
             180deg,
+
             var(--bg) 0%,
-            rgba(7,27,29,0.12) 16%,
-            transparent 35%
+
+            rgba(6,27,29,0.93) 5%,
+
+            rgba(6,27,29,0.65) 13%,
+
+            rgba(6,27,29,0.28) 23%,
+
+            rgba(6,27,29,0.08) 34%,
+
+            transparent 45%
+
           ),
 
           linear-gradient(
             0deg,
+
             var(--bg) 0%,
-            rgba(7,27,29,0.08) 18%,
-            transparent 36%
+
+            rgba(6,27,29,0.55) 8%,
+
+            rgba(6,27,29,0.12) 20%,
+
+            transparent 33%
+
           );
 
       }
 
 
+      .portrait-atmosphere {
+
+        left: -20%;
+        width: 70%;
+
+      }
+
+
       section {
-
         padding: 95px 0;
-
       }
 
 
@@ -1498,9 +1636,7 @@
 
 
       .capability:nth-child(even) {
-
         padding-left: 0;
-
       }
 
 
@@ -1521,9 +1657,7 @@
 
 
       .principle p {
-
         grid-column: 2;
-
       }
 
 
@@ -1540,40 +1674,23 @@
     @media (max-width: 600px) {
 
 
-      .hero {
-
-        padding-top: 125px;
-
-      }
-
-
       .hero h1 {
-
-        font-size: 3.35rem;
-
+        font-size: 3.3rem;
       }
 
 
       .hero-description {
-
         margin-top: 38px;
-
       }
 
 
-      .hero-image-side,
-      .hero-image-frame {
-
-        min-height: 470px;
-        height: 470px;
-
+      .hero-image-side {
+        height: 500px;
       }
 
 
       .hero-image {
-
-        object-position: 45% center;
-
+        object-position: 58% center;
       }
 
 
@@ -1667,14 +1784,45 @@
 
   <header class="hero" id="top">
 
+
+    <!-- PORTRAIT BEHIND CONTENT -->
+
+    <div class="hero-image-side">
+
+      <div class="hero-image-frame">
+
+        <img
+          src="LDTonSTAGE.png"
+          alt="Laila Dalla Torre speaking"
+          class="hero-image"
+        >
+
+        <div class="portrait-atmosphere"></div>
+
+        <div class="portrait-vignette"></div>
+
+
+        <div class="image-caption">
+
+          Leadership · Transformation · Ideas
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- HERO CONTENT -->
+
     <div class="container">
 
       <div class="hero-inner">
 
 
-        <!-- LEFT / MESSAGE -->
-
         <div class="hero-copy-side">
+
 
           <div class="eyebrow">
 
@@ -1685,12 +1833,17 @@
 
           <h1>
 
-            Turning complexity<br>
+            Turning<br>
+
+            complexity<br>
 
             into <span class="accent">direction.</span><br>
 
             <span class="quiet">
-              Direction into execution.
+
+              Direction into<br>
+              execution.
+
             </span>
 
           </h1>
@@ -1708,25 +1861,15 @@
 
           <div class="hero-meta">
 
-            <span>
-              Global Leadership
-            </span>
+            <span>Global Leadership</span>
 
-            <span>
-              Transformation
-            </span>
+            <span>Transformation</span>
 
-            <span>
-              Procurement
-            </span>
+            <span>Procurement</span>
 
-            <span>
-              Operating Models
-            </span>
+            <span>Operating Models</span>
 
-            <span>
-              Digital & AI
-            </span>
+            <span>Digital & AI</span>
 
           </div>
 
@@ -1749,27 +1892,6 @@
 
           </div>
 
-        </div>
-
-
-
-        <!-- RIGHT / IMAGE -->
-
-        <div class="hero-image-side">
-
-          <div class="hero-image-frame">
-
-            <img
-              src="LDTonSTAGE.png"
-              alt="Laila Dalla Torre speaking on stage"
-              class="hero-image"
-            >
-
-            <div class="image-caption">
-              Leadership · Transformation · Ideas
-            </div>
-
-          </div>
 
         </div>
 
@@ -2180,13 +2302,9 @@
 
         <div class="principle">
 
-          <div class="principle-number">
-            01
-          </div>
+          <div class="principle-number">01</div>
 
-          <h3>
-            Understand the system
-          </h3>
+          <h3>Understand the system</h3>
 
           <p>
 
@@ -2202,13 +2320,9 @@
 
         <div class="principle">
 
-          <div class="principle-number">
-            02
-          </div>
+          <div class="principle-number">02</div>
 
-          <h3>
-            Create clarity
-          </h3>
+          <h3>Create clarity</h3>
 
           <p>
 
@@ -2223,13 +2337,9 @@
 
         <div class="principle">
 
-          <div class="principle-number">
-            03
-          </div>
+          <div class="principle-number">03</div>
 
-          <h3>
-            Build the structure
-          </h3>
+          <h3>Build the structure</h3>
 
           <p>
 
@@ -2245,13 +2355,9 @@
 
         <div class="principle">
 
-          <div class="principle-number">
-            04
-          </div>
+          <div class="principle-number">04</div>
 
-          <h3>
-            Mobilize people
-          </h3>
+          <h3>Mobilize people</h3>
 
           <p>
 
@@ -2267,13 +2373,9 @@
 
         <div class="principle">
 
-          <div class="principle-number">
-            05
-          </div>
+          <div class="principle-number">05</div>
 
-          <h3>
-            Measure what changed
-          </h3>
+          <h3>Measure what changed</h3>
 
           <p>
 
@@ -2289,13 +2391,9 @@
 
         <div class="principle">
 
-          <div class="principle-number">
-            06
-          </div>
+          <div class="principle-number">06</div>
 
-          <h3>
-            Scale what works
-          </h3>
+          <h3>Scale what works</h3>
 
           <p>
 
@@ -2317,7 +2415,7 @@
 
 
   <!-- ========================================================
-       PERSPECTIVES / AUTHORING
+       PERSPECTIVES
        ======================================================== -->
 
   <section id="perspectives">
@@ -2720,10 +2818,7 @@
        CONTACT
        ======================================================== -->
 
-  <section
-    class="contact"
-    id="contact"
-  >
+  <section class="contact" id="contact">
 
     <div class="container reveal">
 
@@ -2757,7 +2852,7 @@
         </a>
 
 
-        <!-- REPLACE WITH YOUR EMAIL ADDRESS -->
+        <!-- REPLACE WITH YOUR EMAIL -->
 
         <a
           href="mailto:YOUR-EMAIL-HERE"
@@ -2820,7 +2915,7 @@
   <script>
 
 
-    /* AUTOMATIC YEAR */
+    /* CURRENT YEAR */
 
     document.getElementById("year").textContent =
       new Date().getFullYear();
