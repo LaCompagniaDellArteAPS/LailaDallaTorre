@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Laila Dalla Torre | Leadership · Transformation · AI</title>
+  <title>Laila Dalla Torre | Leadership · Transformation · Intelligence</title>
 
   <meta
     name="description"
-    content="Laila Dalla Torre — Global transformation and procurement leader working at the intersection of strategy, operating models, digital, data and AI."
+    content="Laila Dalla Torre — global leader working at the intersection of strategy, transformation, procurement, technology, data and AI."
   >
 
   <link rel="icon" type="image/png" href="LDTlogo.png">
@@ -17,11 +17,14 @@
 
   <style>
 
+    /* =========================================================
+       DESIGN SYSTEM
+       ========================================================= */
+
     :root {
       --bg: #061b1d;
       --bg-deep: #031416;
       --bg-soft: #0a2528;
-
       --card: #0d292c;
       --card-hover: #103236;
 
@@ -31,18 +34,22 @@
 
       --teal: #079bb2;
       --teal-light: #43b7c5;
-      --teal-deep: #07383d;
+      --teal-dark: #07383d;
 
-      --line: rgba(220, 230, 230, 0.12);
-      --line-strong: rgba(220, 230, 230, 0.24);
+      --light: #e1e4e3;
+      --light-text: #071d1f;
+      --light-muted: #405153;
+
+      --line: rgba(220,230,230,0.12);
+      --line-strong: rgba(220,230,230,0.24);
 
       --max-width: 1660px;
     }
 
 
-    /* ==========================================================
+    /* =========================================================
        RESET
-       ========================================================== */
+       ========================================================= */
 
     * {
       box-sizing: border-box;
@@ -55,6 +62,7 @@
     }
 
     body {
+      margin: 0;
       background: var(--bg);
       color: var(--text);
 
@@ -88,13 +96,12 @@
     }
 
 
-    /* ==========================================================
+    /* =========================================================
        NAVIGATION
-       ========================================================== */
+       ========================================================= */
 
     nav {
       position: fixed;
-
       top: 0;
       left: 0;
 
@@ -102,7 +109,7 @@
 
       z-index: 1000;
 
-      background: rgba(3, 20, 22, 0.91);
+      background: rgba(3,20,22,0.92);
 
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
@@ -111,7 +118,7 @@
     }
 
     .nav-inner {
-      min-height: 92px;
+      min-height: 86px;
 
       display: flex;
       align-items: center;
@@ -125,6 +132,8 @@
       align-items: center;
 
       gap: 16px;
+
+      flex-shrink: 0;
     }
 
     .brand-logo {
@@ -142,17 +151,19 @@
       text-transform: uppercase;
 
       color: var(--text-soft);
+
+      white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
 
-      gap: 37px;
+      gap: clamp(20px, 2.4vw, 38px);
 
-      font-size: 0.78rem;
+      font-size: 0.76rem;
 
-      letter-spacing: 0.09em;
+      letter-spacing: 0.08em;
 
       text-transform: uppercase;
     }
@@ -172,7 +183,7 @@
 
       border: 1px solid var(--line-strong);
 
-      padding: 13px 22px;
+      padding: 12px 20px;
 
       transition:
         background 0.25s ease,
@@ -187,9 +198,9 @@
     }
 
 
-    /* ==========================================================
+    /* =========================================================
        HERO
-       ========================================================== */
+       ========================================================= */
 
     .hero {
       min-height: 100vh;
@@ -201,68 +212,261 @@
 
       overflow: hidden;
 
-      padding: 92px 0 0;
+      padding-top: 86px;
+
+      background: var(--bg);
+    }
+
+
+    /*
+       PHOTO CANVAS
+
+       The important difference:
+       the photograph starts at 18% of the page.
+
+       It therefore exists UNDER the left side rather than
+       beginning where the visible portrait begins.
+    */
+
+    .hero-image-side {
+      position: absolute;
+
+      z-index: 1;
+
+      top: 86px;
+      right: 0;
+      bottom: 0;
+
+      left: 18%;
+
+      overflow: hidden;
+    }
+
+    .hero-image-frame {
+      position: absolute;
+      inset: 0;
+
+      overflow: hidden;
+    }
+
+    .hero-image {
+      position: absolute;
+      inset: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      object-position: 72% center;
+
+      filter:
+        brightness(0.79)
+        contrast(1.04)
+        saturate(0.88);
+    }
+
+
+    /*
+       CONTINUOUS HERO GRADIENT
+
+       This gradient crosses the entire viewport rather
+       than beginning inside the photograph.
+
+       This removes the vertical break.
+    */
+
+    .hero-gradient {
+      position: absolute;
+
+      z-index: 4;
+
+      top: 86px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      pointer-events: none;
 
       background:
-        radial-gradient(
-          circle at 78% 36%,
-          rgba(7, 155, 178, 0.10),
-          transparent 35%
-        ),
+
         linear-gradient(
-          135deg,
-          var(--bg-deep),
-          var(--bg) 64%
+          90deg,
+
+          #061b1d 0%,
+
+          rgba(6,27,29,1) 20%,
+
+          rgba(6,27,29,0.995) 29%,
+
+          rgba(6,27,29,0.97) 37%,
+
+          rgba(6,27,29,0.91) 43%,
+
+          rgba(6,27,29,0.82) 48%,
+
+          rgba(6,27,29,0.70) 53%,
+
+          rgba(6,27,29,0.56) 58%,
+
+          rgba(6,27,29,0.43) 63%,
+
+          rgba(6,27,29,0.31) 68%,
+
+          rgba(6,27,29,0.21) 73%,
+
+          rgba(6,27,29,0.13) 78%,
+
+          rgba(6,27,29,0.07) 83%,
+
+          rgba(6,27,29,0.025) 89%,
+
+          transparent 96%
+        ),
+
+        linear-gradient(
+          0deg,
+
+          rgba(6,27,29,0.70) 0%,
+
+          rgba(6,27,29,0.34) 8%,
+
+          rgba(6,27,29,0.10) 17%,
+
+          transparent 29%
         );
     }
 
-    .hero::before {
-      content: "";
 
+    /*
+       VERY SOFT TEAL ATMOSPHERE
+    */
+
+    .portrait-atmosphere {
       position: absolute;
 
-      width: 620px;
-      height: 620px;
+      z-index: 3;
+
+      pointer-events: none;
+
+      top: -10%;
+      bottom: -10%;
+
+      left: 25%;
+
+      width: 50%;
+
+      background:
+
+        radial-gradient(
+          ellipse at center,
+
+          rgba(7,80,86,0.16) 0%,
+
+          rgba(7,64,69,0.09) 38%,
+
+          rgba(6,45,49,0.035) 62%,
+
+          transparent 82%
+        );
+
+      filter: blur(70px);
+    }
+
+
+    .portrait-vignette {
+      position: absolute;
+
+      z-index: 3;
+
+      pointer-events: none;
+
+      inset: 0;
+
+      background:
+
+        linear-gradient(
+          270deg,
+
+          rgba(2,13,15,0.15) 0%,
+
+          rgba(2,13,15,0.045) 10%,
+
+          transparent 23%
+        );
+    }
+
+
+    .image-caption {
+      position: absolute;
+
+      z-index: 10;
+
+      right: 19px;
+      bottom: 29px;
+
+      color: rgba(229,232,232,0.55);
+
+      font-size: 0.56rem;
+
+      letter-spacing: 0.17em;
+
+      text-transform: uppercase;
+
+      writing-mode: vertical-rl;
+
+      transform: rotate(180deg);
+    }
+
+
+    /*
+       subtle geometric signature
+    */
+
+    .hero-shape {
+      position: absolute;
+
+      z-index: 5;
+
+      width: 550px;
+      height: 550px;
 
       right: -290px;
-      top: 50px;
+      top: 130px;
 
-      border: 1px solid rgba(7, 155, 178, 0.10);
+      border: 1px solid rgba(67,183,197,0.08);
 
       transform: rotate(45deg);
 
       pointer-events: none;
-
-      z-index: 1;
-    }
-
-    .hero-inner {
-      position: relative;
-
-      z-index: 10;
-
-      width: 100%;
-
-      min-height: calc(100vh - 92px);
-
-      display: grid;
-
-      grid-template-columns: 53% 47%;
-
-      align-items: center;
     }
 
 
-    /* ==========================================================
-       HERO COPY
-       ========================================================== */
+    /* =========================================================
+       HERO CONTENT
+       ========================================================= */
 
-    .hero-copy-side {
+    .hero-content {
       position: relative;
 
       z-index: 20;
 
-      padding-right: 50px;
+      width: 100%;
+
+      min-height: calc(100vh - 86px);
+
+      display: flex;
+      align-items: center;
+
+      padding: 48px 0 55px;
+    }
+
+    .hero-copy {
+      width: 54%;
+
+      position: relative;
+
+      z-index: 21;
     }
 
     .eyebrow {
@@ -270,21 +474,21 @@
 
       text-transform: uppercase;
 
-      letter-spacing: 0.20em;
+      letter-spacing: 0.19em;
 
-      font-size: 0.68rem;
+      font-size: 0.67rem;
 
-      margin-bottom: 42px;
+      margin-bottom: 40px;
     }
 
     .hero h1 {
-      font-size: clamp(4rem, 6.5vw, 7.1rem);
+      font-size: clamp(4rem, 6.3vw, 7rem);
 
       line-height: 0.99;
 
       letter-spacing: -0.067em;
 
-      max-width: 780px;
+      max-width: 790px;
 
       font-weight: 400;
     }
@@ -298,11 +502,11 @@
     }
 
     .hero-description {
-      margin-top: 58px;
+      margin-top: 56px;
 
-      max-width: 810px;
+      max-width: 800px;
 
-      font-size: clamp(1rem, 1.35vw, 1.27rem);
+      font-size: clamp(1rem,1.35vw,1.25rem);
 
       color: var(--text-soft);
 
@@ -312,14 +516,14 @@
     }
 
     .hero-meta {
-      margin-top: 38px;
+      margin-top: 35px;
 
       display: flex;
       flex-wrap: wrap;
 
       gap: 10px 24px;
 
-      font-size: 0.65rem;
+      font-size: 0.64rem;
 
       text-transform: uppercase;
 
@@ -329,7 +533,7 @@
     }
 
     .hero-actions {
-      margin-top: 42px;
+      margin-top: 39px;
 
       display: flex;
       flex-wrap: wrap;
@@ -338,248 +542,9 @@
     }
 
 
-    /* ==========================================================
-       HERO PORTRAIT
-       ========================================================== */
-
-    .hero-image-side {
-      position: absolute;
-
-      z-index: 2;
-
-      top: 92px;
-      right: 0;
-      bottom: 0;
-
-      /*
-         IMPORTANT:
-         The photo canvas begins earlier than the visible
-         portrait. This gives us enough room for a long,
-         seamless transition.
-      */
-
-      left: 48%;
-
-      overflow: hidden;
-    }
-
-    .hero-image-frame {
-      position: absolute;
-
-      inset: 0;
-
-      overflow: hidden;
-
-      background: var(--bg);
-    }
-
-    .hero-image {
-      position: absolute;
-
-      inset: 0;
-
-      width: 100%;
-      height: 100%;
-
-      object-fit: cover;
-
-      /*
-         Keeps Laila visually toward the right even though
-         the photograph itself begins much farther left.
-      */
-
-      object-position: 67% center;
-
-      filter:
-        brightness(0.79)
-        contrast(1.04)
-        saturate(0.88);
-    }
-
-
-    /* ==========================================================
-       VERY SMOOTH PHOTO TRANSITION
-       ========================================================== */
-
-    .hero-image-frame::before {
-      content: "";
-
-      position: absolute;
-
-      z-index: 5;
-
-      inset: 0;
-
-      pointer-events: none;
-
-      background:
-
-        /*
-           MAIN LEFT → RIGHT TRANSITION
-
-           The important point here is that there is no
-           specific vertical point where the photograph
-           suddenly becomes visible.
-
-           The transition happens progressively across
-           almost the entire left two thirds of the photo.
-        */
-
-        linear-gradient(
-          90deg,
-
-          #061b1d 0%,
-
-          rgba(6, 27, 29, 0.98) 4%,
-
-          rgba(6, 27, 29, 0.93) 9%,
-
-          rgba(6, 27, 29, 0.84) 15%,
-
-          rgba(6, 27, 29, 0.72) 22%,
-
-          rgba(6, 27, 29, 0.58) 29%,
-
-          rgba(6, 27, 29, 0.44) 36%,
-
-          rgba(6, 27, 29, 0.32) 43%,
-
-          rgba(6, 27, 29, 0.22) 50%,
-
-          rgba(6, 27, 29, 0.14) 58%,
-
-          rgba(6, 27, 29, 0.08) 66%,
-
-          rgba(6, 27, 29, 0.035) 75%,
-
-          rgba(6, 27, 29, 0.01) 84%,
-
-          transparent 94%
-        ),
-
-        /*
-           BOTTOM TRANSITION
-        */
-
-        linear-gradient(
-          0deg,
-
-          rgba(6, 27, 29, 0.82) 0%,
-
-          rgba(6, 27, 29, 0.50) 6%,
-
-          rgba(6, 27, 29, 0.22) 13%,
-
-          rgba(6, 27, 29, 0.07) 21%,
-
-          transparent 34%
-        ),
-
-        /*
-           TOP TRANSITION
-        */
-
-        linear-gradient(
-          180deg,
-
-          rgba(6, 27, 29, 0.28) 0%,
-
-          rgba(6, 27, 29, 0.12) 8%,
-
-          rgba(6, 27, 29, 0.035) 17%,
-
-          transparent 28%
-        );
-    }
-
-
-    /* ==========================================================
-       SOFT TEAL ATMOSPHERE
-       ========================================================== */
-
-    .portrait-atmosphere {
-      position: absolute;
-
-      z-index: 6;
-
-      pointer-events: none;
-
-      top: -10%;
-      bottom: -10%;
-
-      left: -24%;
-
-      width: 72%;
-
-      background:
-        radial-gradient(
-          ellipse at 22% 50%,
-
-          rgba(7, 71, 76, 0.24) 0%,
-
-          rgba(7, 61, 66, 0.18) 25%,
-
-          rgba(6, 48, 52, 0.11) 45%,
-
-          rgba(6, 35, 38, 0.05) 62%,
-
-          transparent 80%
-        );
-
-      filter: blur(45px);
-    }
-
-
-    /* ==========================================================
-       RIGHT VIGNETTE
-       ========================================================== */
-
-    .portrait-vignette {
-      position: absolute;
-
-      z-index: 6;
-
-      pointer-events: none;
-
-      inset: 0;
-
-      background:
-        linear-gradient(
-          270deg,
-
-          rgba(2, 13, 15, 0.16) 0%,
-
-          rgba(2, 13, 15, 0.06) 10%,
-
-          transparent 24%
-        );
-    }
-
-    .image-caption {
-      position: absolute;
-
-      z-index: 8;
-
-      right: 20px;
-      bottom: 30px;
-
-      color: rgba(229, 232, 232, 0.58);
-
-      font-size: 0.58rem;
-
-      letter-spacing: 0.16em;
-
-      text-transform: uppercase;
-
-      writing-mode: vertical-rl;
-
-      transform: rotate(180deg);
-    }
-
-
-    /* ==========================================================
+    /* =========================================================
        BUTTONS
-       ========================================================== */
+       ========================================================= */
 
     .button {
       display: inline-flex;
@@ -587,13 +552,13 @@
       align-items: center;
       justify-content: center;
 
-      min-height: 52px;
+      min-height: 51px;
 
       padding: 0 25px;
 
       border: 1px solid var(--line-strong);
 
-      font-size: 0.68rem;
+      font-size: 0.67rem;
 
       text-transform: uppercase;
 
@@ -629,9 +594,9 @@
     }
 
 
-    /* ==========================================================
+    /* =========================================================
        GENERAL SECTIONS
-       ========================================================== */
+       ========================================================= */
 
     section {
       padding: 135px 0;
@@ -652,7 +617,7 @@
     }
 
     .section-title {
-      font-size: clamp(2.8rem, 6vw, 5.6rem);
+      font-size: clamp(2.8rem,6vw,5.6rem);
 
       line-height: 0.96;
 
@@ -673,15 +638,19 @@
       margin-bottom: 78px;
     }
 
+    .accent-title {
+      color: var(--teal-light);
+    }
 
-    /* ==========================================================
+
+    /* =========================================================
        LEADERSHIP
-       ========================================================== */
+       ========================================================= */
 
     .capabilities {
       display: grid;
 
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2,1fr);
 
       border-top: 1px solid var(--line);
     }
@@ -738,9 +707,9 @@
     }
 
 
-    /* ==========================================================
+    /* =========================================================
        TRANSFORMATION
-       ========================================================== */
+       ========================================================= */
 
     #transformation {
       background: var(--bg-soft);
@@ -775,7 +744,7 @@
     }
 
     .transformation-row h3 {
-      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-size: clamp(2rem,4vw,3.5rem);
 
       line-height: 1.02;
 
@@ -817,9 +786,9 @@
     }
 
 
-    /* ==========================================================
+    /* =========================================================
        MANAGEMENT PHILOSOPHY
-       ========================================================== */
+       ========================================================= */
 
     .principle {
       display: grid;
@@ -858,24 +827,56 @@
     }
 
 
-    /* ==========================================================
-       PERSPECTIVES
-       ========================================================== */
+    /* =========================================================
+       AUTHORING
+       ========================================================= */
 
-    #perspectives {
+    #authoring {
       background: var(--bg-deep);
+    }
+
+    .authoring-header {
+      display: grid;
+
+      grid-template-columns: 1fr 0.85fr;
+
+      gap: 100px;
+
+      align-items: end;
+
+      margin-bottom: 85px;
+    }
+
+    .authoring-header .section-title {
+      margin-bottom: 0;
+    }
+
+    .authoring-intro {
+      max-width: 570px;
+
+      padding-bottom: 8px;
+
+      color: var(--text-soft);
+
+      font-size: 1.08rem;
+
+      line-height: 1.75;
+    }
+
+    .authoring-intro p {
+      margin-bottom: 20px;
     }
 
     .articles {
       display: grid;
 
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3,1fr);
 
       gap: 17px;
     }
 
     .article-card {
-      min-height: 370px;
+      min-height: 360px;
 
       padding: 34px;
 
@@ -950,7 +951,7 @@
 
       letter-spacing: -0.025em;
 
-      max-width: 310px;
+      max-width: 315px;
     }
 
     .article-bottom {
@@ -960,9 +961,9 @@
     }
 
 
-    /* ==========================================================
+    /* =========================================================
        SPEAKING
-       ========================================================== */
+       ========================================================= */
 
     #speaking {
       position: relative;
@@ -979,7 +980,7 @@
     }
 
     .speaking-statement {
-      font-size: clamp(2rem, 4vw, 3.8rem);
+      font-size: clamp(2rem,4vw,3.8rem);
 
       line-height: 1.06;
 
@@ -1013,9 +1014,9 @@
     }
 
 
-    /* ==========================================================
+    /* =========================================================
        ABOUT
-       ========================================================== */
+       ========================================================= */
 
     #about {
       background: var(--bg-soft);
@@ -1030,7 +1031,7 @@
     }
 
     .about-big {
-      font-size: clamp(2.3rem, 4vw, 4rem);
+      font-size: clamp(2.3rem,4vw,4rem);
 
       line-height: 1.05;
 
@@ -1084,9 +1085,108 @@
     }
 
 
-    /* ==========================================================
+    /* =========================================================
+       CREATIVE / MURALS
+       ========================================================= */
+
+    #creative {
+      background: var(--light);
+
+      color: var(--light-text);
+
+      position: relative;
+
+      overflow: hidden;
+    }
+
+    #creative::after {
+      content: "";
+
+      position: absolute;
+
+      width: 480px;
+      height: 480px;
+
+      right: -230px;
+      top: 50%;
+
+      border: 1px solid rgba(7,80,86,0.16);
+
+      transform:
+        translateY(-50%)
+        rotate(45deg);
+    }
+
+    #creative .section-number {
+      color: #087f8e;
+    }
+
+    .creative-grid {
+      display: grid;
+
+      grid-template-columns: 1fr 0.8fr;
+
+      gap: 120px;
+
+      position: relative;
+
+      z-index: 2;
+    }
+
+    .creative-copy {
+      max-width: 570px;
+
+      font-size: 1.06rem;
+
+      line-height: 1.8;
+
+      color: var(--light-muted);
+    }
+
+    .creative-copy p {
+      margin-bottom: 24px;
+    }
+
+    .creative-lead {
+      font-size: 2rem;
+
+      color: var(--light-text) !important;
+
+      letter-spacing: -0.03em;
+    }
+
+    .creative-link {
+      margin-top: 48px;
+
+      padding: 22px 0;
+
+      border-top: 1px solid rgba(7,29,31,0.18);
+      border-bottom: 1px solid rgba(7,29,31,0.18);
+
+      display: flex;
+
+      justify-content: space-between;
+      align-items: center;
+
+      text-transform: uppercase;
+
+      letter-spacing: 0.11em;
+
+      font-size: 0.72rem;
+
+      color: var(--light-text);
+    }
+
+    .creative-link span {
+      color: #087f8e;
+
+      font-size: 1.4rem;
+    }
+
+
+    /* =========================================================
        CONTACT
-       ========================================================== */
+       ========================================================= */
 
     .contact {
       min-height: 72vh;
@@ -1096,15 +1196,18 @@
       align-items: center;
 
       background:
+
         radial-gradient(
           circle at 75% 55%,
           rgba(7,155,178,0.12),
           transparent 30%
-        );
+        ),
+
+        var(--bg);
     }
 
     .contact h2 {
-      font-size: clamp(3.7rem, 8vw, 8rem);
+      font-size: clamp(3.7rem,8vw,8rem);
 
       line-height: 0.9;
 
@@ -1130,9 +1233,9 @@
     }
 
 
-    /* ==========================================================
+    /* =========================================================
        FOOTER
-       ========================================================== */
+       ========================================================= */
 
     footer {
       border-top: 1px solid var(--line);
@@ -1150,7 +1253,6 @@
       display: flex;
 
       justify-content: space-between;
-
       align-items: center;
 
       gap: 20px;
@@ -1171,10 +1273,28 @@
       object-fit: contain;
     }
 
+    .footer-links {
+      display: flex;
 
-    /* ==========================================================
+      align-items: center;
+
+      gap: 28px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+
+      transition: color 0.25s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--teal-light);
+    }
+
+
+    /* =========================================================
        REVEAL
-       ========================================================== */
+       ========================================================= */
 
     .reveal {
       opacity: 0;
@@ -1193,73 +1313,64 @@
     }
 
 
-    /* ==========================================================
+    /* =========================================================
        RESPONSIVE
-       ========================================================== */
+       ========================================================= */
 
-    @media (max-width: 1100px) {
+    @media (max-width: 1150px) {
 
-      .hero h1 {
-        font-size: clamp(3.7rem, 7vw, 6rem);
+      .nav-links {
+        gap: 18px;
       }
 
-      .hero-image-side {
-        left: 47%;
-      }
-
-      .hero-image {
-        object-position: 65% center;
+      .hero-copy {
+        width: 58%;
       }
 
     }
 
 
-    @media (max-width: 900px) {
+    @media (max-width: 950px) {
 
       .nav-links a:not(.connect) {
         display: none;
       }
 
-      .brand-name {
-        display: none;
-      }
-
       .hero {
-        min-height: auto;
-
-        padding-top: 125px;
-      }
-
-      .hero-inner {
         display: block;
 
-        min-height: auto;
+        padding-top: 86px;
       }
 
-      .hero-copy-side {
-        padding-right: 0;
+      .hero-content {
+        min-height: auto;
+
+        padding-top: 80px;
         padding-bottom: 70px;
+      }
+
+      .hero-copy {
+        width: 100%;
       }
 
       .hero-image-side {
         position: relative;
 
         top: auto;
+        left: auto;
         right: auto;
         bottom: auto;
-        left: auto;
 
-        width: 100vw;
+        width: 100%;
         height: 620px;
-
-        margin-left: calc(-50vw + 50%);
       }
 
-      .hero-image {
-        object-position: 58% center;
-      }
+      .hero-gradient {
+        top: 86px;
+        bottom: auto;
 
-      .hero-image-frame::before {
+        height: calc(100% - 86px);
+
         background:
 
           linear-gradient(
@@ -1267,33 +1378,16 @@
 
             var(--bg) 0%,
 
-            rgba(6,27,29,0.93) 5%,
+            rgba(6,27,29,0.98) 30%,
 
-            rgba(6,27,29,0.65) 13%,
+            rgba(6,27,29,0.80) 42%,
 
-            rgba(6,27,29,0.28) 23%,
+            rgba(6,27,29,0.35) 54%,
 
-            rgba(6,27,29,0.08) 34%,
+            rgba(6,27,29,0.08) 64%,
 
-            transparent 45%
-          ),
-
-          linear-gradient(
-            0deg,
-
-            var(--bg) 0%,
-
-            rgba(6,27,29,0.55) 8%,
-
-            rgba(6,27,29,0.12) 20%,
-
-            transparent 33%
+            transparent 75%
           );
-      }
-
-      .portrait-atmosphere {
-        left: -20%;
-        width: 70%;
       }
 
       section {
@@ -1303,7 +1397,9 @@
       .capabilities,
       .articles,
       .speaking-grid,
-      .about-grid {
+      .about-grid,
+      .authoring-header,
+      .creative-grid {
         grid-template-columns: 1fr;
       }
 
@@ -1332,8 +1428,10 @@
       }
 
       .about-grid,
-      .speaking-grid {
-        gap: 55px;
+      .speaking-grid,
+      .authoring-header,
+      .creative-grid {
+        gap: 50px;
       }
 
     }
@@ -1341,8 +1439,21 @@
 
     @media (max-width: 600px) {
 
+      .brand-name {
+        font-size: 0.75rem;
+      }
+
+      .brand-logo {
+        width: 42px;
+        height: 42px;
+      }
+
+      .connect {
+        padding: 10px 13px;
+      }
+
       .hero h1 {
-        font-size: 3.3rem;
+        font-size: 3.25rem;
       }
 
       .hero-description {
@@ -1354,7 +1465,7 @@
       }
 
       .hero-image {
-        object-position: 58% center;
+        object-position: 61% center;
       }
 
       .career-item {
@@ -1369,6 +1480,14 @@
         align-items: flex-start;
       }
 
+      .footer-links {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 10px;
+      }
+
     }
 
   </style>
@@ -1379,7 +1498,9 @@
 <body>
 
 
-  <!-- NAVIGATION -->
+  <!-- ========================================================
+       NAVIGATION
+       ======================================================== -->
 
   <nav>
 
@@ -1406,13 +1527,15 @@
 
         <a href="#transformation">Transformation</a>
 
-        <a href="#perspectives">Perspectives</a>
+        <a href="#authoring">Authoring</a>
 
         <a href="#speaking">Speaking</a>
 
         <a href="#about">About</a>
 
-        <a href="#contact" class="connect">Connect</a>
+        <a href="#contact" class="connect">
+          Connect
+        </a>
 
       </div>
 
@@ -1422,10 +1545,14 @@
 
 
 
-  <!-- HERO -->
+  <!-- ========================================================
+       HERO
+       ======================================================== -->
 
   <header class="hero" id="top">
 
+
+    <!-- Full photographic layer -->
 
     <div class="hero-image-side">
 
@@ -1433,14 +1560,13 @@
 
         <img
           src="LDTonSTAGE.png"
-          alt="Laila Dalla Torre speaking"
+          alt="Laila Dalla Torre"
           class="hero-image"
         >
 
         <div class="portrait-atmosphere"></div>
 
         <div class="portrait-vignette"></div>
-
 
         <div class="image-caption">
           Leadership · Transformation · Ideas
@@ -1451,13 +1577,20 @@
     </div>
 
 
+    <!-- Continuous overlay across whole hero -->
+
+    <div class="hero-gradient"></div>
+
+    <div class="hero-shape"></div>
+
+
+    <!-- Content -->
 
     <div class="container">
 
-      <div class="hero-inner">
+      <div class="hero-content">
 
-
-        <div class="hero-copy-side">
+        <div class="hero-copy">
 
 
           <div class="eyebrow">
@@ -1512,15 +1645,14 @@
               Explore my work
             </a>
 
-            <a href="#perspectives" class="button">
-              Read perspectives
+            <a href="#authoring" class="button">
+              Read my thinking
             </a>
 
           </div>
 
 
         </div>
-
 
       </div>
 
@@ -1530,22 +1662,21 @@
 
 
 
-  <!-- LEADERSHIP -->
+  <!-- ========================================================
+       LEADERSHIP
+       ======================================================== -->
 
   <section id="leadership">
 
     <div class="container reveal">
 
-
       <div class="section-number">
         01 / Leadership
       </div>
 
-
       <h2 class="section-title">
         What I lead.
       </h2>
-
 
       <p class="section-intro">
 
@@ -1554,7 +1685,6 @@
         data and people.
 
       </p>
-
 
 
       <div class="capabilities">
@@ -1575,7 +1705,6 @@
         </div>
 
 
-
         <div class="capability">
 
           <div class="capability-number">02</div>
@@ -1584,12 +1713,11 @@
 
           <p>
             Leading complex global transformation across
-            functions, processes, technology and
-            organizational boundaries.
+            functions, processes, technology and organizational
+            boundaries.
           </p>
 
         </div>
-
 
 
         <div class="capability">
@@ -1599,13 +1727,12 @@
           <h3>Procurement Excellence</h3>
 
           <p>
-            Building scalable procurement capabilities
-            across operating models, processes, governance,
-            supplier management and performance.
+            Building scalable procurement capabilities across
+            operating models, processes, governance, supplier
+            management and performance.
           </p>
 
         </div>
-
 
 
         <div class="capability">
@@ -1615,13 +1742,12 @@
           <h3>Digital & AI</h3>
 
           <p>
-            Connecting business problems with data,
-            analytics, automation and artificial intelligence
-            to create practical and scalable value.
+            Connecting business problems with data, analytics,
+            automation and artificial intelligence to create
+            practical and scalable value.
           </p>
 
         </div>
-
 
 
         <div class="capability">
@@ -1631,13 +1757,12 @@
           <h3>Operating Models</h3>
 
           <p>
-            Designing governance, process ownership,
-            decision rights, performance systems and
-            organizational structures that enable scale.
+            Designing governance, process ownership, decision
+            rights, performance systems and organizational
+            structures that enable scale.
           </p>
 
         </div>
-
 
 
         <div class="capability">
@@ -1647,9 +1772,9 @@
           <h3>People & Change</h3>
 
           <p>
-            Building teams, aligning senior stakeholders
-            and turning transformation from a program
-            into an adopted way of working.
+            Building teams, aligning senior stakeholders and
+            turning transformation from a program into an
+            adopted way of working.
           </p>
 
         </div>
@@ -1663,7 +1788,9 @@
 
 
 
-  <!-- TRANSFORMATION -->
+  <!-- ========================================================
+       TRANSFORMATION
+       ======================================================== -->
 
   <section id="transformation">
 
@@ -1720,15 +1847,11 @@
             capable of delivering measurable change.
           </p>
 
-
           <div class="tags">
 
             <span class="tag">Strategy</span>
-
             <span class="tag">Portfolio Management</span>
-
             <span class="tag">Governance</span>
-
             <span class="tag">Value Creation</span>
 
           </div>
@@ -1764,19 +1887,15 @@
 
           <p>
             I focus on creating structures that make
-            organizations easier to navigate, easier to
-            measure and better able to adapt.
+            organizations easier to navigate, easier to measure
+            and better able to adapt.
           </p>
-
 
           <div class="tags">
 
             <span class="tag">Operating Models</span>
-
             <span class="tag">Process Ownership</span>
-
             <span class="tag">Organization</span>
-
             <span class="tag">Performance</span>
 
           </div>
@@ -1805,28 +1924,23 @@
         <div class="transformation-copy">
 
           <p>
-            Technology creates value when it improves
-            how people understand situations, make decisions
-            and execute work.
+            Technology creates value when it improves how
+            people understand situations, make decisions and
+            execute work.
           </p>
 
           <p>
             My focus is therefore not technology for its own
-            sake, but the connection between process,
-            data, analytics, automation and AI.
+            sake, but the connection between process, data,
+            analytics, automation and AI.
           </p>
-
 
           <div class="tags">
 
             <span class="tag">Digital</span>
-
             <span class="tag">Data</span>
-
             <span class="tag">Analytics</span>
-
             <span class="tag">Automation</span>
-
             <span class="tag">AI</span>
 
           </div>
@@ -1835,13 +1949,16 @@
 
       </div>
 
+
     </div>
 
   </section>
 
 
 
-  <!-- MANAGEMENT PHILOSOPHY -->
+  <!-- ========================================================
+       HOW I LEAD
+       ======================================================== -->
 
   <section id="how-i-lead">
 
@@ -1877,13 +1994,12 @@
           <h3>Understand the system</h3>
 
           <p>
-            Before optimizing individual processes,
-            understand how decisions, information,
-            incentives and people interact.
+            Before optimizing individual processes, understand
+            how decisions, information, incentives and people
+            interact.
           </p>
 
         </div>
-
 
 
         <div class="principle">
@@ -1893,12 +2009,11 @@
           <h3>Create clarity</h3>
 
           <p>
-            Translate complexity into priorities,
-            ownership, decisions and measurable outcomes.
+            Translate complexity into priorities, ownership,
+            decisions and measurable outcomes.
           </p>
 
         </div>
-
 
 
         <div class="principle">
@@ -1908,13 +2023,11 @@
           <h3>Build the structure</h3>
 
           <p>
-            Governance, processes and technology should
-            enable people — not compensate for unclear
-            accountability.
+            Governance, processes and technology should enable
+            people — not compensate for unclear accountability.
           </p>
 
         </div>
-
 
 
         <div class="principle">
@@ -1924,13 +2037,12 @@
           <h3>Mobilize people</h3>
 
           <p>
-            Transformation succeeds when people understand
-            the purpose, contribute to the solution and
-            adopt the change.
+            Transformation succeeds when people understand the
+            purpose, contribute to the solution and adopt the
+            change.
           </p>
 
         </div>
-
 
 
         <div class="principle">
@@ -1940,13 +2052,11 @@
           <h3>Measure what changed</h3>
 
           <p>
-            Activity is not impact. Define baselines,
-            targets, ownership and clear measures
-            of success.
+            Activity is not impact. Define baselines, targets,
+            ownership and clear measures of success.
           </p>
 
         </div>
-
 
 
         <div class="principle">
@@ -1957,8 +2067,8 @@
 
           <p>
             Turn successful solutions into repeatable
-            organizational capabilities rather than
-            isolated projects.
+            organizational capabilities rather than isolated
+            projects.
           </p>
 
         </div>
@@ -1972,38 +2082,67 @@
 
 
 
-  <!-- PERSPECTIVES -->
+  <!-- ========================================================
+       AUTHORING
+       ======================================================== -->
 
-  <section id="perspectives">
+  <section id="authoring">
 
     <div class="container reveal">
 
 
       <div class="section-number">
-        04 / Perspectives & Authoring
+        04 / Authoring
       </div>
 
 
-      <h2 class="section-title">
-        Ideas worth<br>
-        challenging.
-      </h2>
+      <div class="authoring-header">
 
 
-      <p class="section-intro">
+        <div>
 
-        I write about the questions that emerge when
-        transformation, leadership, procurement and
-        technology meet organizational reality.
+          <h2 class="section-title">
 
-      </p>
+            Thinking.<br>
+            Writing.<br>
+
+            <span class="accent-title">
+              Challenging.
+            </span>
+
+          </h2>
+
+        </div>
+
+
+        <div class="authoring-intro">
+
+          <p>
+            Writing is part of how I think.
+          </p>
+
+          <p>
+            I explore the questions that emerge when leadership,
+            transformation, procurement, technology and
+            artificial intelligence meet organizational reality.
+          </p>
+
+          <p>
+            Not every new idea needs agreement. But the right
+            question can change how we understand the problem.
+          </p>
+
+        </div>
+
+
+      </div>
 
 
 
       <div class="articles">
 
 
-        <a href="#" class="article-card">
+        <article class="article-card">
 
           <div class="article-category">
             Artificial Intelligence
@@ -2014,14 +2153,13 @@
           </h3>
 
           <div class="article-bottom">
-            Perspective → Coming soon
+            Perspective · Coming soon
           </div>
 
-        </a>
+        </article>
 
 
-
-        <a href="#" class="article-card">
+        <article class="article-card">
 
           <div class="article-category">
             Transformation
@@ -2033,51 +2171,47 @@
           </h3>
 
           <div class="article-bottom">
-            Perspective → Coming soon
+            Perspective · Coming soon
           </div>
 
-        </a>
+        </article>
 
 
-
-        <a href="#" class="article-card">
+        <article class="article-card">
 
           <div class="article-category">
             Intelligence
           </div>
 
           <h3>
-            Moving from data to decisions.
+            From more data to better decisions.
           </h3>
 
           <div class="article-bottom">
-            Perspective → Coming soon
+            Perspective · Coming soon
           </div>
 
-        </a>
+        </article>
 
 
-
-        <a href="#" class="article-card">
+        <article class="article-card">
 
           <div class="article-category">
             Operating Models
           </div>
 
           <h3>
-            Why process ownership matters more than
-            another system.
+            Process ownership before another system.
           </h3>
 
           <div class="article-bottom">
-            Perspective → Coming soon
+            Perspective · Coming soon
           </div>
 
-        </a>
+        </article>
 
 
-
-        <a href="#" class="article-card">
+        <article class="article-card">
 
           <div class="article-category">
             Artificial Intelligence
@@ -2089,14 +2223,13 @@
           </h3>
 
           <div class="article-bottom">
-            Perspective → Coming soon
+            Perspective · Coming soon
           </div>
 
-        </a>
+        </article>
 
 
-
-        <a href="#" class="article-card">
+        <article class="article-card">
 
           <div class="article-category">
             Leadership
@@ -2107,13 +2240,14 @@
           </h3>
 
           <div class="article-bottom">
-            Perspective → Coming soon
+            Perspective · Coming soon
           </div>
 
-        </a>
+        </article>
 
 
       </div>
+
 
     </div>
 
@@ -2121,7 +2255,9 @@
 
 
 
-  <!-- SPEAKING -->
+  <!-- ========================================================
+       SPEAKING
+       ======================================================== -->
 
   <section id="speaking">
 
@@ -2146,7 +2282,6 @@
           </div>
 
         </div>
-
 
 
         <div class="speaking-copy">
@@ -2187,7 +2322,7 @@
           </div>
 
 
-          <div style="margin-top: 38px;">
+          <div style="margin-top:38px;">
 
             <a href="#contact" class="button">
               Invite me to speak
@@ -2195,9 +2330,11 @@
 
           </div>
 
+
         </div>
 
       </div>
+
 
     </div>
 
@@ -2205,7 +2342,9 @@
 
 
 
-  <!-- ABOUT -->
+  <!-- ========================================================
+       ABOUT
+       ======================================================== -->
 
   <section id="about">
 
@@ -2232,50 +2371,49 @@
         </div>
 
 
-
         <div class="about-copy">
 
 
           <p>
 
-            My career has evolved from procurement and
-            process management into global transformation
-            leadership — connecting strategy, operating
-            models, technology, data and people.
+            My career has evolved from procurement and process
+            management into global transformation leadership —
+            connecting strategy, operating models, technology,
+            data and people.
 
           </p>
 
 
           <p>
 
-            I have led global teams, Centers of Excellence
-            and transformation initiatives across complex
+            I have led global teams, Centers of Excellence and
+            transformation initiatives across complex
             international organizations, with responsibility
             spanning strategy execution, process governance,
-            digitalization, analytics, change and
-            organizational capability.
+            digitalization, analytics, change and organizational
+            capability.
 
           </p>
 
 
           <p>
 
-            Today, I am particularly interested in how
-            organizations move beyond digitalization toward
-            intelligence — using data, analytics and AI to
-            improve decisions while building the governance,
-            capabilities and operating models required to
-            make that change sustainable.
+            I am particularly interested in how organizations
+            move beyond digitalization toward intelligence —
+            using data, analytics and AI to improve decisions
+            while building the governance, capabilities and
+            operating models required to make that change
+            sustainable.
 
           </p>
 
 
           <p>
 
-            The part I find most interesting is where
-            ambitious ideas meet organizational reality.
-            That is where transformation either becomes
-            impact — or remains a presentation.
+            The part I find most interesting is where ambitious
+            ideas meet organizational reality. That is where
+            transformation either becomes impact — or remains
+            a presentation.
 
           </p>
 
@@ -2305,7 +2443,6 @@
             </div>
 
 
-
             <div class="career-item">
 
               <div class="career-year">
@@ -2325,7 +2462,6 @@
               </div>
 
             </div>
-
 
 
             <div class="career-item">
@@ -2351,9 +2487,11 @@
 
           </div>
 
+
         </div>
 
       </div>
+
 
     </div>
 
@@ -2361,7 +2499,95 @@
 
 
 
-  <!-- CONTACT -->
+  <!-- ========================================================
+       CREATIVE / MURALS
+       ======================================================== -->
+
+  <section id="creative">
+
+    <div class="container reveal">
+
+
+      <div class="section-number">
+        07 / Beyond the Boardroom
+      </div>
+
+
+      <div class="creative-grid">
+
+
+        <div>
+
+          <h2 class="section-title">
+
+            Different canvas.<br>
+            Same instinct.
+
+          </h2>
+
+        </div>
+
+
+        <div class="creative-copy">
+
+
+          <p class="creative-lead">
+            I also paint.
+          </p>
+
+
+          <p>
+
+            Murals give me a very different way to work with
+            complexity: space, context, people, colour and an
+            idea that has to become visible.
+
+          </p>
+
+
+          <p>
+
+            It may look far removed from organizational
+            transformation. I don't think it is.
+
+          </p>
+
+
+          <p>
+
+            Both begin with an empty space, a point of view
+            and the challenge of turning an idea into something
+            other people can experience.
+
+          </p>
+
+
+          <div class="creative-link">
+
+            <span style="color:inherit;font-size:inherit;">
+              Selected murals & creative work
+            </span>
+
+            <span>→</span>
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+
+  <!-- ========================================================
+       CONTACT
+       ======================================================== -->
 
   <section class="contact" id="contact">
 
@@ -2369,7 +2595,7 @@
 
 
       <div class="section-number">
-        07 / Connect
+        08 / Connect
       </div>
 
 
@@ -2391,13 +2617,13 @@
           href="#"
           class="button primary"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           LinkedIn
         </a>
 
 
-        <!-- REPLACE WITH YOUR EMAIL -->
+        <!-- REPLACE EMAIL BELOW -->
 
         <a
           href="mailto:YOUR-EMAIL-HERE"
@@ -2409,13 +2635,16 @@
 
       </div>
 
+
     </div>
 
   </section>
 
 
 
-  <!-- FOOTER -->
+  <!-- ========================================================
+       FOOTER
+       ======================================================== -->
 
   <footer>
 
@@ -2431,17 +2660,23 @@
         >
 
         <span>
-
           © <span id="year"></span>
           Laila Dalla Torre
-
         </span>
 
       </div>
 
 
-      <div>
-        Leadership · Transformation · Intelligence
+      <div class="footer-links">
+
+        <span>
+          Leadership · Transformation · Intelligence
+        </span>
+
+        <a href="privacy.html">
+          Privacy
+        </a>
+
       </div>
 
 
@@ -2451,7 +2686,9 @@
 
 
 
-  <!-- JAVASCRIPT -->
+  <!-- ========================================================
+       JAVASCRIPT
+       ======================================================== -->
 
   <script>
 
