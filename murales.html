@@ -16,6 +16,7 @@
   <link rel="icon" type="image/png" href="LDTlogo.png">
   <link rel="apple-touch-icon" href="LDTlogo.png">
 
+
   <style>
 
     :root {
@@ -24,7 +25,6 @@
       --dark-soft:#061b1d;
 
       --light:#e5e7e6;
-      --light-soft:#d7dcdb;
 
       --text:#071d1f;
       --text-soft:#425355;
@@ -388,8 +388,7 @@
 
 
     /* =========================================================
-       GALLERY
-       FULL IMAGES — NO CROPPING
+       CONTINUOUS FULL-WIDTH GALLERY
        ========================================================= */
 
 
@@ -400,22 +399,31 @@
     }
 
 
-    .gallery-grid {
+    .gallery-list {
 
-      display:grid;
+      display:flex;
 
-      grid-template-columns:repeat(12,1fr);
+      flex-direction:column;
+
+      width:100%;
 
       gap:18px;
-
-      align-items:start;
 
     }
 
 
+    /*
+       EVERY MURALES IS A LARGE,
+       FULL-WIDTH FIXED-HEIGHT PANEL.
+    */
+
     .artwork {
 
       position:relative;
+
+      width:100%;
+
+      height:680px;
 
       overflow:hidden;
 
@@ -426,22 +434,14 @@
     }
 
 
-    /*
-      IMPORTANT:
-      NO FIXED HEIGHT.
-
-      Every murales keeps its natural proportions.
-      The complete image remains visible.
-    */
-
     .artwork img {
 
-      display:block;
-
       width:100%;
-      height:auto;
+      height:100%;
 
-      object-fit:contain;
+      object-fit:cover;
+
+      object-position:center;
 
       transition:
         transform .8s cubic-bezier(.2,.75,.25,1),
@@ -452,11 +452,17 @@
 
     .artwork:hover img {
 
-      transform:scale(1.012);
+      transform:scale(1.015);
 
       filter:brightness(.92);
 
     }
+
+
+
+    /* =========================================================
+       IMAGE OVERLAY
+       ========================================================= */
 
 
     .artwork-overlay {
@@ -467,7 +473,7 @@
       right:0;
       bottom:0;
 
-      padding:70px 28px 25px;
+      padding:100px 38px 30px;
 
       color:white;
 
@@ -475,7 +481,7 @@
         linear-gradient(
           0deg,
           rgba(3,20,22,.80),
-          rgba(3,20,22,.28) 58%,
+          rgba(3,20,22,.30) 52%,
           transparent
         );
 
@@ -503,9 +509,9 @@
 
     .artwork-title {
 
-      font-size:1rem;
+      font-size:1.1rem;
 
-      margin-bottom:3px;
+      margin-bottom:4px;
 
     }
 
@@ -514,94 +520,11 @@
 
       color:rgba(255,255,255,.68);
 
-      font-size:.68rem;
+      font-size:.67rem;
 
-      letter-spacing:.08em;
+      letter-spacing:.11em;
 
       text-transform:uppercase;
-
-    }
-
-
-
-    /* =========================================================
-       EDITORIAL LAYOUT
-       ========================================================= */
-
-
-    .artwork-1 {
-      grid-column:span 7;
-    }
-
-    .artwork-2 {
-      grid-column:span 5;
-    }
-
-
-    .artwork-3 {
-      grid-column:span 5;
-    }
-
-    .artwork-4 {
-      grid-column:span 7;
-    }
-
-
-    .artwork-5 {
-      grid-column:span 8;
-    }
-
-    .artwork-6 {
-      grid-column:span 4;
-    }
-
-
-    .artwork-7 {
-      grid-column:span 5;
-    }
-
-    .artwork-8 {
-      grid-column:span 7;
-    }
-
-
-    .artwork-9 {
-      grid-column:span 7;
-    }
-
-    .artwork-10 {
-      grid-column:span 5;
-    }
-
-
-    .artwork-11 {
-      grid-column:span 4;
-    }
-
-    .artwork-12 {
-      grid-column:span 8;
-    }
-
-
-    .artwork-13 {
-      grid-column:span 7;
-    }
-
-    .artwork-14 {
-      grid-column:span 5;
-    }
-
-
-    /*
-      Final image gets more visual weight
-      when murales15.jpeg is uploaded.
-    */
-
-    .artwork-15 {
-
-      grid-column:2 / span 10;
-
-      margin-top:30px;
 
     }
 
@@ -671,7 +594,7 @@
 
 
     /* =========================================================
-       RETURN
+       RETURN TO MAIN SITE
        ========================================================= */
 
 
@@ -734,7 +657,7 @@
 
       z-index:2000;
 
-      background:rgba(3,20,22,.96);
+      background:rgba(3,20,22,.97);
 
       display:none;
 
@@ -753,10 +676,15 @@
     }
 
 
+    /*
+       LIGHTBOX SHOWS COMPLETE ORIGINAL IMAGE.
+       NO CROPPING HERE.
+    */
+
     .lightbox img {
 
-      max-width:92vw;
-      max-height:88vh;
+      max-width:94vw;
+      max-height:90vh;
 
       width:auto;
       height:auto;
@@ -779,11 +707,13 @@
 
       color:white;
 
-      font-size:2rem;
+      font-size:2.2rem;
 
       font-weight:300;
 
       cursor:pointer;
+
+      z-index:10;
 
     }
 
@@ -858,6 +788,13 @@
     }
 
 
+    .footer-links a {
+
+      transition:color .25s ease;
+
+    }
+
+
     .footer-links a:hover {
 
       color:var(--teal-light);
@@ -885,45 +822,9 @@
       }
 
 
-      /*
-        Mobile becomes one continuous vertical gallery.
-      */
+      .artwork {
 
-      .gallery-grid {
-
-        display:block;
-
-      }
-
-
-      .artwork,
-      .artwork-1,
-      .artwork-2,
-      .artwork-3,
-      .artwork-4,
-      .artwork-5,
-      .artwork-6,
-      .artwork-7,
-      .artwork-8,
-      .artwork-9,
-      .artwork-10,
-      .artwork-11,
-      .artwork-12,
-      .artwork-13,
-      .artwork-14,
-      .artwork-15 {
-
-        width:100%;
-
-        margin:0 0 18px 0;
-
-      }
-
-
-      .artwork img {
-
-        width:100%;
-        height:auto;
+        height:520px;
 
       }
 
@@ -933,6 +834,8 @@
         opacity:1;
 
         transform:none;
+
+        padding:80px 25px 23px;
 
       }
 
@@ -978,9 +881,23 @@
       }
 
 
+      .gallery-list {
+
+        gap:10px;
+
+      }
+
+
+      .artwork {
+
+        height:390px;
+
+      }
+
+
       .lightbox {
 
-        padding:20px;
+        padding:18px;
 
       }
 
@@ -1164,7 +1081,7 @@
 
 
   <!-- =======================================================
-       GALLERY
+       CONTINUOUS GALLERY
        ======================================================= -->
 
 
@@ -1174,14 +1091,14 @@
     <div class="container">
 
 
-      <div class="gallery-grid">
+      <div class="gallery-list">
 
 
 
         <!-- MURALES 01 -->
 
         <div
-          class="artwork artwork-1"
+          class="artwork"
           onclick="openLightbox('murales01.jpeg')"
         >
 
@@ -1210,7 +1127,7 @@
         <!-- MURALES 02 -->
 
         <div
-          class="artwork artwork-2"
+          class="artwork"
           onclick="openLightbox('murales02.jpeg')"
         >
 
@@ -1239,7 +1156,7 @@
         <!-- MURALES 03 -->
 
         <div
-          class="artwork artwork-3"
+          class="artwork"
           onclick="openLightbox('murales03.jpeg')"
         >
 
@@ -1268,7 +1185,7 @@
         <!-- MURALES 04 -->
 
         <div
-          class="artwork artwork-4"
+          class="artwork"
           onclick="openLightbox('murales04.jpeg')"
         >
 
@@ -1297,7 +1214,7 @@
         <!-- MURALES 05 -->
 
         <div
-          class="artwork artwork-5"
+          class="artwork"
           onclick="openLightbox('murales05.jpeg')"
         >
 
@@ -1326,7 +1243,7 @@
         <!-- MURALES 06 -->
 
         <div
-          class="artwork artwork-6"
+          class="artwork"
           onclick="openLightbox('murales06.jpeg')"
         >
 
@@ -1355,7 +1272,7 @@
         <!-- MURALES 07 -->
 
         <div
-          class="artwork artwork-7"
+          class="artwork"
           onclick="openLightbox('murales07.jpeg')"
         >
 
@@ -1384,7 +1301,7 @@
         <!-- MURALES 08 -->
 
         <div
-          class="artwork artwork-8"
+          class="artwork"
           onclick="openLightbox('murales08.jpeg')"
         >
 
@@ -1413,7 +1330,7 @@
         <!-- MURALES 09 -->
 
         <div
-          class="artwork artwork-9"
+          class="artwork"
           onclick="openLightbox('murales09.jpeg')"
         >
 
@@ -1442,7 +1359,7 @@
         <!-- MURALES 10 -->
 
         <div
-          class="artwork artwork-10"
+          class="artwork"
           onclick="openLightbox('murales10.jpeg')"
         >
 
@@ -1471,7 +1388,7 @@
         <!-- MURALES 11 -->
 
         <div
-          class="artwork artwork-11"
+          class="artwork"
           onclick="openLightbox('murales11.jpeg')"
         >
 
@@ -1500,7 +1417,7 @@
         <!-- MURALES 12 -->
 
         <div
-          class="artwork artwork-12"
+          class="artwork"
           onclick="openLightbox('murales12.jpeg')"
         >
 
@@ -1529,7 +1446,7 @@
         <!-- MURALES 13 -->
 
         <div
-          class="artwork artwork-13"
+          class="artwork"
           onclick="openLightbox('murales13.jpeg')"
         >
 
@@ -1558,7 +1475,7 @@
         <!-- MURALES 14 -->
 
         <div
-          class="artwork artwork-14"
+          class="artwork"
           onclick="openLightbox('murales14.jpeg')"
         >
 
@@ -1587,7 +1504,7 @@
         <!-- MURALES 15 -->
 
         <div
-          class="artwork artwork-15"
+          class="artwork"
           onclick="openLightbox('murales15.jpeg')"
         >
 
@@ -1810,23 +1727,27 @@
   <script>
 
 
+    /* CURRENT YEAR */
+
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
 
 
     /*
-      If murales09.jpeg etc. do not exist yet,
-      hide the entire artwork block.
+      AUTOMATICALLY HIDE MURALES THAT
+      HAVE NOT YET BEEN UPLOADED.
 
-      This means you can prepare the site for 15 now
-      without showing broken images.
+      Example:
+      if murales09.jpeg doesn't exist,
+      there is no broken image or empty panel.
     */
 
     function hideArtwork(image) {
 
       const artwork =
         image.closest(".artwork");
+
 
       if (artwork) {
 
@@ -1837,6 +1758,8 @@
     }
 
 
+
+    /* OPEN FULL IMAGE */
 
     function openLightbox(image) {
 
@@ -1862,6 +1785,8 @@
 
 
 
+    /* CLOSE FULL IMAGE */
+
     function closeLightbox(event) {
 
 
@@ -1886,6 +1811,8 @@
     }
 
 
+
+    /* ESC KEY CLOSES LIGHTBOX */
 
     document.addEventListener(
       "keydown",
