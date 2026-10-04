@@ -20,25 +20,17 @@
   <style>
 
     :root {
-
       --dark:#031416;
       --dark-soft:#061b1d;
-
       --light:#e5e7e6;
-
       --text:#071d1f;
       --text-soft:#425355;
-
       --white:#edf0ef;
-
       --teal:#079bb2;
       --teal-light:#43b7c5;
-
       --line-dark:rgba(7,29,31,.16);
       --line-light:rgba(230,235,235,.13);
-
       --max-width:1660px;
-
     }
 
 
@@ -55,7 +47,6 @@
 
 
     body {
-
       background:var(--light);
       color:var(--text);
 
@@ -67,9 +58,7 @@
         sans-serif;
 
       -webkit-font-smoothing:antialiased;
-
       overflow-x:hidden;
-
     }
 
 
@@ -86,11 +75,8 @@
 
 
     .container {
-
       width:min(96%,var(--max-width));
-
       margin:0 auto;
-
     }
 
 
@@ -99,9 +85,7 @@
        NAVIGATION
        ========================================================= */
 
-
     nav {
-
       position:fixed;
 
       top:0;
@@ -117,77 +101,58 @@
       -webkit-backdrop-filter:blur(18px);
 
       border-bottom:1px solid var(--line-light);
-
     }
 
 
     .nav-inner {
-
       min-height:86px;
 
       display:flex;
-
       align-items:center;
       justify-content:space-between;
 
       gap:30px;
-
     }
 
 
     .brand {
-
       display:flex;
-
       align-items:center;
-
       gap:16px;
-
     }
 
 
     .brand-logo {
-
       width:51px;
       height:51px;
-
       object-fit:contain;
-
     }
 
 
     .brand-name {
-
       color:#c8cecf;
 
       font-size:.98rem;
 
       letter-spacing:.15em;
-
       text-transform:uppercase;
-
     }
 
 
     .back {
-
       color:#8d9b9c;
 
       font-size:.69rem;
 
       letter-spacing:.14em;
-
       text-transform:uppercase;
 
       transition:color .25s ease;
-
     }
 
 
     .back:hover {
-
       color:var(--teal-light);
-
     }
 
 
@@ -196,11 +161,8 @@
        INTRO
        ========================================================= */
 
-
     .intro {
-
       background:var(--dark);
-
       color:var(--white);
 
       min-height:72vh;
@@ -208,14 +170,11 @@
       padding:190px 0 110px;
 
       position:relative;
-
       overflow:hidden;
-
     }
 
 
     .intro::after {
-
       content:"";
 
       position:absolute;
@@ -229,27 +188,22 @@
       border:1px solid rgba(67,183,197,.10);
 
       transform:rotate(45deg);
-
     }
 
 
     .eyebrow {
-
       color:var(--teal-light);
 
       font-size:.66rem;
 
       letter-spacing:.19em;
-
       text-transform:uppercase;
 
       margin-bottom:32px;
-
     }
 
 
     h1 {
-
       font-size:clamp(4.5rem,10vw,10rem);
 
       line-height:.84;
@@ -259,21 +213,16 @@
       font-weight:400;
 
       position:relative;
-
       z-index:2;
-
     }
 
 
     h1 span {
-
       color:var(--teal-light);
-
     }
 
 
     .intro-bottom {
-
       margin-top:75px;
 
       display:grid;
@@ -285,14 +234,11 @@
       align-items:end;
 
       position:relative;
-
       z-index:2;
-
     }
 
 
     .intro-statement {
-
       font-size:clamp(1.7rem,3vw,3rem);
 
       line-height:1.2;
@@ -302,12 +248,10 @@
       max-width:750px;
 
       color:#dce1e1;
-
     }
 
 
     .intro-copy {
-
       color:#93a0a1;
 
       max-width:550px;
@@ -315,7 +259,6 @@
       font-size:1.04rem;
 
       line-height:1.8;
-
     }
 
 
@@ -324,42 +267,33 @@
        GALLERY INTRO
        ========================================================= */
 
-
     .gallery-intro {
-
       padding:115px 0 70px;
-
     }
 
 
     .gallery-label {
-
       color:#087f8e;
 
       font-size:.65rem;
 
       letter-spacing:.18em;
-
       text-transform:uppercase;
 
       margin-bottom:25px;
-
     }
 
 
     .gallery-intro-grid {
-
       display:grid;
 
       grid-template-columns:1fr .8fr;
 
       gap:100px;
-
     }
 
 
     .gallery-intro h2 {
-
       font-size:clamp(2.8rem,6vw,5.5rem);
 
       line-height:.96;
@@ -369,12 +303,10 @@
       font-weight:400;
 
       max-width:780px;
-
     }
 
 
     .gallery-intro p {
-
       color:var(--text-soft);
 
       font-size:1.05rem;
@@ -382,80 +314,71 @@
       line-height:1.8;
 
       max-width:550px;
-
     }
 
 
 
     /* =========================================================
-       CONTINUOUS FULL-WIDTH GALLERY
+       GALLERY
+       2 LARGE MURALES PER ROW
        ========================================================= */
 
-
     .gallery {
-
       padding:20px 0 150px;
-
     }
 
 
     .gallery-list {
+      display:grid;
 
-      display:flex;
-
-      flex-direction:column;
-
-      width:100%;
+      grid-template-columns:
+        repeat(2,minmax(0,1fr));
 
       gap:18px;
 
+      width:100%;
     }
 
 
     /*
-       EVERY MURALES IS A LARGE,
-       FULL-WIDTH FIXED-HEIGHT PANEL.
+      Every murales has the same fixed height.
+
+      The image fills the complete frame.
+      There are no miniature / thumbnail versions.
     */
 
     .artwork {
-
       position:relative;
 
       width:100%;
-
-      height:680px;
+      height:600px;
 
       overflow:hidden;
 
       background:#ccd2d1;
 
       cursor:pointer;
-
     }
 
 
     .artwork img {
+      display:block;
 
       width:100%;
       height:100%;
 
       object-fit:cover;
-
       object-position:center;
 
       transition:
         transform .8s cubic-bezier(.2,.75,.25,1),
         filter .5s ease;
-
     }
 
 
     .artwork:hover img {
-
-      transform:scale(1.015);
-
+      transform:scale(1.018);
       filter:brightness(.92);
-
     }
 
 
@@ -464,16 +387,14 @@
        IMAGE OVERLAY
        ========================================================= */
 
-
     .artwork-overlay {
-
       position:absolute;
 
       left:0;
       right:0;
       bottom:0;
 
-      padding:100px 38px 30px;
+      padding:90px 30px 26px;
 
       color:white;
 
@@ -481,7 +402,7 @@
         linear-gradient(
           0deg,
           rgba(3,20,22,.80),
-          rgba(3,20,22,.30) 52%,
+          rgba(3,20,22,.28) 55%,
           transparent
         );
 
@@ -494,38 +415,45 @@
         transform .3s ease;
 
       pointer-events:none;
-
     }
 
 
     .artwork:hover .artwork-overlay {
-
       opacity:1;
-
       transform:translateY(0);
-
     }
 
 
     .artwork-title {
-
-      font-size:1.1rem;
-
+      font-size:1.05rem;
       margin-bottom:4px;
-
     }
 
 
     .artwork-meta {
-
       color:rgba(255,255,255,.68);
 
       font-size:.67rem;
 
       letter-spacing:.11em;
-
       text-transform:uppercase;
+    }
 
+
+
+    /* =========================================================
+       FINAL SINGLE IMAGE
+       ========================================================= */
+
+    /*
+      When Murales 15 exists, it becomes a strong
+      full-width final image instead of leaving
+      an empty half-row.
+    */
+
+    .artwork.final-visible {
+      grid-column:1 / -1;
+      height:680px;
     }
 
 
@@ -534,44 +462,34 @@
        CREATIVE STATEMENT
        ========================================================= */
 
-
     .statement {
-
       background:var(--dark-soft);
-
       color:var(--white);
 
       padding:130px 0;
-
     }
 
 
     .statement-grid {
-
       display:grid;
 
       grid-template-columns:.65fr 1.35fr;
 
       gap:100px;
-
     }
 
 
     .statement-label {
-
       color:var(--teal-light);
 
       font-size:.66rem;
 
       letter-spacing:.18em;
-
       text-transform:uppercase;
-
     }
 
 
     .statement-text {
-
       font-size:clamp(2rem,4.2vw,4.3rem);
 
       line-height:1.08;
@@ -581,14 +499,11 @@
       font-weight:400;
 
       max-width:1000px;
-
     }
 
 
     .statement-text span {
-
       color:var(--teal-light);
-
     }
 
 
@@ -597,18 +512,14 @@
        RETURN TO MAIN SITE
        ========================================================= */
 
-
     .return-section {
-
       padding:120px 0;
 
       background:var(--light);
-
     }
 
 
     .return-section a {
-
       display:flex;
 
       justify-content:space-between;
@@ -624,22 +535,17 @@
       letter-spacing:-.03em;
 
       transition:padding .25s ease;
-
     }
 
 
     .return-section a:hover {
-
       padding-left:12px;
       padding-right:12px;
-
     }
 
 
     .return-arrow {
-
       color:#087f8e;
-
     }
 
 
@@ -648,9 +554,7 @@
        LIGHTBOX
        ========================================================= */
 
-
     .lightbox {
-
       position:fixed;
 
       inset:0;
@@ -665,24 +569,20 @@
       justify-content:center;
 
       padding:45px;
-
     }
 
 
     .lightbox.active {
-
       display:flex;
-
     }
 
 
     /*
-       LIGHTBOX SHOWS COMPLETE ORIGINAL IMAGE.
-       NO CROPPING HERE.
+      In the lightbox the COMPLETE original image
+      is visible without cropping.
     */
 
     .lightbox img {
-
       max-width:94vw;
       max-height:90vh;
 
@@ -690,12 +590,10 @@
       height:auto;
 
       object-fit:contain;
-
     }
 
 
     .lightbox-close {
-
       position:absolute;
 
       top:24px;
@@ -714,7 +612,6 @@
       cursor:pointer;
 
       z-index:10;
-
     }
 
 
@@ -723,9 +620,7 @@
        FOOTER
        ========================================================= */
 
-
     footer {
-
       background:var(--dark);
 
       color:#8d9b9c;
@@ -735,35 +630,29 @@
       padding:38px 0;
 
       font-size:.69rem;
-
     }
 
 
     .footer-inner {
-
       display:flex;
 
       align-items:center;
       justify-content:space-between;
 
       gap:20px;
-
     }
 
 
     .footer-brand {
-
       display:flex;
 
       align-items:center;
 
       gap:14px;
-
     }
 
 
     .footer-monogram {
-
       color:var(--teal-light);
 
       font-size:.72rem;
@@ -775,148 +664,157 @@
       padding-right:16px;
 
       border-right:1px solid var(--line-light);
-
     }
 
 
     .footer-links {
-
       display:flex;
-
       gap:28px;
-
     }
 
 
     .footer-links a {
-
       transition:color .25s ease;
-
     }
 
 
     .footer-links a:hover {
-
       color:var(--teal-light);
+    }
+
+
+
+    /* =========================================================
+       TABLET
+       ========================================================= */
+
+    @media(max-width:900px) {
+
+      .intro-bottom,
+      .gallery-intro-grid,
+      .statement-grid {
+        grid-template-columns:1fr;
+
+        gap:45px;
+      }
+
+
+      /*
+        Still 2 murales per row.
+      */
+
+      .gallery-list {
+        grid-template-columns:
+          repeat(2,minmax(0,1fr));
+
+        gap:12px;
+      }
+
+
+      .artwork {
+        height:430px;
+      }
+
+
+      .artwork.final-visible {
+        height:520px;
+      }
+
+
+      .artwork-overlay {
+        opacity:1;
+
+        transform:none;
+
+        padding:70px 22px 20px;
+      }
 
     }
 
 
 
     /* =========================================================
-       RESPONSIVE
+       MOBILE
        ========================================================= */
-
-
-    @media(max-width:900px) {
-
-
-      .intro-bottom,
-      .gallery-intro-grid,
-      .statement-grid {
-
-        grid-template-columns:1fr;
-
-        gap:45px;
-
-      }
-
-
-      .artwork {
-
-        height:520px;
-
-      }
-
-
-      .artwork-overlay {
-
-        opacity:1;
-
-        transform:none;
-
-        padding:80px 25px 23px;
-
-      }
-
-    }
-
-
 
     @media(max-width:600px) {
 
-
       .brand-name {
-
         display:none;
-
       }
 
 
       .intro {
-
         padding-top:150px;
-
       }
 
 
       h1 {
-
         font-size:4.3rem;
-
       }
 
 
       .gallery-intro {
-
         padding-top:80px;
-
       }
 
 
       .gallery {
-
         padding-bottom:90px;
-
       }
 
 
+      /*
+        Keep 2 per row even on mobile.
+      */
+
       .gallery-list {
+        grid-template-columns:
+          repeat(2,minmax(0,1fr));
 
-        gap:10px;
-
+        gap:7px;
       }
 
 
       .artwork {
+        height:270px;
+      }
 
-        height:390px;
 
+      .artwork.final-visible {
+        height:340px;
+      }
+
+
+      .artwork-overlay {
+        padding:50px 12px 12px;
+      }
+
+
+      .artwork-title {
+        font-size:.8rem;
+      }
+
+
+      .artwork-meta {
+        font-size:.55rem;
       }
 
 
       .lightbox {
-
         padding:18px;
-
       }
 
 
       .footer-inner {
-
         flex-direction:column;
-
         align-items:flex-start;
-
       }
 
 
       .footer-links {
-
         flex-direction:column;
-
         gap:8px;
-
       }
 
     }
@@ -935,7 +833,6 @@
   <!-- =======================================================
        NAVIGATION
        ======================================================= -->
-
 
   <nav>
 
@@ -974,9 +871,7 @@
        INTRO
        ======================================================= -->
 
-
   <header class="intro">
-
 
     <div class="container">
 
@@ -1023,7 +918,6 @@
 
     </div>
 
-
   </header>
 
 
@@ -1032,9 +926,7 @@
        GALLERY INTRO
        ======================================================= -->
 
-
   <section class="gallery-intro">
-
 
     <div class="container">
 
@@ -1075,21 +967,17 @@
 
     </div>
 
-
   </section>
 
 
 
   <!-- =======================================================
-       CONTINUOUS GALLERY
+       GALLERY
        ======================================================= -->
-
 
   <main class="gallery">
 
-
     <div class="container">
-
 
       <div class="gallery-list">
 
@@ -1532,9 +1420,7 @@
 
       </div>
 
-
     </div>
-
 
   </main>
 
@@ -1544,12 +1430,9 @@
        STATEMENT
        ======================================================= -->
 
-
   <section class="statement">
 
-
     <div class="container">
-
 
       <div class="statement-grid">
 
@@ -1580,9 +1463,7 @@
 
       </div>
 
-
     </div>
-
 
   </section>
 
@@ -1592,9 +1473,7 @@
        RETURN
        ======================================================= -->
 
-
   <section class="return-section">
-
 
     <div class="container">
 
@@ -1621,7 +1500,6 @@
 
     </div>
 
-
   </section>
 
 
@@ -1630,9 +1508,7 @@
        FOOTER
        ======================================================= -->
 
-
   <footer>
-
 
     <div class="container footer-inner">
 
@@ -1680,7 +1556,6 @@
 
     </div>
 
-
   </footer>
 
 
@@ -1688,7 +1563,6 @@
   <!-- =======================================================
        LIGHTBOX
        ======================================================= -->
-
 
   <div
     class="lightbox"
@@ -1723,11 +1597,10 @@
        JAVASCRIPT
        ======================================================= -->
 
-
   <script>
 
 
-    /* CURRENT YEAR */
+    /* YEAR */
 
     document.getElementById("year").textContent =
       new Date().getFullYear();
@@ -1735,12 +1608,8 @@
 
 
     /*
-      AUTOMATICALLY HIDE MURALES THAT
-      HAVE NOT YET BEEN UPLOADED.
-
-      Example:
-      if murales09.jpeg doesn't exist,
-      there is no broken image or empty panel.
+      HIDE MURALES THAT HAVE NOT YET
+      BEEN UPLOADED.
     */
 
     function hideArtwork(image) {
@@ -1755,11 +1624,79 @@
 
       }
 
+
+      updateGallery();
+
     }
 
 
 
-    /* OPEN FULL IMAGE */
+    /*
+      CHECK THE VISIBLE MURALES.
+
+      If the gallery contains an odd number,
+      the final visible murales spans the
+      complete width.
+
+      This means:
+      8 images = 4 complete rows
+      9 images = 4 rows + large final image
+      10 images = 5 complete rows
+      etc.
+    */
+
+    function updateGallery() {
+
+
+      const artworks =
+        Array.from(
+          document.querySelectorAll(".artwork")
+        );
+
+
+      artworks.forEach(function(artwork) {
+
+        artwork.classList.remove("final-visible");
+
+      });
+
+
+      const visible =
+        artworks.filter(function(artwork) {
+
+          return artwork.style.display !== "none";
+
+        });
+
+
+      if (
+        visible.length > 0 &&
+        visible.length % 2 !== 0
+      ) {
+
+        visible[
+          visible.length - 1
+        ].classList.add("final-visible");
+
+      }
+
+    }
+
+
+
+    /*
+      WAIT UNTIL IMAGES HAVE BEEN CHECKED,
+      THEN CALCULATE THE FINAL LAYOUT.
+    */
+
+    window.addEventListener(
+      "load",
+      updateGallery
+    );
+
+
+
+    /* OPEN LIGHTBOX */
 
     function openLightbox(image) {
 
@@ -1780,12 +1717,11 @@
 
       document.body.style.overflow = "hidden";
 
-
     }
 
 
 
-    /* CLOSE FULL IMAGE */
+    /* CLOSE LIGHTBOX */
 
     function closeLightbox(event) {
 
@@ -1807,12 +1743,11 @@
 
       document.body.style.overflow = "";
 
-
     }
 
 
 
-    /* ESC KEY CLOSES LIGHTBOX */
+    /* ESC CLOSES LIGHTBOX */
 
     document.addEventListener(
       "keydown",
@@ -1829,7 +1764,6 @@
 
 
           document.body.style.overflow = "";
-
 
         }
 
