@@ -14,10 +14,12 @@
   >
 
   <link rel="icon" type="image/png" href="LDTlogo.png">
+  <link rel="apple-touch-icon" href="LDTlogo.png">
 
   <style>
 
     :root {
+
       --dark:#031416;
       --dark-soft:#061b1d;
 
@@ -36,6 +38,7 @@
       --line-light:rgba(230,235,235,.13);
 
       --max-width:1660px;
+
     }
 
 
@@ -52,6 +55,7 @@
 
 
     body {
+
       background:var(--light);
       color:var(--text);
 
@@ -63,7 +67,9 @@
         sans-serif;
 
       -webkit-font-smoothing:antialiased;
+
       overflow-x:hidden;
+
     }
 
 
@@ -75,21 +81,27 @@
 
     img {
       display:block;
-      width:100%;
+      max-width:100%;
     }
 
 
     .container {
+
       width:min(96%,var(--max-width));
+
       margin:0 auto;
+
     }
+
 
 
     /* =========================================================
        NAVIGATION
        ========================================================= */
 
+
     nav {
+
       position:fixed;
 
       top:0;
@@ -105,68 +117,90 @@
       -webkit-backdrop-filter:blur(18px);
 
       border-bottom:1px solid var(--line-light);
+
     }
 
 
     .nav-inner {
+
       min-height:86px;
 
       display:flex;
+
       align-items:center;
       justify-content:space-between;
 
       gap:30px;
+
     }
 
 
     .brand {
+
       display:flex;
+
       align-items:center;
+
       gap:16px;
+
     }
 
 
     .brand-logo {
+
       width:51px;
       height:51px;
 
       object-fit:contain;
+
     }
 
 
     .brand-name {
+
       color:#c8cecf;
 
       font-size:.98rem;
 
       letter-spacing:.15em;
+
       text-transform:uppercase;
+
     }
 
 
     .back {
+
       color:#8d9b9c;
 
       font-size:.69rem;
 
       letter-spacing:.14em;
+
       text-transform:uppercase;
 
       transition:color .25s ease;
+
     }
 
 
     .back:hover {
+
       color:var(--teal-light);
+
     }
+
 
 
     /* =========================================================
        INTRO
        ========================================================= */
 
+
     .intro {
+
       background:var(--dark);
+
       color:var(--white);
 
       min-height:72vh;
@@ -174,11 +208,14 @@
       padding:190px 0 110px;
 
       position:relative;
+
       overflow:hidden;
+
     }
 
 
     .intro::after {
+
       content:"";
 
       position:absolute;
@@ -192,22 +229,27 @@
       border:1px solid rgba(67,183,197,.10);
 
       transform:rotate(45deg);
+
     }
 
 
     .eyebrow {
+
       color:var(--teal-light);
 
       font-size:.66rem;
 
       letter-spacing:.19em;
+
       text-transform:uppercase;
 
       margin-bottom:32px;
+
     }
 
 
     h1 {
+
       font-size:clamp(4.5rem,10vw,10rem);
 
       line-height:.84;
@@ -219,15 +261,19 @@
       position:relative;
 
       z-index:2;
+
     }
 
 
     h1 span {
+
       color:var(--teal-light);
+
     }
 
 
     .intro-bottom {
+
       margin-top:75px;
 
       display:grid;
@@ -241,10 +287,12 @@
       position:relative;
 
       z-index:2;
+
     }
 
 
     .intro-statement {
+
       font-size:clamp(1.7rem,3vw,3rem);
 
       line-height:1.2;
@@ -254,10 +302,12 @@
       max-width:750px;
 
       color:#dce1e1;
+
     }
 
 
     .intro-copy {
+
       color:#93a0a1;
 
       max-width:550px;
@@ -265,40 +315,51 @@
       font-size:1.04rem;
 
       line-height:1.8;
+
     }
+
 
 
     /* =========================================================
        GALLERY INTRO
        ========================================================= */
 
+
     .gallery-intro {
+
       padding:115px 0 70px;
+
     }
 
 
     .gallery-label {
+
       color:#087f8e;
 
       font-size:.65rem;
 
       letter-spacing:.18em;
+
       text-transform:uppercase;
 
       margin-bottom:25px;
+
     }
 
 
     .gallery-intro-grid {
+
       display:grid;
 
       grid-template-columns:1fr .8fr;
 
       gap:100px;
+
     }
 
 
     .gallery-intro h2 {
+
       font-size:clamp(2.8rem,6vw,5.5rem);
 
       line-height:.96;
@@ -308,10 +369,12 @@
       font-weight:400;
 
       max-width:780px;
+
     }
 
 
     .gallery-intro p {
+
       color:var(--text-soft);
 
       font-size:1.05rem;
@@ -319,28 +382,39 @@
       line-height:1.8;
 
       max-width:550px;
+
     }
+
 
 
     /* =========================================================
        GALLERY
+       FULL IMAGES — NO CROPPING
        ========================================================= */
 
+
     .gallery {
-      padding:20px 0 140px;
+
+      padding:20px 0 150px;
+
     }
 
 
     .gallery-grid {
+
       display:grid;
 
       grid-template-columns:repeat(12,1fr);
 
       gap:18px;
+
+      align-items:start;
+
     }
 
 
     .artwork {
+
       position:relative;
 
       overflow:hidden;
@@ -348,44 +422,60 @@
       background:#ccd2d1;
 
       cursor:pointer;
+
     }
 
 
-    .artwork img {
-      width:100%;
-      height:100%;
+    /*
+      IMPORTANT:
+      NO FIXED HEIGHT.
 
-      object-fit:cover;
+      Every murales keeps its natural proportions.
+      The complete image remains visible.
+    */
+
+    .artwork img {
+
+      display:block;
+
+      width:100%;
+      height:auto;
+
+      object-fit:contain;
 
       transition:
         transform .8s cubic-bezier(.2,.75,.25,1),
         filter .5s ease;
+
     }
 
 
     .artwork:hover img {
-      transform:scale(1.025);
 
-      filter:brightness(.9);
+      transform:scale(1.012);
+
+      filter:brightness(.92);
+
     }
 
 
     .artwork-overlay {
+
       position:absolute;
 
       left:0;
       right:0;
       bottom:0;
 
-      padding:50px 28px 25px;
+      padding:70px 28px 25px;
 
       color:white;
 
       background:
         linear-gradient(
           0deg,
-          rgba(3,20,22,.76),
-          rgba(3,20,22,.28) 60%,
+          rgba(3,20,22,.80),
+          rgba(3,20,22,.28) 58%,
           transparent
         );
 
@@ -396,24 +486,32 @@
       transition:
         opacity .3s ease,
         transform .3s ease;
+
+      pointer-events:none;
+
     }
 
 
     .artwork:hover .artwork-overlay {
+
       opacity:1;
 
       transform:translateY(0);
+
     }
 
 
     .artwork-title {
+
       font-size:1rem;
 
       margin-bottom:3px;
+
     }
 
 
     .artwork-meta {
+
       color:rgba(255,255,255,.68);
 
       font-size:.68rem;
@@ -421,76 +519,123 @@
       letter-spacing:.08em;
 
       text-transform:uppercase;
+
     }
 
 
-    /* GALLERY LAYOUT */
+
+    /* =========================================================
+       EDITORIAL LAYOUT
+       ========================================================= */
+
 
     .artwork-1 {
       grid-column:span 7;
-
-      height:650px;
     }
-
 
     .artwork-2 {
       grid-column:span 5;
-
-      height:650px;
     }
 
 
     .artwork-3 {
-      grid-column:span 4;
-
-      height:510px;
+      grid-column:span 5;
     }
 
-
     .artwork-4 {
-      grid-column:span 8;
-
-      height:510px;
+      grid-column:span 7;
     }
 
 
     .artwork-5 {
-      grid-column:span 7;
-
-      height:620px;
+      grid-column:span 8;
     }
-
 
     .artwork-6 {
-      grid-column:span 5;
-
-      height:620px;
+      grid-column:span 4;
     }
+
+
+    .artwork-7 {
+      grid-column:span 5;
+    }
+
+    .artwork-8 {
+      grid-column:span 7;
+    }
+
+
+    .artwork-9 {
+      grid-column:span 7;
+    }
+
+    .artwork-10 {
+      grid-column:span 5;
+    }
+
+
+    .artwork-11 {
+      grid-column:span 4;
+    }
+
+    .artwork-12 {
+      grid-column:span 8;
+    }
+
+
+    .artwork-13 {
+      grid-column:span 7;
+    }
+
+    .artwork-14 {
+      grid-column:span 5;
+    }
+
+
+    /*
+      Final image gets more visual weight
+      when murales15.jpeg is uploaded.
+    */
+
+    .artwork-15 {
+
+      grid-column:2 / span 10;
+
+      margin-top:30px;
+
+    }
+
 
 
     /* =========================================================
        CREATIVE STATEMENT
        ========================================================= */
 
+
     .statement {
+
       background:var(--dark-soft);
 
       color:var(--white);
 
       padding:130px 0;
+
     }
 
 
     .statement-grid {
+
       display:grid;
 
       grid-template-columns:.65fr 1.35fr;
 
       gap:100px;
+
     }
 
 
     .statement-label {
+
       color:var(--teal-light);
 
       font-size:.66rem;
@@ -498,10 +643,12 @@
       letter-spacing:.18em;
 
       text-transform:uppercase;
+
     }
 
 
     .statement-text {
+
       font-size:clamp(2rem,4.2vw,4.3rem);
 
       line-height:1.08;
@@ -511,26 +658,34 @@
       font-weight:400;
 
       max-width:1000px;
+
     }
 
 
     .statement-text span {
+
       color:var(--teal-light);
+
     }
+
 
 
     /* =========================================================
        RETURN
        ========================================================= */
 
+
     .return-section {
+
       padding:120px 0;
 
       background:var(--light);
+
     }
 
 
     .return-section a {
+
       display:flex;
 
       justify-content:space-between;
@@ -546,25 +701,33 @@
       letter-spacing:-.03em;
 
       transition:padding .25s ease;
+
     }
 
 
     .return-section a:hover {
+
       padding-left:12px;
       padding-right:12px;
+
     }
 
 
     .return-arrow {
+
       color:#087f8e;
+
     }
+
 
 
     /* =========================================================
        LIGHTBOX
        ========================================================= */
 
+
     .lightbox {
+
       position:fixed;
 
       inset:0;
@@ -579,15 +742,19 @@
       justify-content:center;
 
       padding:45px;
+
     }
 
 
     .lightbox.active {
+
       display:flex;
+
     }
 
 
     .lightbox img {
+
       max-width:92vw;
       max-height:88vh;
 
@@ -595,10 +762,12 @@
       height:auto;
 
       object-fit:contain;
+
     }
 
 
     .lightbox-close {
+
       position:absolute;
 
       top:24px;
@@ -612,15 +781,21 @@
 
       font-size:2rem;
 
+      font-weight:300;
+
       cursor:pointer;
+
     }
+
 
 
     /* =========================================================
        FOOTER
        ========================================================= */
 
+
     footer {
+
       background:var(--dark);
 
       color:#8d9b9c;
@@ -630,135 +805,220 @@
       padding:38px 0;
 
       font-size:.69rem;
+
     }
 
 
     .footer-inner {
+
       display:flex;
 
       align-items:center;
       justify-content:space-between;
 
       gap:20px;
+
     }
 
 
     .footer-brand {
+
       display:flex;
 
       align-items:center;
 
-      gap:12px;
+      gap:14px;
+
     }
 
 
-    .footer-logo {
-      width:30px;
-      height:30px;
+    .footer-monogram {
 
-      object-fit:contain;
+      color:var(--teal-light);
+
+      font-size:.72rem;
+
+      font-weight:500;
+
+      letter-spacing:.18em;
+
+      padding-right:16px;
+
+      border-right:1px solid var(--line-light);
+
     }
 
 
     .footer-links {
+
       display:flex;
 
       gap:28px;
+
     }
 
 
     .footer-links a:hover {
+
       color:var(--teal-light);
+
     }
+
 
 
     /* =========================================================
        RESPONSIVE
        ========================================================= */
 
+
     @media(max-width:900px) {
+
 
       .intro-bottom,
       .gallery-intro-grid,
       .statement-grid {
+
         grid-template-columns:1fr;
 
         gap:45px;
+
       }
 
 
+      /*
+        Mobile becomes one continuous vertical gallery.
+      */
+
+      .gallery-grid {
+
+        display:block;
+
+      }
+
+
+      .artwork,
       .artwork-1,
       .artwork-2,
       .artwork-3,
       .artwork-4,
       .artwork-5,
-      .artwork-6 {
-        grid-column:span 12;
+      .artwork-6,
+      .artwork-7,
+      .artwork-8,
+      .artwork-9,
+      .artwork-10,
+      .artwork-11,
+      .artwork-12,
+      .artwork-13,
+      .artwork-14,
+      .artwork-15 {
 
-        height:520px;
+        width:100%;
+
+        margin:0 0 18px 0;
+
+      }
+
+
+      .artwork img {
+
+        width:100%;
+        height:auto;
+
       }
 
 
       .artwork-overlay {
+
         opacity:1;
 
         transform:none;
+
       }
 
     }
+
 
 
     @media(max-width:600px) {
 
+
       .brand-name {
+
         display:none;
+
       }
 
 
       .intro {
+
         padding-top:150px;
+
       }
 
 
       h1 {
+
         font-size:4.3rem;
+
       }
 
 
-      .artwork-1,
-      .artwork-2,
-      .artwork-3,
-      .artwork-4,
-      .artwork-5,
-      .artwork-6 {
-        height:390px;
+      .gallery-intro {
+
+        padding-top:80px;
+
+      }
+
+
+      .gallery {
+
+        padding-bottom:90px;
+
+      }
+
+
+      .lightbox {
+
+        padding:20px;
+
       }
 
 
       .footer-inner {
+
         flex-direction:column;
 
         align-items:flex-start;
+
       }
 
 
       .footer-links {
+
         flex-direction:column;
 
         gap:8px;
+
       }
 
     }
+
 
   </style>
 
 </head>
 
 
+
 <body>
 
 
-  <!-- NAVIGATION -->
+
+  <!-- =======================================================
+       NAVIGATION
+       ======================================================= -->
+
 
   <nav>
 
@@ -781,7 +1041,9 @@
 
 
       <a href="index.html#creative" class="back">
+
         ← Back to main site
+
       </a>
 
 
@@ -791,7 +1053,10 @@
 
 
 
-  <!-- INTRO -->
+  <!-- =======================================================
+       INTRO
+       ======================================================= -->
+
 
   <header class="intro">
 
@@ -800,7 +1065,9 @@
 
 
       <div class="eyebrow">
+
         Beyond the Boardroom · Selected Creative Work
+
       </div>
 
 
@@ -817,7 +1084,9 @@
 
 
         <div class="intro-statement">
+
           A different canvas for ideas.
+
         </div>
 
 
@@ -842,7 +1111,10 @@
 
 
 
-  <!-- GALLERY INTRO -->
+  <!-- =======================================================
+       GALLERY INTRO
+       ======================================================= -->
+
 
   <section class="gallery-intro">
 
@@ -851,7 +1123,9 @@
 
 
       <div class="gallery-label">
+
         Selected Work
+
       </div>
 
 
@@ -889,7 +1163,10 @@
 
 
 
-  <!-- GALLERY -->
+  <!-- =======================================================
+       GALLERY
+       ======================================================= -->
+
 
   <main class="gallery">
 
@@ -900,7 +1177,8 @@
       <div class="gallery-grid">
 
 
-        <!-- 01 -->
+
+        <!-- MURALES 01 -->
 
         <div
           class="artwork artwork-1"
@@ -909,7 +1187,8 @@
 
           <img
             src="murales01.jpeg"
-            alt="Murale by Laila Dalla Torre"
+            alt="Murales 01 by Laila Dalla Torre"
+            onerror="hideArtwork(this)"
           >
 
           <div class="artwork-overlay">
@@ -928,7 +1207,7 @@
 
 
 
-        <!-- 02 -->
+        <!-- MURALES 02 -->
 
         <div
           class="artwork artwork-2"
@@ -937,7 +1216,8 @@
 
           <img
             src="murales02.jpeg"
-            alt="Murale by Laila Dalla Torre"
+            alt="Murales 02 by Laila Dalla Torre"
+            onerror="hideArtwork(this)"
           >
 
           <div class="artwork-overlay">
@@ -956,7 +1236,7 @@
 
 
 
-        <!-- 03 -->
+        <!-- MURALES 03 -->
 
         <div
           class="artwork artwork-3"
@@ -965,7 +1245,8 @@
 
           <img
             src="murales03.jpeg"
-            alt="Murale by Laila Dalla Torre"
+            alt="Murales 03 by Laila Dalla Torre"
+            onerror="hideArtwork(this)"
           >
 
           <div class="artwork-overlay">
@@ -984,7 +1265,7 @@
 
 
 
-        <!-- 04 -->
+        <!-- MURALES 04 -->
 
         <div
           class="artwork artwork-4"
@@ -993,7 +1274,8 @@
 
           <img
             src="murales04.jpeg"
-            alt="Murale by Laila Dalla Torre"
+            alt="Murales 04 by Laila Dalla Torre"
+            onerror="hideArtwork(this)"
           >
 
           <div class="artwork-overlay">
@@ -1012,7 +1294,7 @@
 
 
 
-        <!-- 05 -->
+        <!-- MURALES 05 -->
 
         <div
           class="artwork artwork-5"
@@ -1021,7 +1303,8 @@
 
           <img
             src="murales05.jpeg"
-            alt="Murale by Laila Dalla Torre"
+            alt="Murales 05 by Laila Dalla Torre"
+            onerror="hideArtwork(this)"
           >
 
           <div class="artwork-overlay">
@@ -1040,7 +1323,7 @@
 
 
 
-        <!-- 06 -->
+        <!-- MURALES 06 -->
 
         <div
           class="artwork artwork-6"
@@ -1049,7 +1332,8 @@
 
           <img
             src="murales06.jpeg"
-            alt="Murale by Laila Dalla Torre"
+            alt="Murales 06 by Laila Dalla Torre"
+            onerror="hideArtwork(this)"
           >
 
           <div class="artwork-overlay">
@@ -1067,7 +1351,8 @@
         </div>
 
 
-                <!-- 07 -->
+
+        <!-- MURALES 07 -->
 
         <div
           class="artwork artwork-7"
@@ -1076,7 +1361,8 @@
 
           <img
             src="murales07.jpeg"
-            alt="Murale by Laila Dalla Torre"
+            alt="Murales 07 by Laila Dalla Torre"
+            onerror="hideArtwork(this)"
           >
 
           <div class="artwork-overlay">
@@ -1093,7 +1379,9 @@
 
         </div>
 
-                <!-- 08 -->
+
+
+        <!-- MURALES 08 -->
 
         <div
           class="artwork artwork-8"
@@ -1102,7 +1390,8 @@
 
           <img
             src="murales08.jpeg"
-            alt="Murale by Laila Dalla Torre"
+            alt="Murales 08 by Laila Dalla Torre"
+            onerror="hideArtwork(this)"
           >
 
           <div class="artwork-overlay">
@@ -1119,7 +1408,9 @@
 
         </div>
 
-                <!-- 09 -->
+
+
+        <!-- MURALES 09 -->
 
         <div
           class="artwork artwork-9"
@@ -1128,7 +1419,8 @@
 
           <img
             src="murales09.jpeg"
-            alt="Murale by Laila Dalla Torre"
+            alt="Murales 09 by Laila Dalla Torre"
+            onerror="hideArtwork(this)"
           >
 
           <div class="artwork-overlay">
@@ -1145,7 +1437,9 @@
 
         </div>
 
-                <!-- 10 -->
+
+
+        <!-- MURALES 10 -->
 
         <div
           class="artwork artwork-10"
@@ -1154,7 +1448,8 @@
 
           <img
             src="murales10.jpeg"
-            alt="Murale by Laila Dalla Torre"
+            alt="Murales 10 by Laila Dalla Torre"
+            onerror="hideArtwork(this)"
           >
 
           <div class="artwork-overlay">
@@ -1171,7 +1466,9 @@
 
         </div>
 
-                <!-- 11 -->
+
+
+        <!-- MURALES 11 -->
 
         <div
           class="artwork artwork-11"
@@ -1180,7 +1477,8 @@
 
           <img
             src="murales11.jpeg"
-            alt="Murale by Laila Dalla Torre"
+            alt="Murales 11 by Laila Dalla Torre"
+            onerror="hideArtwork(this)"
           >
 
           <div class="artwork-overlay">
@@ -1197,7 +1495,9 @@
 
         </div>
 
-                <!-- 12 -->
+
+
+        <!-- MURALES 12 -->
 
         <div
           class="artwork artwork-12"
@@ -1206,7 +1506,8 @@
 
           <img
             src="murales12.jpeg"
-            alt="Murale by Laila Dalla Torre"
+            alt="Murales 12 by Laila Dalla Torre"
+            onerror="hideArtwork(this)"
           >
 
           <div class="artwork-overlay">
@@ -1223,7 +1524,9 @@
 
         </div>
 
-                <!-- 13 -->
+
+
+        <!-- MURALES 13 -->
 
         <div
           class="artwork artwork-13"
@@ -1232,13 +1535,14 @@
 
           <img
             src="murales13.jpeg"
-            alt="Murale by Laila Dalla Torre"
+            alt="Murales 13 by Laila Dalla Torre"
+            onerror="hideArtwork(this)"
           >
 
           <div class="artwork-overlay">
 
             <div class="artwork-title">
-              Murale 13
+              Murales 13
             </div>
 
             <div class="artwork-meta">
@@ -1248,6 +1552,66 @@
           </div>
 
         </div>
+
+
+
+        <!-- MURALES 14 -->
+
+        <div
+          class="artwork artwork-14"
+          onclick="openLightbox('murales14.jpeg')"
+        >
+
+          <img
+            src="murales14.jpeg"
+            alt="Murales 14 by Laila Dalla Torre"
+            onerror="hideArtwork(this)"
+          >
+
+          <div class="artwork-overlay">
+
+            <div class="artwork-title">
+              Murales 14
+            </div>
+
+            <div class="artwork-meta">
+              Selected work
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- MURALES 15 -->
+
+        <div
+          class="artwork artwork-15"
+          onclick="openLightbox('murales15.jpeg')"
+        >
+
+          <img
+            src="murales15.jpeg"
+            alt="Murales 15 by Laila Dalla Torre"
+            onerror="hideArtwork(this)"
+          >
+
+          <div class="artwork-overlay">
+
+            <div class="artwork-title">
+              Murales 15
+            </div>
+
+            <div class="artwork-meta">
+              Selected work
+            </div>
+
+          </div>
+
+        </div>
+
+
 
       </div>
 
@@ -1259,7 +1623,10 @@
 
 
 
-  <!-- STATEMENT -->
+  <!-- =======================================================
+       STATEMENT
+       ======================================================= -->
+
 
   <section class="statement">
 
@@ -1271,7 +1638,9 @@
 
 
         <div class="statement-label">
+
           Perspective
+
         </div>
 
 
@@ -1284,7 +1653,9 @@
           <br><br>
 
           <span>
+
             Both begin with perspective.
+
           </span>
 
         </div>
@@ -1300,7 +1671,10 @@
 
 
 
-  <!-- RETURN -->
+  <!-- =======================================================
+       RETURN
+       ======================================================= -->
+
 
   <section class="return-section">
 
@@ -1310,13 +1684,20 @@
 
       <a href="index.html">
 
+
         <span>
+
           Return to the main site
+
         </span>
 
+
         <span class="return-arrow">
+
           →
+
         </span>
+
 
       </a>
 
@@ -1328,7 +1709,10 @@
 
 
 
-  <!-- FOOTER -->
+  <!-- =======================================================
+       FOOTER
+       ======================================================= -->
+
 
   <footer>
 
@@ -1338,11 +1722,13 @@
 
       <div class="footer-brand">
 
-        <img
-          src="LDTlogo.png"
-          alt="LDT"
-          class="footer-logo"
-        >
+
+        <span class="footer-monogram">
+
+          LDT
+
+        </span>
+
 
         <span>
 
@@ -1351,18 +1737,26 @@
 
         </span>
 
+
       </div>
 
 
       <div class="footer-links">
 
+
         <a href="index.html">
+
           Main site
+
         </a>
 
+
         <a href="privacy.html">
+
           Privacy
+
         </a>
+
 
       </div>
 
@@ -1374,7 +1768,10 @@
 
 
 
-  <!-- LIGHTBOX -->
+  <!-- =======================================================
+       LIGHTBOX
+       ======================================================= -->
+
 
   <div
     class="lightbox"
@@ -1382,35 +1779,71 @@
     onclick="closeLightbox(event)"
   >
 
+
     <button
       class="lightbox-close"
       onclick="closeLightbox(event)"
       aria-label="Close"
     >
+
       ×
+
     </button>
 
 
     <img
       src=""
-      alt="Murale enlarged"
+      alt="Murales enlarged"
       id="lightbox-image"
     >
+
 
   </div>
 
 
 
+  <!-- =======================================================
+       JAVASCRIPT
+       ======================================================= -->
+
+
   <script>
+
 
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
 
+
+    /*
+      If murales09.jpeg etc. do not exist yet,
+      hide the entire artwork block.
+
+      This means you can prepare the site for 15 now
+      without showing broken images.
+    */
+
+    function hideArtwork(image) {
+
+      const artwork =
+        image.closest(".artwork");
+
+      if (artwork) {
+
+        artwork.style.display = "none";
+
+      }
+
+    }
+
+
+
     function openLightbox(image) {
+
 
       const lightbox =
         document.getElementById("lightbox");
+
 
       const lightboxImage =
         document.getElementById("lightbox-image");
@@ -1418,19 +1851,26 @@
 
       lightboxImage.src = image;
 
+
       lightbox.classList.add("active");
 
+
       document.body.style.overflow = "hidden";
+
 
     }
 
 
+
     function closeLightbox(event) {
+
 
       if (
         event.target.id === "lightbox-image"
       ) {
+
         return;
+
       }
 
 
@@ -1442,26 +1882,34 @@
 
       document.body.style.overflow = "";
 
+
     }
+
 
 
     document.addEventListener(
       "keydown",
       function(event) {
 
+
         if (event.key === "Escape") {
+
 
           document
             .getElementById("lightbox")
             .classList
             .remove("active");
 
+
           document.body.style.overflow = "";
+
 
         }
 
+
       }
     );
+
 
   </script>
 
