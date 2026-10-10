@@ -1,956 +1,642 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Art & Murales | Laila Dalla Torre</title>
-
-  <meta
-    name="description"
-    content="Selected murales and creative work by Laila Dalla Torre."
-  >
+  <meta name="description" content="Selected murales and creative work by Laila Dalla Torre.">
 
   <link rel="icon" type="image/png" href="LDTlogo.png">
   <link rel="apple-touch-icon" href="LDTlogo.png">
 
-
   <style>
-
     :root {
-      --dark:#031416;
-      --dark-soft:#061b1d;
-      --light:#e5e7e6;
-      --text:#071d1f;
-      --text-soft:#425355;
-      --white:#edf0ef;
-      --teal:#079bb2;
-      --teal-light:#43b7c5;
-      --line-dark:rgba(7,29,31,.16);
-      --line-light:rgba(230,235,235,.13);
-      --max-width:1660px;
+      --dark: #031416;
+      --dark-soft: #061b1d;
+      --light: #e5e7e6;
+      --text: #071d1f;
+      --text-soft: #425355;
+      --white: #edf0ef;
+      --teal: #079bb2;
+      --teal-light: #43b7c5;
+      --line-dark: rgba(7,29,31,.16);
+      --line-light: rgba(230,235,235,.13);
+      --max-width: 1660px;
     }
-
 
     * {
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
-
 
     html {
-      scroll-behavior:smooth;
+      scroll-behavior: smooth;
     }
-
 
     body {
-      background:var(--light);
-      color:var(--text);
-
-      font-family:
-        Inter,
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
-
-      -webkit-font-smoothing:antialiased;
-      overflow-x:hidden;
+      background: var(--light);
+      color: var(--text);
+      font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
-
 
     a {
-      color:inherit;
-      text-decoration:none;
+      color: inherit;
+      text-decoration: none;
     }
-
 
     img {
-      display:block;
-      max-width:100%;
+      display: block;
+      max-width: 100%;
     }
 
+    button {
+      font: inherit;
+    }
 
     .container {
-      width:min(96%,var(--max-width));
-      margin:0 auto;
+      width: min(96%, var(--max-width));
+      margin: 0 auto;
     }
 
-
-
-    /* =========================================================
-       NAVIGATION
-       ========================================================= */
+    /* NAVIGATION */
 
     nav {
-      position:fixed;
-
-      top:0;
-      left:0;
-
-      width:100%;
-
-      z-index:1000;
-
-      background:rgba(3,20,22,.94);
-
-      backdrop-filter:blur(18px);
-      -webkit-backdrop-filter:blur(18px);
-
-      border-bottom:1px solid var(--line-light);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(3,20,22,.94);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line-light);
     }
-
 
     .nav-inner {
-      min-height:86px;
-
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-
-      gap:30px;
+      min-height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
     }
-
 
     .brand {
-      display:flex;
-      align-items:center;
-      gap:16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
     }
-
 
     .brand-logo {
-      width:51px;
-      height:51px;
-      object-fit:contain;
+      width: 51px;
+      height: 51px;
+      object-fit: contain;
     }
-
 
     .brand-name {
-      color:#c8cecf;
-
-      font-size:.98rem;
-
-      letter-spacing:.15em;
-      text-transform:uppercase;
+      color: #c8cecf;
+      font-size: .98rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
     }
-
 
     .back {
-      color:#8d9b9c;
-
-      font-size:.69rem;
-
-      letter-spacing:.14em;
-      text-transform:uppercase;
-
-      transition:color .25s ease;
+      color: #8d9b9c;
+      font-size: .69rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      transition: color .25s ease;
     }
-
 
     .back:hover {
-      color:var(--teal-light);
+      color: var(--teal-light);
     }
 
-
-
-    /* =========================================================
-       INTRO
-       ========================================================= */
+    /* INTRO */
 
     .intro {
-      background:var(--dark);
-      color:var(--white);
-
-      min-height:72vh;
-
-      padding:190px 0 110px;
-
-      position:relative;
-      overflow:hidden;
+      background: var(--dark);
+      color: var(--white);
+      min-height: 72vh;
+      padding: 190px 0 110px;
+      position: relative;
+      overflow: hidden;
     }
-
 
     .intro::after {
-      content:"";
-
-      position:absolute;
-
-      width:600px;
-      height:600px;
-
-      right:-270px;
-      top:50px;
-
-      border:1px solid rgba(67,183,197,.10);
-
-      transform:rotate(45deg);
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      right: -270px;
+      top: 50px;
+      border: 1px solid rgba(67,183,197,.10);
+      transform: rotate(45deg);
+      pointer-events: none;
     }
-
 
     .eyebrow {
-      color:var(--teal-light);
-
-      font-size:.66rem;
-
-      letter-spacing:.19em;
-      text-transform:uppercase;
-
-      margin-bottom:32px;
+      color: var(--teal-light);
+      font-size: .66rem;
+      letter-spacing: .19em;
+      text-transform: uppercase;
+      margin-bottom: 32px;
     }
-
 
     h1 {
-      font-size:clamp(4.5rem,10vw,10rem);
-
-      line-height:.84;
-
-      letter-spacing:-.07em;
-
-      font-weight:400;
-
-      position:relative;
-      z-index:2;
+      font-size: clamp(4.5rem,10vw,10rem);
+      line-height: .84;
+      letter-spacing: -.07em;
+      font-weight: 400;
+      position: relative;
+      z-index: 2;
     }
-
 
     h1 span {
-      color:var(--teal-light);
+      color: var(--teal-light);
     }
-
 
     .intro-bottom {
-      margin-top:75px;
-
-      display:grid;
-
-      grid-template-columns:1fr .8fr;
-
-      gap:100px;
-
-      align-items:end;
-
-      position:relative;
-      z-index:2;
+      margin-top: 75px;
+      display: grid;
+      grid-template-columns: 1fr .8fr;
+      gap: 100px;
+      align-items: end;
+      position: relative;
+      z-index: 2;
     }
-
 
     .intro-statement {
-      font-size:clamp(1.7rem,3vw,3rem);
-
-      line-height:1.2;
-
-      letter-spacing:-.035em;
-
-      max-width:750px;
-
-      color:#dce1e1;
+      font-size: clamp(1.7rem,3vw,3rem);
+      line-height: 1.2;
+      letter-spacing: -.035em;
+      max-width: 750px;
+      color: #dce1e1;
     }
-
 
     .intro-copy {
-      color:#93a0a1;
-
-      max-width:550px;
-
-      font-size:1.04rem;
-
-      line-height:1.8;
+      color: #93a0a1;
+      max-width: 550px;
+      font-size: 1.04rem;
+      line-height: 1.8;
     }
 
-
-
-    /* =========================================================
-       GALLERY INTRO
-       ========================================================= */
+    /* GALLERY INTRO */
 
     .gallery-intro {
-      padding:115px 0 70px;
+      padding: 115px 0 70px;
     }
-
 
     .gallery-label {
-      color:#087f8e;
-
-      font-size:.65rem;
-
-      letter-spacing:.18em;
-      text-transform:uppercase;
-
-      margin-bottom:25px;
+      color: #087f8e;
+      font-size: .65rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 25px;
     }
-
 
     .gallery-intro-grid {
-      display:grid;
-
-      grid-template-columns:1fr .8fr;
-
-      gap:100px;
+      display: grid;
+      grid-template-columns: 1fr .8fr;
+      gap: 100px;
     }
-
 
     .gallery-intro h2 {
-      font-size:clamp(2.8rem,6vw,5.5rem);
-
-      line-height:.96;
-
-      letter-spacing:-.055em;
-
-      font-weight:400;
-
-      max-width:780px;
+      font-size: clamp(2.8rem,6vw,5.5rem);
+      line-height: .96;
+      letter-spacing: -.055em;
+      font-weight: 400;
+      max-width: 780px;
     }
-
 
     .gallery-intro p {
-      color:var(--text-soft);
-
-      font-size:1.05rem;
-
-      line-height:1.8;
-
-      max-width:550px;
+      color: var(--text-soft);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      max-width: 550px;
     }
 
-
-
-    /* =========================================================
-       GALLERY
-       2 LARGE MURALES PER ROW
-       ========================================================= */
+    /* AUTOMATIC GALLERY */
 
     .gallery {
-      padding:20px 0 150px;
+      padding: 20px 0 150px;
     }
-
 
     .gallery-list {
-      display:grid;
-
-      grid-template-columns:
-        repeat(2,minmax(0,1fr));
-
-      gap:18px;
-
-      width:100%;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      width: 100%;
     }
 
+    .gallery-row {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      gap: 18px;
+      width: 100%;
+    }
 
-    /*
-      Every murales has the same fixed height.
+    .gallery-row.landscape-left {
+      grid-template-columns: 3fr 2fr;
+    }
 
-      The image fills the complete frame.
-      There are no miniature / thumbnail versions.
-    */
+    .gallery-row.equal {
+      grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+
+    .gallery-row.single {
+      grid-template-columns: minmax(0,1fr);
+    }
 
     .artwork {
-      position:relative;
-
-      width:100%;
-      height:600px;
-
-      overflow:hidden;
-
-      background:#ccd2d1;
-
-      cursor:pointer;
+      position: relative;
+      width: 100%;
+      height: 560px;
+      min-width: 0;
+      overflow: hidden;
+      background: #ccd2d1;
+      cursor: zoom-in;
+      border: 0;
+      padding: 0;
+      text-align: left;
     }
 
-
     .artwork img {
-      display:block;
-
-      width:100%;
-      height:100%;
-
-      object-fit:cover;
-      object-position:center;
-
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
       transition:
         transform .8s cubic-bezier(.2,.75,.25,1),
         filter .5s ease;
     }
 
-
     .artwork:hover img {
-      transform:scale(1.018);
-      filter:brightness(.92);
+      transform: scale(1.018);
+      filter: brightness(.92);
     }
 
-
-
-    /* =========================================================
-       IMAGE OVERLAY
-       ========================================================= */
+    .artwork:focus-visible {
+      outline: 3px solid var(--teal);
+      outline-offset: 3px;
+    }
 
     .artwork-overlay {
-      position:absolute;
-
-      left:0;
-      right:0;
-      bottom:0;
-
-      padding:90px 30px 26px;
-
-      color:white;
-
-      background:
-        linear-gradient(
-          0deg,
-          rgba(3,20,22,.80),
-          rgba(3,20,22,.28) 55%,
-          transparent
-        );
-
-      opacity:0;
-
-      transform:translateY(8px);
-
-      transition:
-        opacity .3s ease,
-        transform .3s ease;
-
-      pointer-events:none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 90px 30px 26px;
+      color: white;
+      background: linear-gradient(
+        0deg,
+        rgba(3,20,22,.80),
+        rgba(3,20,22,.28) 55%,
+        transparent
+      );
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity .3s ease, transform .3s ease;
+      pointer-events: none;
     }
 
-
-    .artwork:hover .artwork-overlay {
-      opacity:1;
-      transform:translateY(0);
+    .artwork:hover .artwork-overlay,
+    .artwork:focus-visible .artwork-overlay {
+      opacity: 1;
+      transform: translateY(0);
     }
-
 
     .artwork-title {
-      font-size:1.05rem;
-      margin-bottom:4px;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
     }
-
 
     .artwork-meta {
-      color:rgba(255,255,255,.68);
-
-      font-size:.67rem;
-
-      letter-spacing:.11em;
-      text-transform:uppercase;
+      color: rgba(255,255,255,.68);
+      font-size: .67rem;
+      letter-spacing: .11em;
+      text-transform: uppercase;
     }
 
-
-
-    /* =========================================================
-       FINAL SINGLE IMAGE
-       ========================================================= */
-
-    /*
-      When Murales 15 exists, it becomes a strong
-      full-width final image instead of leaving
-      an empty half-row.
-    */
-
-    .artwork.final-visible {
-      grid-column:1 / -1;
-      height:680px;
+    .gallery-row.single .artwork {
+      height: 680px;
     }
 
-
-
-    /* =========================================================
-       CREATIVE STATEMENT
-       ========================================================= */
+    /* STATEMENT */
 
     .statement {
-      background:var(--dark-soft);
-      color:var(--white);
-
-      padding:130px 0;
+      background: var(--dark-soft);
+      color: var(--white);
+      padding: 130px 0;
     }
-
 
     .statement-grid {
-      display:grid;
-
-      grid-template-columns:.65fr 1.35fr;
-
-      gap:100px;
+      display: grid;
+      grid-template-columns: .65fr 1.35fr;
+      gap: 100px;
     }
-
 
     .statement-label {
-      color:var(--teal-light);
-
-      font-size:.66rem;
-
-      letter-spacing:.18em;
-      text-transform:uppercase;
+      color: var(--teal-light);
+      font-size: .66rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
     }
-
 
     .statement-text {
-      font-size:clamp(2rem,4.2vw,4.3rem);
-
-      line-height:1.08;
-
-      letter-spacing:-.045em;
-
-      font-weight:400;
-
-      max-width:1000px;
+      font-size: clamp(2rem,4.2vw,4.3rem);
+      line-height: 1.08;
+      letter-spacing: -.045em;
+      font-weight: 400;
+      max-width: 1000px;
     }
-
 
     .statement-text span {
-      color:var(--teal-light);
+      color: var(--teal-light);
     }
 
-
-
-    /* =========================================================
-       RETURN TO MAIN SITE
-       ========================================================= */
+    /* RETURN */
 
     .return-section {
-      padding:120px 0;
-
-      background:var(--light);
+      padding: 120px 0;
+      background: var(--light);
     }
-
 
     .return-section a {
-      display:flex;
-
-      justify-content:space-between;
-      align-items:center;
-
-      padding:35px 0;
-
-      border-top:1px solid var(--line-dark);
-      border-bottom:1px solid var(--line-dark);
-
-      font-size:clamp(1.5rem,3vw,2.7rem);
-
-      letter-spacing:-.03em;
-
-      transition:padding .25s ease;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 35px 0;
+      border-top: 1px solid var(--line-dark);
+      border-bottom: 1px solid var(--line-dark);
+      font-size: clamp(1.5rem,3vw,2.7rem);
+      letter-spacing: -.03em;
+      transition: padding .25s ease;
     }
-
 
     .return-section a:hover {
-      padding-left:12px;
-      padding-right:12px;
+      padding-left: 12px;
+      padding-right: 12px;
     }
-
 
     .return-arrow {
-      color:#087f8e;
+      color: #087f8e;
     }
 
-
-
-    /* =========================================================
-       LIGHTBOX
-       ========================================================= */
+    /* LIGHTBOX */
 
     .lightbox {
-      position:fixed;
-
-      inset:0;
-
-      z-index:2000;
-
-      background:rgba(3,20,22,.97);
-
-      display:none;
-
-      align-items:center;
-      justify-content:center;
-
-      padding:45px;
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(3,20,22,.97);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 45px;
     }
-
 
     .lightbox.active {
-      display:flex;
+      display: flex;
     }
-
-
-    /*
-      In the lightbox the COMPLETE original image
-      is visible without cropping.
-    */
 
     .lightbox img {
-      max-width:94vw;
-      max-height:90vh;
-
-      width:auto;
-      height:auto;
-
-      object-fit:contain;
+      max-width: 94vw;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
     }
-
 
     .lightbox-close {
-      position:absolute;
-
-      top:24px;
-      right:30px;
-
-      border:none;
-
-      background:none;
-
-      color:white;
-
-      font-size:2.2rem;
-
-      font-weight:300;
-
-      cursor:pointer;
-
-      z-index:10;
+      position: absolute;
+      top: 24px;
+      right: 30px;
+      border: none;
+      background: none;
+      color: white;
+      font-size: 2.2rem;
+      font-weight: 300;
+      cursor: pointer;
+      z-index: 10;
     }
 
-
-
-    /* =========================================================
-       FOOTER
-       ========================================================= */
+    /* FOOTER */
 
     footer {
-      background:var(--dark);
-
-      color:#8d9b9c;
-
-      border-top:1px solid var(--line-light);
-
-      padding:38px 0;
-
-      font-size:.69rem;
+      background: var(--dark);
+      color: #8d9b9c;
+      border-top: 1px solid var(--line-light);
+      padding: 38px 0;
+      font-size: .69rem;
     }
-
 
     .footer-inner {
-      display:flex;
-
-      align-items:center;
-      justify-content:space-between;
-
-      gap:20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
-
 
     .footer-brand {
-      display:flex;
-
-      align-items:center;
-
-      gap:14px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
     }
-
 
     .footer-monogram {
-      color:var(--teal-light);
-
-      font-size:.72rem;
-
-      font-weight:500;
-
-      letter-spacing:.18em;
-
-      padding-right:16px;
-
-      border-right:1px solid var(--line-light);
+      color: var(--teal-light);
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .18em;
+      padding-right: 16px;
+      border-right: 1px solid var(--line-light);
     }
-
 
     .footer-links {
-      display:flex;
-      gap:28px;
+      display: flex;
+      gap: 28px;
     }
-
-
-    .footer-links a {
-      transition:color .25s ease;
-    }
-
 
     .footer-links a:hover {
-      color:var(--teal-light);
+      color: var(--teal-light);
     }
 
+    /* RESPONSIVE */
 
-
-    /* =========================================================
-       TABLET
-       ========================================================= */
-
-    @media(max-width:900px) {
-
+    @media (max-width: 900px) {
       .intro-bottom,
       .gallery-intro-grid,
       .statement-grid {
-        grid-template-columns:1fr;
-
-        gap:45px;
+        grid-template-columns: 1fr;
+        gap: 45px;
       }
 
-
-      /*
-        Still 2 murales per row.
-      */
-
-      .gallery-list {
-        grid-template-columns:
-          repeat(2,minmax(0,1fr));
-
-        gap:12px;
+      .gallery-row,
+      .gallery-row.landscape-left {
+        gap: 12px;
       }
-
 
       .artwork {
-        height:430px;
+        height: 430px;
       }
 
-
-      .artwork.final-visible {
-        height:520px;
+      .gallery-row.single .artwork {
+        height: 520px;
       }
-
 
       .artwork-overlay {
-        opacity:1;
-
-        transform:none;
-
-        padding:70px 22px 20px;
+        opacity: 1;
+        transform: none;
+        padding: 70px 22px 20px;
       }
-
     }
 
-
-
-    /* =========================================================
-       MOBILE
-       ========================================================= */
-
-    @media(max-width:600px) {
-
+    @media (max-width: 600px) {
       .brand-name {
-        display:none;
+        display: none;
       }
-
 
       .intro {
-        padding-top:150px;
+        padding-top: 150px;
       }
-
 
       h1 {
-        font-size:4.3rem;
+        font-size: 4.3rem;
       }
-
 
       .gallery-intro {
-        padding-top:80px;
+        padding-top: 80px;
       }
-
 
       .gallery {
-        padding-bottom:90px;
+        padding-bottom: 90px;
       }
-
-
-      /*
-        Keep 2 per row even on mobile.
-      */
 
       .gallery-list {
-        grid-template-columns:
-          repeat(2,minmax(0,1fr));
-
-        gap:7px;
+        gap: 8px;
       }
 
+      .gallery-row,
+      .gallery-row.landscape-left {
+        gap: 8px;
+      }
 
       .artwork {
-        height:270px;
+        height: 270px;
       }
 
-
-      .artwork.final-visible {
-        height:340px;
+      .gallery-row.single .artwork {
+        height: 340px;
       }
-
 
       .artwork-overlay {
-        padding:50px 12px 12px;
+        padding: 50px 12px 12px;
       }
-
 
       .artwork-title {
-        font-size:.8rem;
+        font-size: .8rem;
       }
-
 
       .artwork-meta {
-        font-size:.55rem;
+        font-size: .55rem;
       }
-
 
       .lightbox {
-        padding:18px;
+        padding: 18px;
       }
-
 
       .footer-inner {
-        flex-direction:column;
-        align-items:flex-start;
+        flex-direction: column;
+        align-items: flex-start;
       }
-
 
       .footer-links {
-        flex-direction:column;
-        gap:8px;
+        flex-direction: column;
+        gap: 8px;
       }
-
     }
 
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
 
+      .artwork img,
+      .artwork-overlay {
+        transition: none;
+      }
+    }
   </style>
-
 </head>
-
-
 
 <body>
 
-
-
-  <!-- =======================================================
-       NAVIGATION
-       ======================================================= -->
+  <!-- NAVIGATION -->
 
   <nav>
-
     <div class="container nav-inner">
-
-
       <a href="index.html" class="brand">
-
         <img
           src="LDTlogo.png"
           alt="Laila Dalla Torre"
           class="brand-logo"
         >
-
-        <span class="brand-name">
-          Laila Dalla Torre
-        </span>
-
+        <span class="brand-name">Laila Dalla Torre</span>
       </a>
-
 
       <a href="index.html#creative" class="back">
-
         ← Back to main site
-
       </a>
-
-
     </div>
-
   </nav>
 
-
-
-  <!-- =======================================================
-       INTRO
-       ======================================================= -->
+  <!-- INTRO -->
 
   <header class="intro">
-
     <div class="container">
-
-
       <div class="eyebrow">
-
         Beyond the Boardroom · Selected Creative Work
-
       </div>
 
-
       <h1>
-
         Art &<br>
-
         <span>Murales.</span>
-
       </h1>
 
-
       <div class="intro-bottom">
-
-
         <div class="intro-statement">
-
           A different canvas for ideas.
-
         </div>
 
-
         <div class="intro-copy">
-
           Creativity offers another way of exploring
           perspective, scale and expression.
 
           Murales turn ideas into physical spaces —
           experienced rather than presented.
-
         </div>
-
-
       </div>
-
-
     </div>
-
   </header>
 
-
-
-  <!-- =======================================================
-       GALLERY INTRO
-       ======================================================= -->
+  <!-- GALLERY INTRO -->
 
   <section class="gallery-intro">
-
     <div class="container">
-
-
-      <div class="gallery-label">
-
-        Selected Work
-
-      </div>
-
+      <div class="gallery-label">Selected Work</div>
 
       <div class="gallery-intro-grid">
-
-
         <h2>
-
           Ideas that leave<br>
           the page.
-
         </h2>
 
-
         <p>
-
           Large-scale work changes with its surroundings.
           Architecture, surface, light and distance all
           become part of the composition.
@@ -958,823 +644,334 @@
           <br><br>
 
           A selection of murales and visual work.
-
         </p>
-
-
       </div>
-
-
     </div>
-
   </section>
 
-
-
-  <!-- =======================================================
-       GALLERY
-       ======================================================= -->
+  <!-- AUTOMATIC GALLERY -->
 
   <main class="gallery">
-
     <div class="container">
-
-      <div class="gallery-list">
-
-
-
-        <!-- MURALES 01 -->
-
-        <div
-          class="artwork"
-          onclick="openLightbox('murales01.jpeg')"
-        >
-
-          <img
-            src="murales01.jpeg"
-            alt="Murales 01 by Laila Dalla Torre"
-            onerror="hideArtwork(this)"
-          >
-
-          <div class="artwork-overlay">
-
-            <div class="artwork-title">
-              Murales 01
-            </div>
-
-            <div class="artwork-meta">
-              Selected work
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- MURALES 02 -->
-
-        <div
-          class="artwork"
-          onclick="openLightbox('murales02.jpeg')"
-        >
-
-          <img
-            src="murales02.jpeg"
-            alt="Murales 02 by Laila Dalla Torre"
-            onerror="hideArtwork(this)"
-          >
-
-          <div class="artwork-overlay">
-
-            <div class="artwork-title">
-              Murales 02
-            </div>
-
-            <div class="artwork-meta">
-              Selected work
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- MURALES 03 -->
-
-        <div
-          class="artwork"
-          onclick="openLightbox('murales03.jpeg')"
-        >
-
-          <img
-            src="murales03.jpeg"
-            alt="Murales 03 by Laila Dalla Torre"
-            onerror="hideArtwork(this)"
-          >
-
-          <div class="artwork-overlay">
-
-            <div class="artwork-title">
-              Murales 03
-            </div>
-
-            <div class="artwork-meta">
-              Selected work
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- MURALES 04 -->
-
-        <div
-          class="artwork"
-          onclick="openLightbox('murales04.jpeg')"
-        >
-
-          <img
-            src="murales04.jpeg"
-            alt="Murales 04 by Laila Dalla Torre"
-            onerror="hideArtwork(this)"
-          >
-
-          <div class="artwork-overlay">
-
-            <div class="artwork-title">
-              Murales 04
-            </div>
-
-            <div class="artwork-meta">
-              Selected work
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- MURALES 05 -->
-
-        <div
-          class="artwork"
-          onclick="openLightbox('murales05.jpeg')"
-        >
-
-          <img
-            src="murales05.jpeg"
-            alt="Murales 05 by Laila Dalla Torre"
-            onerror="hideArtwork(this)"
-          >
-
-          <div class="artwork-overlay">
-
-            <div class="artwork-title">
-              Murales 05
-            </div>
-
-            <div class="artwork-meta">
-              Selected work
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- MURALES 06 -->
-
-        <div
-          class="artwork"
-          onclick="openLightbox('murales06.jpeg')"
-        >
-
-          <img
-            src="murales06.jpeg"
-            alt="Murales 06 by Laila Dalla Torre"
-            onerror="hideArtwork(this)"
-          >
-
-          <div class="artwork-overlay">
-
-            <div class="artwork-title">
-              Murales 06
-            </div>
-
-            <div class="artwork-meta">
-              Selected work
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- MURALES 07 -->
-
-        <div
-          class="artwork"
-          onclick="openLightbox('murales07.jpeg')"
-        >
-
-          <img
-            src="murales07.jpeg"
-            alt="Murales 07 by Laila Dalla Torre"
-            onerror="hideArtwork(this)"
-          >
-
-          <div class="artwork-overlay">
-
-            <div class="artwork-title">
-              Murales 07
-            </div>
-
-            <div class="artwork-meta">
-              Selected work
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- MURALES 08 -->
-
-        <div
-          class="artwork"
-          onclick="openLightbox('murales08.jpeg')"
-        >
-
-          <img
-            src="murales08.jpeg"
-            alt="Murales 08 by Laila Dalla Torre"
-            onerror="hideArtwork(this)"
-          >
-
-          <div class="artwork-overlay">
-
-            <div class="artwork-title">
-              Murales 08
-            </div>
-
-            <div class="artwork-meta">
-              Selected work
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- MURALES 09 -->
-
-        <div
-          class="artwork"
-          onclick="openLightbox('murales09.jpeg')"
-        >
-
-          <img
-            src="murales09.jpeg"
-            alt="Murales 09 by Laila Dalla Torre"
-            onerror="hideArtwork(this)"
-          >
-
-          <div class="artwork-overlay">
-
-            <div class="artwork-title">
-              Murales 09
-            </div>
-
-            <div class="artwork-meta">
-              Selected work
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- MURALES 10 -->
-
-        <div
-          class="artwork"
-          onclick="openLightbox('murales10.jpeg')"
-        >
-
-          <img
-            src="murales10.jpeg"
-            alt="Murales 10 by Laila Dalla Torre"
-            onerror="hideArtwork(this)"
-          >
-
-          <div class="artwork-overlay">
-
-            <div class="artwork-title">
-              Murales 10
-            </div>
-
-            <div class="artwork-meta">
-              Selected work
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- MURALES 11 -->
-
-        <div
-          class="artwork"
-          onclick="openLightbox('murales11.jpeg')"
-        >
-
-          <img
-            src="murales11.jpeg"
-            alt="Murales 11 by Laila Dalla Torre"
-            onerror="hideArtwork(this)"
-          >
-
-          <div class="artwork-overlay">
-
-            <div class="artwork-title">
-              Murales 11
-            </div>
-
-            <div class="artwork-meta">
-              Selected work
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- MURALES 12 -->
-
-        <div
-          class="artwork"
-          onclick="openLightbox('murales12.jpeg')"
-        >
-
-          <img
-            src="murales12.jpeg"
-            alt="Murales 12 by Laila Dalla Torre"
-            onerror="hideArtwork(this)"
-          >
-
-          <div class="artwork-overlay">
-
-            <div class="artwork-title">
-              Murales 12
-            </div>
-
-            <div class="artwork-meta">
-              Selected work
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- MURALES 13 -->
-
-        <div
-          class="artwork"
-          onclick="openLightbox('murales13.jpeg')"
-        >
-
-          <img
-            src="murales13.jpeg"
-            alt="Murales 13 by Laila Dalla Torre"
-            onerror="hideArtwork(this)"
-          >
-
-          <div class="artwork-overlay">
-
-            <div class="artwork-title">
-              Murales 13
-            </div>
-
-            <div class="artwork-meta">
-              Selected work
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- MURALES 14 -->
-
-        <div
-          class="artwork"
-          onclick="openLightbox('murales14.jpeg')"
-        >
-
-          <img
-            src="murales14.jpeg"
-            alt="Murales 14 by Laila Dalla Torre"
-            onerror="hideArtwork(this)"
-          >
-
-          <div class="artwork-overlay">
-
-            <div class="artwork-title">
-              Murales 14
-            </div>
-
-            <div class="artwork-meta">
-              Selected work
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- MURALES 15 -->
-
-        <div
-          class="artwork"
-          onclick="openLightbox('murales15.jpeg')"
-        >
-
-          <img
-            src="murales15.jpeg"
-            alt="Murales 15 by Laila Dalla Torre"
-            onerror="hideArtwork(this)"
-          >
-
-          <div class="artwork-overlay">
-
-            <div class="artwork-title">
-              Murales 15
-            </div>
-
-            <div class="artwork-meta">
-              Selected work
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-      </div>
-
+      <div
+        class="gallery-list"
+        id="gallery-list"
+        aria-label="Murales gallery"
+      ></div>
     </div>
-
   </main>
 
-
-
-  <!-- =======================================================
-       STATEMENT
-       ======================================================= -->
+  <!-- STATEMENT -->
 
   <section class="statement">
-
     <div class="container">
-
       <div class="statement-grid">
-
-
-        <div class="statement-label">
-
-          Perspective
-
-        </div>
-
+        <div class="statement-label">Perspective</div>
 
         <div class="statement-text">
-
           Some ideas need a framework.<br>
-
           Others need a wall.
 
           <br><br>
 
-          <span>
-
-            Both begin with perspective.
-
-          </span>
-
+          <span>Both begin with perspective.</span>
         </div>
-
-
       </div>
-
     </div>
-
   </section>
 
-
-
-  <!-- =======================================================
-       RETURN
-       ======================================================= -->
+  <!-- RETURN -->
 
   <section class="return-section">
-
     <div class="container">
-
-
       <a href="index.html">
-
-
-        <span>
-
-          Return to the main site
-
-        </span>
-
-
-        <span class="return-arrow">
-
-          →
-
-        </span>
-
-
+        <span>Return to the main site</span>
+        <span class="return-arrow">→</span>
       </a>
-
-
     </div>
-
   </section>
 
-
-
-  <!-- =======================================================
-       FOOTER
-       ======================================================= -->
+  <!-- FOOTER -->
 
   <footer>
-
     <div class="container footer-inner">
-
-
       <div class="footer-brand">
-
-
-        <span class="footer-monogram">
-
-          LDT
-
-        </span>
-
-
+        <span class="footer-monogram">LDT</span>
         <span>
-
-          © <span id="year"></span>
-          Laila Dalla Torre
-
+          © <span id="year"></span> Laila Dalla Torre
         </span>
-
-
       </div>
-
 
       <div class="footer-links">
-
-
-        <a href="index.html">
-
-          Main site
-
-        </a>
-
-
-        <a href="privacy.html">
-
-          Privacy
-
-        </a>
-
-
+        <a href="index.html">Main site</a>
+        <a href="privacy.html">Privacy</a>
       </div>
-
-
     </div>
-
   </footer>
 
-
-
-  <!-- =======================================================
-       LIGHTBOX
-       ======================================================= -->
+  <!-- LIGHTBOX -->
 
   <div
     class="lightbox"
     id="lightbox"
-    onclick="closeLightbox(event)"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Enlarged murales"
+    aria-hidden="true"
   >
-
-
     <button
       class="lightbox-close"
-      onclick="closeLightbox(event)"
-      aria-label="Close"
-    >
-
-      ×
-
-    </button>
-
+      id="lightbox-close"
+      type="button"
+      aria-label="Close enlarged image"
+    >×</button>
 
     <img
       src=""
       alt="Murales enlarged"
       id="lightbox-image"
     >
-
-
   </div>
 
-
-
-  <!-- =======================================================
-       JAVASCRIPT
-       ======================================================= -->
+  <!-- JAVASCRIPT -->
 
   <script>
-
-
-    /* YEAR */
-
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
+    const gallery = document.getElementById("gallery-list");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const closeButton = document.getElementById("lightbox-close");
 
+    let previousFocus = null;
 
     /*
-      HIDE MURALES THAT HAVE NOT YET
-      BEEN UPLOADED.
+      IMAGE SETTINGS
+
+      The website checks murales01.jpeg to murales15.jpeg.
+
+      It automatically:
+      - ignores missing files
+      - reads real image dimensions
+      - separates portrait and landscape images
+      - pairs one portrait with one landscape
+      - alternates their positions
+      - displays remaining images in equal pairs
+      - displays one final image full width
+
+      Square images are treated as landscape
+      for the purpose of grouping.
     */
 
-    function hideArtwork(image) {
+    const MAX_MURALES = 15;
 
-      const artwork =
-        image.closest(".artwork");
+    function loadImage(number) {
+      return new Promise(resolve => {
+        const filename =
+          "murales" + String(number).padStart(2, "0") + ".jpeg";
 
+        const img = new Image();
 
-      if (artwork) {
+        img.onload = function() {
+          resolve({
+            number,
+            filename,
+            width: img.naturalWidth,
+            height: img.naturalHeight,
+            orientation:
+              img.naturalHeight > img.naturalWidth
+                ? "portrait"
+                : "landscape"
+          });
+        };
 
-        artwork.style.display = "none";
+        img.onerror = function() {
+          resolve(null);
+        };
 
-      }
-
-
-      updateGallery();
-
+        img.src = filename;
+      });
     }
 
+    function createArtwork(item) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "artwork";
 
+      const number = String(item.number).padStart(2, "0");
 
-    /*
-      CHECK THE VISIBLE MURALES.
+      button.setAttribute(
+        "aria-label",
+        "Enlarge Murales " + number
+      );
 
-      If the gallery contains an odd number,
-      the final visible murales spans the
-      complete width.
+      const image = document.createElement("img");
+      image.src = item.filename;
+      image.alt = "Murales " + number + " by Laila Dalla Torre";
+      image.loading = "lazy";
+      image.decoding = "async";
 
-      This means:
-      8 images = 4 complete rows
-      9 images = 4 rows + large final image
-      10 images = 5 complete rows
-      etc.
-    */
+      const overlay = document.createElement("div");
+      overlay.className = "artwork-overlay";
 
-    function updateGallery() {
+      const title = document.createElement("div");
+      title.className = "artwork-title";
+      title.textContent = "Murales " + number;
 
+      const meta = document.createElement("div");
+      meta.className = "artwork-meta";
+      meta.textContent = "Selected work";
 
-      const artworks =
-        Array.from(
-          document.querySelectorAll(".artwork")
-        );
+      overlay.append(title, meta);
+      button.append(image, overlay);
 
-
-      artworks.forEach(function(artwork) {
-
-        artwork.classList.remove("final-visible");
-
+      button.addEventListener("click", function() {
+        openLightbox(item.filename, number);
       });
 
-
-      const visible =
-        artworks.filter(function(artwork) {
-
-          return artwork.style.display !== "none";
-
-        });
-
-
-      if (
-        visible.length > 0 &&
-        visible.length % 2 !== 0
-      ) {
-
-        visible[
-          visible.length - 1
-        ].classList.add("final-visible");
-
-      }
-
+      return button;
     }
 
+    function addRow(items, type, index) {
+      const row = document.createElement("div");
+      row.className = "gallery-row";
 
+      if (type === "mixed") {
+        /*
+          Even mixed rows: portrait left, landscape right.
+          Odd mixed rows: landscape left, portrait right.
+        */
 
-    /*
-      WAIT UNTIL IMAGES HAVE BEEN CHECKED,
-      THEN CALCULATE THE FINAL LAYOUT.
-    */
+        if (index % 2 === 1) {
+          row.classList.add("landscape-left");
+          items.reverse();
+        }
+      } else if (type === "equal") {
+        row.classList.add("equal");
+      } else {
+        row.classList.add("single");
+      }
 
-    window.addEventListener(
-      "load",
-      updateGallery
-    );
+      items.forEach(item => {
+        row.appendChild(createArtwork(item));
+      });
 
+      gallery.appendChild(row);
+    }
 
+    async function buildGallery() {
+      const numbers = Array.from(
+        { length: MAX_MURALES },
+        (_, index) => index + 1
+      );
 
-    /* OPEN LIGHTBOX */
+      const results = await Promise.all(
+        numbers.map(loadImage)
+      );
 
-    function openLightbox(image) {
+      const available = results.filter(Boolean);
 
+      const portraits = available.filter(
+        item => item.orientation === "portrait"
+      );
 
-      const lightbox =
-        document.getElementById("lightbox");
+      const landscapes = available.filter(
+        item => item.orientation === "landscape"
+      );
 
+      gallery.replaceChildren();
 
-      const lightboxImage =
-        document.getElementById("lightbox-image");
+      let mixedIndex = 0;
 
+      /*
+        First: pair one portrait with one landscape.
+      */
 
-      lightboxImage.src = image;
+      while (portraits.length && landscapes.length) {
+        addRow(
+          [portraits.shift(), landscapes.shift()],
+          "mixed",
+          mixedIndex
+        );
 
+        mixedIndex++;
+      }
+
+      /*
+        Next: show any remaining images in equal pairs.
+        Nothing is omitted.
+      */
+
+      const remaining = [...portraits, ...landscapes]
+        .sort((a, b) => a.number - b.number);
+
+      while (remaining.length >= 2) {
+        addRow(
+          [remaining.shift(), remaining.shift()],
+          "equal",
+          0
+        );
+      }
+
+      /*
+        Finally: if there is one image left,
+        display it full width.
+      */
+
+      if (remaining.length === 1) {
+        addRow([remaining.shift()], "single", 0);
+      }
+    }
+
+    function openLightbox(filename, number) {
+      previousFocus = document.activeElement;
+
+      lightboxImage.src = filename;
+      lightboxImage.alt = "Murales " + number + " enlarged";
 
       lightbox.classList.add("active");
-
+      lightbox.setAttribute("aria-hidden", "false");
 
       document.body.style.overflow = "hidden";
-
+      closeButton.focus();
     }
 
-
-
-    /* CLOSE LIGHTBOX */
-
-    function closeLightbox(event) {
-
-
-      if (
-        event.target.id === "lightbox-image"
-      ) {
-
-        return;
-
-      }
-
-
-      document
-        .getElementById("lightbox")
-        .classList
-        .remove("active");
-
+    function closeLightbox() {
+      lightbox.classList.remove("active");
+      lightbox.setAttribute("aria-hidden", "true");
 
       document.body.style.overflow = "";
+      lightboxImage.removeAttribute("src");
 
+      if (previousFocus && previousFocus.isConnected) {
+        previousFocus.focus();
+      }
     }
 
+    closeButton.addEventListener("click", closeLightbox);
 
-
-    /* ESC CLOSES LIGHTBOX */
-
-    document.addEventListener(
-      "keydown",
-      function(event) {
-
-
-        if (event.key === "Escape") {
-
-
-          document
-            .getElementById("lightbox")
-            .classList
-            .remove("active");
-
-
-          document.body.style.overflow = "";
-
-        }
-
-
+    lightbox.addEventListener("click", function(event) {
+      if (event.target === lightbox) {
+        closeLightbox();
       }
-    );
+    });
 
+    document.addEventListener("keydown", function(event) {
+      if (!lightbox.classList.contains("active")) return;
 
+      if (event.key === "Escape") {
+        closeLightbox();
+      }
+
+      if (event.key === "Tab") {
+        event.preventDefault();
+        closeButton.focus();
+      }
+    });
+
+    buildGallery();
   </script>
 
-
 </body>
-
 </html>
