@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -111,7 +112,8 @@
       transition: color .25s ease;
     }
 
-    .back:hover {
+    .back:hover,
+    .brand:hover .brand-name {
       color: var(--teal-light);
     }
 
@@ -219,7 +221,7 @@
       max-width: 550px;
     }
 
-    /* AUTOMATIC GALLERY */
+    /* NATURAL-PROPORTIONS GALLERY */
 
     .gallery {
       padding: 20px 0 150px;
@@ -233,50 +235,40 @@
     }
 
     .gallery-row {
-      display: grid;
-      grid-template-columns: 2fr 3fr;
+      display: flex;
+      align-items: flex-start;
       gap: 18px;
       width: 100%;
     }
 
-    .gallery-row.landscape-left {
-      grid-template-columns: 3fr 2fr;
-    }
-
-    .gallery-row.equal {
-      grid-template-columns: repeat(2, minmax(0,1fr));
-    }
-
-    .gallery-row.single {
-      grid-template-columns: minmax(0,1fr);
-    }
-
     .artwork {
+      display: block;
       position: relative;
-      width: 100%;
-      height: 560px;
+      flex: 1 1 0;
       min-width: 0;
-      overflow: hidden;
-      background: #ccd2d1;
-      cursor: zoom-in;
-      border: 0;
+      width: 100%;
+      height: auto;
       padding: 0;
+      border: 0;
+      background: transparent;
       text-align: left;
+      cursor: zoom-in;
+      overflow: hidden;
     }
 
     .artwork img {
+      display: block;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center;
+      height: auto;
+      object-fit: contain;
       transition:
-        transform .8s cubic-bezier(.2,.75,.25,1),
+        transform .7s cubic-bezier(.2,.75,.25,1),
         filter .5s ease;
     }
 
     .artwork:hover img {
-      transform: scale(1.018);
-      filter: brightness(.92);
+      transform: scale(1.008);
+      filter: brightness(.95);
     }
 
     .artwork:focus-visible {
@@ -289,16 +281,16 @@
       left: 0;
       right: 0;
       bottom: 0;
-      padding: 90px 30px 26px;
+      padding: 65px 26px 22px;
       color: white;
       background: linear-gradient(
         0deg,
-        rgba(3,20,22,.80),
-        rgba(3,20,22,.28) 55%,
+        rgba(3,20,22,.82),
+        rgba(3,20,22,.20) 65%,
         transparent
       );
       opacity: 0;
-      transform: translateY(8px);
+      transform: translateY(6px);
       transition: opacity .3s ease, transform .3s ease;
       pointer-events: none;
     }
@@ -315,14 +307,29 @@
     }
 
     .artwork-meta {
-      color: rgba(255,255,255,.68);
+      color: rgba(255,255,255,.72);
       font-size: .67rem;
       letter-spacing: .11em;
       text-transform: uppercase;
     }
 
+    /* SINGLE IMAGE */
+
+    .gallery-row.single {
+      justify-content: center;
+    }
+
     .gallery-row.single .artwork {
-      height: 680px;
+      flex: 0 1 auto;
+      width: auto;
+      max-width: 100%;
+    }
+
+    .gallery-row.single .artwork img {
+      width: auto;
+      max-width: 100%;
+      max-height: 780px;
+      height: auto;
     }
 
     /* STATEMENT */
@@ -466,7 +473,7 @@
       color: var(--teal-light);
     }
 
-    /* RESPONSIVE */
+    /* TABLET */
 
     @media (max-width: 900px) {
       .intro-bottom,
@@ -476,25 +483,19 @@
         gap: 45px;
       }
 
-      .gallery-row,
-      .gallery-row.landscape-left {
+      .gallery-list,
+      .gallery-row {
         gap: 12px;
-      }
-
-      .artwork {
-        height: 430px;
-      }
-
-      .gallery-row.single .artwork {
-        height: 520px;
       }
 
       .artwork-overlay {
         opacity: 1;
         transform: none;
-        padding: 70px 22px 20px;
+        padding: 55px 18px 16px;
       }
     }
+
+    /* MOBILE */
 
     @media (max-width: 600px) {
       .brand-name {
@@ -517,25 +518,13 @@
         padding-bottom: 90px;
       }
 
-      .gallery-list {
+      .gallery-list,
+      .gallery-row {
         gap: 8px;
-      }
-
-      .gallery-row,
-      .gallery-row.landscape-left {
-        gap: 8px;
-      }
-
-      .artwork {
-        height: 270px;
-      }
-
-      .gallery-row.single .artwork {
-        height: 340px;
       }
 
       .artwork-overlay {
-        padding: 50px 12px 12px;
+        padding: 35px 10px 10px;
       }
 
       .artwork-title {
@@ -580,7 +569,7 @@
 
   <nav>
     <div class="container nav-inner">
-      <a href="index.html" class="brand">
+      <a href="https://lailadallatorre.com/" class="brand">
         <img
           src="LDTlogo.png"
           alt="Laila Dalla Torre"
@@ -589,7 +578,7 @@
         <span class="brand-name">Laila Dalla Torre</span>
       </a>
 
-      <a href="index.html#creative" class="back">
+      <a href="https://lailadallatorre.com/" class="back">
         ← Back to main site
       </a>
     </div>
@@ -684,7 +673,7 @@
 
   <section class="return-section">
     <div class="container">
-      <a href="index.html">
+      <a href="https://lailadallatorre.com/">
         <span>Return to the main site</span>
         <span class="return-arrow">→</span>
       </a>
@@ -703,7 +692,7 @@
       </div>
 
       <div class="footer-links">
-        <a href="index.html">Main site</a>
+        <a href="https://lailadallatorre.com/">Main site</a>
         <a href="privacy.html">Privacy</a>
       </div>
     </div>
@@ -744,27 +733,14 @@
     const lightboxImage = document.getElementById("lightbox-image");
     const closeButton = document.getElementById("lightbox-close");
 
+    const MAX_MURALES = 15;
+
     let previousFocus = null;
 
     /*
-      IMAGE SETTINGS
-
-      The website checks murales01.jpeg to murales25.jpeg.
-
-      It automatically:
-      - ignores missing files
-      - reads real image dimensions
-      - separates portrait and landscape images
-      - pairs one portrait with one landscape
-      - alternates their positions
-      - displays remaining images in equal pairs
-      - displays one final image full width
-
-      Square images are treated as landscape
-      for the purpose of grouping.
+      Load images and read their actual dimensions.
+      Missing images are ignored automatically.
     */
-
-    const MAX_MURALES = 25;
 
     function loadImage(number) {
       return new Promise(resolve => {
@@ -775,10 +751,11 @@
 
         img.onload = function() {
           resolve({
-            number,
-            filename,
+            number: number,
+            filename: filename,
             width: img.naturalWidth,
             height: img.naturalHeight,
+            ratio: img.naturalWidth / img.naturalHeight,
             orientation:
               img.naturalHeight > img.naturalWidth
                 ? "portrait"
@@ -793,6 +770,11 @@
         img.src = filename;
       });
     }
+
+    /*
+      Create an artwork element.
+      The image keeps its natural proportions.
+    */
 
     function createArtwork(item) {
       const button = document.createElement("button");
@@ -833,32 +815,62 @@
       return button;
     }
 
-    function addRow(items, type, index) {
+    /*
+      Calculate the width of each artwork using
+      its original aspect ratio.
+
+      Example:
+      Portrait 3:4 = ratio .75
+      Landscape 3:2 = ratio 1.5
+
+      Widths:
+      Portrait = 33.3%
+      Landscape = 66.7%
+
+      Both images then have exactly the same
+      displayed height without any cropping.
+    */
+
+    function addRow(items, alternate) {
       const row = document.createElement("div");
       row.className = "gallery-row";
 
-      if (type === "mixed") {
-        /*
-          Even mixed rows: portrait left, landscape right.
-          Odd mixed rows: landscape left, portrait right.
-        */
-
-        if (index % 2 === 1) {
-          row.classList.add("landscape-left");
-          items.reverse();
-        }
-      } else if (type === "equal") {
-        row.classList.add("equal");
-      } else {
+      if (items.length === 1) {
         row.classList.add("single");
+        row.appendChild(createArtwork(items[0]));
+        gallery.appendChild(row);
+        return;
       }
 
-      items.forEach(item => {
-        row.appendChild(createArtwork(item));
+      if (alternate) {
+        items.reverse();
+      }
+
+      const totalRatio = items[0].ratio + items[1].ratio;
+
+      items.forEach(function(item) {
+        const artwork = createArtwork(item);
+
+        artwork.style.flex =
+          item.ratio + " 1 0%";
+
+        artwork.style.width =
+          (item.ratio / totalRatio * 100) + "%";
+
+        row.appendChild(artwork);
       });
 
       gallery.appendChild(row);
     }
+
+    /*
+      Build the gallery:
+
+      1. Pair portraits with landscapes.
+      2. Alternate their position in each row.
+      3. Pair remaining images.
+      4. Show a final unmatched image centered.
+    */
 
     async function buildGallery() {
       const numbers = Array.from(
@@ -882,26 +894,16 @@
 
       gallery.replaceChildren();
 
-      let mixedIndex = 0;
-
-      /*
-        First: pair one portrait with one landscape.
-      */
+      let rowIndex = 0;
 
       while (portraits.length && landscapes.length) {
         addRow(
           [portraits.shift(), landscapes.shift()],
-          "mixed",
-          mixedIndex
+          rowIndex % 2 === 1
         );
 
-        mixedIndex++;
+        rowIndex++;
       }
-
-      /*
-        Next: show any remaining images in equal pairs.
-        Nothing is omitted.
-      */
 
       const remaining = [...portraits, ...landscapes]
         .sort((a, b) => a.number - b.number);
@@ -909,20 +911,18 @@
       while (remaining.length >= 2) {
         addRow(
           [remaining.shift(), remaining.shift()],
-          "equal",
-          0
+          rowIndex % 2 === 1
         );
-      }
 
-      /*
-        Finally: if there is one image left,
-        display it full width.
-      */
+        rowIndex++;
+      }
 
       if (remaining.length === 1) {
-        addRow([remaining.shift()], "single", 0);
+        addRow([remaining.shift()], false);
       }
     }
+
+    /* LIGHTBOX */
 
     function openLightbox(filename, number) {
       previousFocus = document.activeElement;
