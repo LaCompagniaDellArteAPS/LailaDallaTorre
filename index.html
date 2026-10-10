@@ -1,2728 +1,977 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Laila Dalla Torre | Leadership · Transformation · Intelligence</title>
-
-  <meta
-    name="description"
-    content="Laila Dalla Torre — global leader working at the intersection of strategy, transformation, operating models, procurement, digital and AI."
-  >
+  <title>Art & Murales | Laila Dalla Torre</title>
+  <meta name="description" content="Selected murales and creative work by Laila Dalla Torre.">
 
   <link rel="icon" type="image/png" href="LDTlogo.png">
   <link rel="apple-touch-icon" href="LDTlogo.png">
 
   <style>
-
     :root {
-      --bg:#061b1d;
-      --bg-deep:#031416;
-      --bg-soft:#0a2528;
-
-      --card:#0d292c;
-      --card-hover:#103236;
-
-      --text:#e7eaea;
-      --text-soft:#c8cecf;
-      --muted:#8d9b9c;
-
-      --teal:#079bb2;
-      --teal-light:#43b7c5;
-
-      --light:#e1e4e3;
-      --light-text:#071d1f;
-      --light-muted:#405153;
-
-      --line:rgba(220,230,230,.12);
-      --line-strong:rgba(220,230,230,.24);
-
-      --max-width:1660px;
+      --dark: #031416;
+      --dark-soft: #061b1d;
+      --light: #e5e7e6;
+      --text: #071d1f;
+      --text-soft: #425355;
+      --white: #edf0ef;
+      --teal: #079bb2;
+      --teal-light: #43b7c5;
+      --line-dark: rgba(7,29,31,.16);
+      --line-light: rgba(230,235,235,.13);
+      --max-width: 1660px;
     }
 
     * {
-      box-sizing:border-box;
-      margin:0;
-      padding:0;
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     html {
-      scroll-behavior:smooth;
+      scroll-behavior: smooth;
     }
 
     body {
-      background:var(--bg);
-      color:var(--text);
-
-      font-family:
-        Inter,
-        "Helvetica Neue",
-        Helvetica,
-        Arial,
-        sans-serif;
-
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
-      overflow-x:hidden;
+      background: var(--light);
+      color: var(--text);
+      font-family: Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     a {
-      color:inherit;
-      text-decoration:none;
+      color: inherit;
+      text-decoration: none;
     }
 
     img {
-      display:block;
-      max-width:100%;
+      display: block;
+      max-width: 100%;
+    }
+
+    button {
+      font: inherit;
     }
 
     .container {
-      width:min(96%,var(--max-width));
-      margin:0 auto;
+      width: min(96%, var(--max-width));
+      margin: 0 auto;
     }
 
-
-    /* =========================================================
-       NAVIGATION
-       ========================================================= */
+    /* NAVIGATION */
 
     nav {
-      position:fixed;
-      top:0;
-      left:0;
-
-      width:100%;
-
-      z-index:1000;
-
-      background:rgba(3,20,22,.92);
-
-      backdrop-filter:blur(18px);
-      -webkit-backdrop-filter:blur(18px);
-
-      border-bottom:1px solid var(--line);
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(3,20,22,.94);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line-light);
     }
 
     .nav-inner {
-      min-height:86px;
-
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-
-      gap:30px;
+      min-height: 86px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
     }
 
     .brand {
-      display:flex;
-      align-items:center;
-
-      gap:16px;
-
-      flex-shrink:0;
+      display: flex;
+      align-items: center;
+      gap: 16px;
     }
 
     .brand-logo {
-      width:51px;
-      height:51px;
-
-      object-fit:contain;
+      width: 51px;
+      height: 51px;
+      object-fit: contain;
     }
 
     .brand-name {
-      font-size:.98rem;
-
-      letter-spacing:.15em;
-
-      text-transform:uppercase;
-
-      color:var(--text-soft);
-
-      white-space:nowrap;
+      color: #c8cecf;
+      font-size: .98rem;
+      letter-spacing: .15em;
+      text-transform: uppercase;
     }
 
-    .nav-links {
-      display:flex;
-      align-items:center;
-
-      gap:clamp(18px,2.2vw,36px);
-
-      font-size:.75rem;
-
-      letter-spacing:.08em;
-
-      text-transform:uppercase;
+    .back {
+      color: #8d9b9c;
+      font-size: .69rem;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      transition: color .25s ease;
     }
 
-    .nav-links a {
-      color:var(--muted);
-
-      transition:color .25s ease;
+    .back:hover {
+      color: var(--teal-light);
     }
 
-    .nav-links a:hover {
-      color:var(--text);
+    /* INTRO */
+
+    .intro {
+      background: var(--dark);
+      color: var(--white);
+      min-height: 72vh;
+      padding: 190px 0 110px;
+      position: relative;
+      overflow: hidden;
     }
 
-    .connect {
-      color:var(--text)!important;
-
-      border:1px solid var(--line-strong);
-
-      padding:12px 20px;
-    }
-
-    .connect:hover {
-      background:var(--teal);
-      border-color:var(--teal);
-
-      color:white!important;
-    }
-
-
-    /* =========================================================
-       HERO
-       ========================================================= */
-
-    .hero {
-      min-height:100vh;
-
-      position:relative;
-
-      display:flex;
-      align-items:center;
-
-      overflow:hidden;
-
-      padding-top:86px;
-
-      background:var(--bg);
-    }
-
-    .hero-image-side {
-      position:absolute;
-
-      z-index:1;
-
-      top:86px;
-      right:0;
-      bottom:0;
-      left:18%;
-
-      overflow:hidden;
-    }
-
-    .hero-image-frame {
-      position:absolute;
-
-      inset:0;
-
-      overflow:hidden;
-    }
-
-    .hero-image {
-      position:absolute;
-
-      inset:0;
-
-      width:100%;
-      height:100%;
-
-      object-fit:cover;
-
-      object-position:72% center;
-
-      filter:
-        brightness(.79)
-        contrast(1.04)
-        saturate(.88);
-    }
-
-    .hero-gradient {
-      position:absolute;
-
-      z-index:4;
-
-      top:86px;
-      right:0;
-      bottom:0;
-      left:0;
-
-      pointer-events:none;
-
-      background:
-
-        linear-gradient(
-          90deg,
-
-          #061b1d 0%,
-
-          rgba(6,27,29,1) 18%,
-
-          rgba(6,27,29,.995) 27%,
-
-          rgba(6,27,29,.97) 35%,
-
-          rgba(6,27,29,.91) 42%,
-
-          rgba(6,27,29,.82) 48%,
-
-          rgba(6,27,29,.70) 53%,
-
-          rgba(6,27,29,.56) 58%,
-
-          rgba(6,27,29,.43) 63%,
-
-          rgba(6,27,29,.31) 68%,
-
-          rgba(6,27,29,.21) 73%,
-
-          rgba(6,27,29,.13) 78%,
-
-          rgba(6,27,29,.07) 83%,
-
-          rgba(6,27,29,.025) 89%,
-
-          transparent 96%
-        ),
-
-        linear-gradient(
-          0deg,
-
-          rgba(6,27,29,.68) 0%,
-
-          rgba(6,27,29,.32) 8%,
-
-          rgba(6,27,29,.09) 17%,
-
-          transparent 29%
-        );
-    }
-
-    .portrait-atmosphere {
-      position:absolute;
-
-      z-index:3;
-
-      pointer-events:none;
-
-      top:-10%;
-      bottom:-10%;
-
-      left:25%;
-
-      width:50%;
-
-      background:
-        radial-gradient(
-          ellipse at center,
-          rgba(7,80,86,.16) 0%,
-          rgba(7,64,69,.09) 38%,
-          rgba(6,45,49,.035) 62%,
-          transparent 82%
-        );
-
-      filter:blur(70px);
-    }
-
-    .portrait-vignette {
-      position:absolute;
-
-      z-index:3;
-
-      pointer-events:none;
-
-      inset:0;
-
-      background:
-        linear-gradient(
-          270deg,
-          rgba(2,13,15,.15) 0%,
-          rgba(2,13,15,.045) 10%,
-          transparent 23%
-        );
-    }
-
-    .image-caption {
-      position:absolute;
-
-      z-index:10;
-
-      right:19px;
-      bottom:29px;
-
-      color:rgba(229,232,232,.55);
-
-      font-size:.56rem;
-
-      letter-spacing:.17em;
-
-      text-transform:uppercase;
-
-      writing-mode:vertical-rl;
-
-      transform:rotate(180deg);
-    }
-
-    .hero-shape {
-      position:absolute;
-
-      z-index:5;
-
-      width:550px;
-      height:550px;
-
-      right:-290px;
-      top:130px;
-
-      border:1px solid rgba(67,183,197,.08);
-
-      transform:rotate(45deg);
-
-      pointer-events:none;
-    }
-
-
-    /* =========================================================
-       HERO CONTENT
-       ========================================================= */
-
-    .hero-content {
-      position:relative;
-
-      z-index:20;
-
-      width:100%;
-
-      min-height:calc(100vh - 86px);
-
-      display:flex;
-      align-items:center;
-
-      padding:48px 0 55px;
-    }
-
-    .hero-copy {
-      width:54%;
-
-      position:relative;
-
-      z-index:21;
+    .intro::after {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      right: -270px;
+      top: 50px;
+      border: 1px solid rgba(67,183,197,.10);
+      transform: rotate(45deg);
+      pointer-events: none;
     }
 
     .eyebrow {
-      color:var(--teal-light);
-
-      text-transform:uppercase;
-
-      letter-spacing:.19em;
-
-      font-size:.67rem;
-
-      margin-bottom:40px;
+      color: var(--teal-light);
+      font-size: .66rem;
+      letter-spacing: .19em;
+      text-transform: uppercase;
+      margin-bottom: 32px;
     }
 
-    .hero h1 {
-      font-size:clamp(4rem,6.3vw,7rem);
-
-      line-height:.99;
-
-      letter-spacing:-.067em;
-
-      max-width:790px;
-
-      font-weight:400;
+    h1 {
+      font-size: clamp(4.5rem,10vw,10rem);
+      line-height: .84;
+      letter-spacing: -.07em;
+      font-weight: 400;
+      position: relative;
+      z-index: 2;
     }
 
-    .hero h1 .accent {
-      color:var(--teal-light);
+    h1 span {
+      color: var(--teal-light);
     }
 
-    .hero h1 .quiet {
-      color:#8c999a;
+    .intro-bottom {
+      margin-top: 75px;
+      display: grid;
+      grid-template-columns: 1fr .8fr;
+      gap: 100px;
+      align-items: end;
+      position: relative;
+      z-index: 2;
     }
 
-    .hero-description {
-      margin-top:56px;
-
-      max-width:790px;
-
-      font-size:clamp(1rem,1.3vw,1.22rem);
-
-      color:var(--text-soft);
-
-      font-weight:300;
-
-      line-height:1.75;
+    .intro-statement {
+      font-size: clamp(1.7rem,3vw,3rem);
+      line-height: 1.2;
+      letter-spacing: -.035em;
+      max-width: 750px;
+      color: #dce1e1;
     }
 
-    .hero-meta {
-      margin-top:35px;
-
-      display:flex;
-      flex-wrap:wrap;
-
-      gap:10px 24px;
-
-      font-size:.64rem;
-
-      text-transform:uppercase;
-
-      letter-spacing:.14em;
-
-      color:var(--muted);
+    .intro-copy {
+      color: #93a0a1;
+      max-width: 550px;
+      font-size: 1.04rem;
+      line-height: 1.8;
     }
 
-    .hero-actions {
-      margin-top:39px;
+    /* GALLERY INTRO */
 
-      display:flex;
-      flex-wrap:wrap;
-
-      gap:14px;
+    .gallery-intro {
+      padding: 115px 0 70px;
     }
 
+    .gallery-label {
+      color: #087f8e;
+      font-size: .65rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+    }
 
-    /* =========================================================
-       BUTTONS
-       ========================================================= */
+    .gallery-intro-grid {
+      display: grid;
+      grid-template-columns: 1fr .8fr;
+      gap: 100px;
+    }
 
-    .button {
-      display:inline-flex;
+    .gallery-intro h2 {
+      font-size: clamp(2.8rem,6vw,5.5rem);
+      line-height: .96;
+      letter-spacing: -.055em;
+      font-weight: 400;
+      max-width: 780px;
+    }
 
-      align-items:center;
-      justify-content:center;
+    .gallery-intro p {
+      color: var(--text-soft);
+      font-size: 1.05rem;
+      line-height: 1.8;
+      max-width: 550px;
+    }
 
-      min-height:51px;
+    /* AUTOMATIC GALLERY */
 
-      padding:0 25px;
+    .gallery {
+      padding: 20px 0 150px;
+    }
 
-      border:1px solid var(--line-strong);
+    .gallery-list {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      width: 100%;
+    }
 
-      font-size:.67rem;
+    .gallery-row {
+      display: grid;
+      grid-template-columns: 2fr 3fr;
+      gap: 18px;
+      width: 100%;
+    }
 
-      text-transform:uppercase;
+    .gallery-row.landscape-left {
+      grid-template-columns: 3fr 2fr;
+    }
 
-      letter-spacing:.12em;
+    .gallery-row.equal {
+      grid-template-columns: repeat(2, minmax(0,1fr));
+    }
 
+    .gallery-row.single {
+      grid-template-columns: minmax(0,1fr);
+    }
+
+    .artwork {
+      position: relative;
+      width: 100%;
+      height: 560px;
+      min-width: 0;
+      overflow: hidden;
+      background: #ccd2d1;
+      cursor: zoom-in;
+      border: 0;
+      padding: 0;
+      text-align: left;
+    }
+
+    .artwork img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
       transition:
-        background .25s ease,
-        border .25s ease,
-        color .25s ease,
-        transform .25s ease;
+        transform .8s cubic-bezier(.2,.75,.25,1),
+        filter .5s ease;
     }
 
-    .button:hover {
-      border-color:var(--teal-light);
-
-      transform:translateY(-2px);
-    }
-
-    .button.primary {
-      background:var(--teal);
-
-      border-color:var(--teal);
-
-      color:white;
-    }
-
-    .button.primary:hover {
-      background:var(--teal-light);
-
-      border-color:var(--teal-light);
-
-      color:var(--bg-deep);
-    }
-
-
-    /* =========================================================
-       GENERAL SECTIONS
-       ========================================================= */
-
-    section {
-      padding:135px 0;
-
-      border-top:1px solid var(--line);
-    }
-
-    .section-number {
-      color:var(--teal-light);
-
-      font-size:.66rem;
-
-      letter-spacing:.18em;
-
-      margin-bottom:22px;
-
-      text-transform:uppercase;
-    }
-
-    .section-title {
-      font-size:clamp(2.8rem,6vw,5.6rem);
-
-      line-height:.96;
-
-      letter-spacing:-.055em;
-
-      font-weight:400;
-
-      margin-bottom:32px;
-    }
-
-    .section-intro {
-      max-width:760px;
-
-      color:var(--muted);
-
-      font-size:1.12rem;
-
-      margin-bottom:78px;
-    }
-
-    .accent-title {
-      color:var(--teal-light);
-    }
-
-
-    /* =========================================================
-       LEADERSHIP
-       ========================================================= */
-
-    .leadership-statement {
-      max-width:960px;
-
-      font-size:clamp(1.5rem,2.6vw,2.45rem);
-
-      line-height:1.35;
-
-      letter-spacing:-.025em;
-
-      color:var(--text-soft);
-
-      margin-bottom:80px;
-    }
-
-    .capabilities {
-      display:grid;
-
-      grid-template-columns:repeat(2,1fr);
-
-      border-top:1px solid var(--line);
-    }
-
-    .capability {
-      min-height:245px;
-
-      padding:48px 45px 48px 0;
-
-      border-bottom:1px solid var(--line);
-    }
-
-    .capability:nth-child(odd) {
-      border-right:1px solid var(--line);
-
-      padding-right:55px;
-    }
-
-    .capability:nth-child(even) {
-      padding-left:55px;
-    }
-
-    .capability-number {
-      color:var(--teal-light);
-
-      font-size:.67rem;
-
-      margin-bottom:30px;
-    }
-
-    .capability h3 {
-      font-size:1.55rem;
-
-      font-weight:400;
-
-      margin-bottom:14px;
-    }
-
-    .capability p {
-      color:var(--muted);
-
-      max-width:540px;
-    }
-
-
-    /* =========================================================
-       TRANSFORMATION
-       ========================================================= */
-
-    #transformation {
-      background:var(--bg-soft);
-    }
-
-    .transformation-row {
-      display:grid;
-
-      grid-template-columns:.72fr 1.28fr;
-
-      gap:75px;
-
-      padding:70px 0;
-
-      border-top:1px solid var(--line);
-    }
-
-    .transformation-row:last-child {
-      border-bottom:1px solid var(--line);
-    }
-
-    .transformation-label {
-      color:var(--teal-light);
-
-      text-transform:uppercase;
-
-      letter-spacing:.14em;
-
-      font-size:.66rem;
-
-      margin-bottom:17px;
-    }
-
-    .transformation-row h3 {
-      font-size:clamp(2rem,4vw,3.5rem);
-
-      line-height:1.02;
-
-      letter-spacing:-.045em;
-
-      font-weight:400;
-    }
-
-    .transformation-copy p {
-      color:var(--text-soft);
-
-      font-size:1.05rem;
-
-      margin-bottom:25px;
-
-      max-width:700px;
-    }
-
-    .tags {
-      display:flex;
-
-      flex-wrap:wrap;
-
-      gap:8px;
-
-      margin-top:32px;
-    }
-
-    .tag {
-      border:1px solid var(--line-strong);
-
-      border-radius:30px;
-
-      padding:7px 13px;
-
-      font-size:.66rem;
-
-      color:var(--muted);
-    }
-
-
-    /* =========================================================
-       IMPACT
-       ========================================================= */
-
-    #impact {
-      background:var(--bg);
-    }
-
-    .impact-grid {
-      display:grid;
-
-      grid-template-columns:repeat(2,1fr);
-
-      border-top:1px solid var(--line);
-    }
-
-    .impact-item {
-      min-height:285px;
-
-      padding:50px 55px 50px 0;
-
-      border-bottom:1px solid var(--line);
-    }
-
-    .impact-item:nth-child(odd) {
-      border-right:1px solid var(--line);
-    }
-
-    .impact-item:nth-child(even) {
-      padding-left:55px;
-    }
-
-    .impact-label {
-      color:var(--teal-light);
-
-      font-size:.65rem;
-
-      text-transform:uppercase;
-
-      letter-spacing:.15em;
-
-      margin-bottom:30px;
-    }
-
-    .impact-item h3 {
-      font-size:clamp(1.7rem,2.8vw,2.6rem);
-
-      font-weight:400;
-
-      line-height:1.12;
-
-      letter-spacing:-.035em;
-
-      margin-bottom:20px;
-    }
-
-    .impact-item p {
-      color:var(--muted);
-
-      max-width:570px;
-    }
-
-
-    /* =========================================================
-       LEADERSHIP PHILOSOPHY
-       ========================================================= */
-
-    #philosophy {
-      background:var(--bg-soft);
-    }
-
-    .principle {
-      display:grid;
-
-      grid-template-columns:90px 1fr 1.4fr;
-
-      gap:40px;
-
-      padding:40px 0;
-
-      border-top:1px solid var(--line);
-
-      align-items:start;
-    }
-
-    .principle:last-child {
-      border-bottom:1px solid var(--line);
-    }
-
-    .principle-number {
-      color:var(--teal-light);
-
-      font-size:.69rem;
-    }
-
-    .principle h3 {
-      font-size:1.35rem;
-
-      font-weight:400;
+    .artwork:hover img {
+      transform: scale(1.018);
+      filter: brightness(.92);
     }
 
-    .principle p {
-      color:var(--muted);
-
-      max-width:620px;
-    }
-
-
-    /* =========================================================
-       PERSPECTIVES
-       ========================================================= */
-
-    #perspectives {
-      background:var(--bg-deep);
-    }
-
-    .perspective-header {
-      display:grid;
-
-      grid-template-columns:1fr .85fr;
-
-      gap:100px;
-
-      align-items:end;
-
-      margin-bottom:85px;
-    }
-
-    .perspective-header .section-title {
-      margin-bottom:0;
-    }
-
-    .perspective-intro {
-      max-width:570px;
-
-      color:var(--text-soft);
-
-      font-size:1.08rem;
-
-      line-height:1.75;
-    }
-
-    .articles {
-      display:grid;
-
-      grid-template-columns:repeat(3,1fr);
-
-      gap:17px;
-    }
-
-    .article-card {
-      min-height:360px;
-
-      padding:34px;
-
-      background:var(--card);
-
-      border:1px solid var(--line);
-
-      display:flex;
-
-      flex-direction:column;
-
-      justify-content:space-between;
-
-      position:relative;
-
-      overflow:hidden;
-
-      transition:
-        transform .3s ease,
-        border-color .3s ease,
-        background .3s ease;
-    }
-
-    .article-card::after {
-      content:"";
-
-      position:absolute;
-
-      width:100px;
-      height:100px;
-
-      right:-60px;
-      bottom:-60px;
-
-      border:1px solid rgba(7,155,178,.30);
-
-      transform:rotate(45deg);
-    }
-
-    .article-card:hover {
-      transform:translateY(-5px);
-
-      border-color:rgba(66,181,195,.4);
-
-      background:var(--card-hover);
-    }
-
-    .article-category {
-      color:var(--teal-light);
-
-      font-size:.65rem;
-
-      text-transform:uppercase;
-
-      letter-spacing:.14em;
-    }
-
-    .article-card h3 {
-      font-size:1.6rem;
-
-      line-height:1.18;
-
-      font-weight:400;
-
-      letter-spacing:-.025em;
-
-      max-width:315px;
-    }
-
-    .article-bottom {
-      color:var(--muted);
-
-      font-size:.74rem;
-    }
-
-
-    /* =========================================================
-       SPEAKING
-       ========================================================= */
-
-    #speaking {
-      position:relative;
-
-      overflow:hidden;
-    }
-
-    .speaking-grid {
-      display:grid;
-
-      grid-template-columns:1fr 1fr;
-
-      gap:90px;
-    }
-
-    .speaking-statement {
-      font-size:clamp(2rem,4vw,3.8rem);
-
-      line-height:1.06;
-
-      letter-spacing:-.045em;
-
-      max-width:620px;
-
-      font-weight:400;
-    }
-
-    .speaking-copy {
-      color:var(--text-soft);
-
-      font-size:1.04rem;
-    }
-
-    .speaking-topics {
-      margin-top:38px;
-    }
-
-    .speaking-topic {
-      padding:17px 0;
-
-      border-top:1px solid var(--line);
-
-      color:var(--text-soft);
-    }
-
-    .speaking-topic:last-child {
-      border-bottom:1px solid var(--line);
-    }
-
-
-    /* =========================================================
-       ABOUT
-       ========================================================= */
-
-    #about {
-      background:var(--bg-soft);
-    }
-
-    .about-grid {
-      display:grid;
-
-      grid-template-columns:.8fr 1.2fr;
-
-      gap:100px;
-    }
-
-    .about-big {
-      font-size:clamp(2.3rem,4vw,4rem);
-
-      line-height:1.05;
-
-      letter-spacing:-.045em;
-
-      font-weight:400;
-    }
-
-    .about-copy {
-      color:var(--text-soft);
-
-      font-size:1.05rem;
-    }
-
-    .about-copy p {
-      margin-bottom:26px;
-    }
-
-    .career {
-      margin-top:55px;
+    .artwork:focus-visible {
+      outline: 3px solid var(--teal);
+      outline-offset: 3px;
     }
-
-    .career-item {
-      display:grid;
-
-      grid-template-columns:145px 1fr;
 
-      padding:22px 0;
-
-      border-top:1px solid var(--line);
+    .artwork-overlay {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 90px 30px 26px;
+      color: white;
+      background: linear-gradient(
+        0deg,
+        rgba(3,20,22,.80),
+        rgba(3,20,22,.28) 55%,
+        transparent
+      );
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity .3s ease, transform .3s ease;
+      pointer-events: none;
     }
-
-    .career-year {
-      color:var(--teal-light);
 
-      font-size:.69rem;
+    .artwork:hover .artwork-overlay,
+    .artwork:focus-visible .artwork-overlay {
+      opacity: 1;
+      transform: translateY(0);
     }
 
-    .career-item strong {
-      display:block;
-
-      margin-bottom:4px;
-
-      font-weight:500;
+    .artwork-title {
+      font-size: 1.05rem;
+      margin-bottom: 4px;
     }
-
-    .career-item span {
-      color:var(--muted);
 
-      font-size:.88rem;
+    .artwork-meta {
+      color: rgba(255,255,255,.68);
+      font-size: .67rem;
+      letter-spacing: .11em;
+      text-transform: uppercase;
     }
-
-
-    /* =========================================================
-       CREATIVE
-       ========================================================= */
-
-    #creative {
-      background:var(--light);
-
-      color:var(--light-text);
-
-      position:relative;
 
-      overflow:hidden;
+    .gallery-row.single .artwork {
+      height: 680px;
     }
 
-    #creative::after {
-      content:"";
+    /* STATEMENT */
 
-      position:absolute;
-
-      width:480px;
-      height:480px;
-
-      right:-230px;
-      top:50%;
-
-      border:1px solid rgba(7,80,86,.16);
-
-      transform:
-        translateY(-50%)
-        rotate(45deg);
+    .statement {
+      background: var(--dark-soft);
+      color: var(--white);
+      padding: 130px 0;
     }
-
-    #creative .section-number {
-      color:#087f8e;
-    }
-
-    .creative-grid {
-      display:grid;
-
-      grid-template-columns:1fr .8fr;
-
-      gap:120px;
 
-      position:relative;
-
-      z-index:2;
+    .statement-grid {
+      display: grid;
+      grid-template-columns: .65fr 1.35fr;
+      gap: 100px;
     }
-
-    .creative-copy {
-      max-width:580px;
 
-      font-size:1.06rem;
-
-      line-height:1.8;
-
-      color:var(--light-muted);
+    .statement-label {
+      color: var(--teal-light);
+      font-size: .66rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
     }
 
-    .creative-copy p {
-      margin-bottom:24px;
+    .statement-text {
+      font-size: clamp(2rem,4.2vw,4.3rem);
+      line-height: 1.08;
+      letter-spacing: -.045em;
+      font-weight: 400;
+      max-width: 1000px;
     }
-
-    .creative-lead {
-      font-size:2rem;
 
-      color:var(--light-text)!important;
-
-      letter-spacing:-.03em;
+    .statement-text span {
+      color: var(--teal-light);
     }
-
-    .creative-link {
-      margin-top:48px;
-
-      padding:22px 0;
-
-      border-top:1px solid rgba(7,29,31,.18);
-      border-bottom:1px solid rgba(7,29,31,.18);
-
-      display:flex;
 
-      justify-content:space-between;
-      align-items:center;
+    /* RETURN */
 
-      text-transform:uppercase;
-
-      letter-spacing:.11em;
-
-      font-size:.72rem;
-
-      color:var(--light-text);
-
-      transition:padding .25s ease;
+    .return-section {
+      padding: 120px 0;
+      background: var(--light);
     }
 
-    .creative-link:hover {
-      padding-left:10px;
-      padding-right:10px;
+    .return-section a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 35px 0;
+      border-top: 1px solid var(--line-dark);
+      border-bottom: 1px solid var(--line-dark);
+      font-size: clamp(1.5rem,3vw,2.7rem);
+      letter-spacing: -.03em;
+      transition: padding .25s ease;
     }
-
-    .creative-arrow {
-      color:#087f8e;
 
-      font-size:1.4rem;
+    .return-section a:hover {
+      padding-left: 12px;
+      padding-right: 12px;
     }
-
-
-    /* =========================================================
-       CONTACT
-       ========================================================= */
-
-    .contact {
-      min-height:72vh;
-
-      display:flex;
-
-      align-items:center;
 
-      background:
-        radial-gradient(
-          circle at 75% 55%,
-          rgba(7,155,178,.12),
-          transparent 30%
-        ),
-        var(--bg);
+    .return-arrow {
+      color: #087f8e;
     }
 
-    .contact h2 {
-      font-size:clamp(3.7rem,8vw,8rem);
+    /* LIGHTBOX */
 
-      line-height:.9;
-
-      letter-spacing:-.065em;
-
-      font-weight:400;
-
-      max-width:1050px;
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      background: rgba(3,20,22,.97);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 45px;
     }
 
-    .contact h2 span {
-      color:var(--teal-light);
+    .lightbox.active {
+      display: flex;
     }
-
-    .contact-sub {
-      max-width:620px;
-
-      margin-top:40px;
 
-      color:var(--muted);
-
-      font-size:1.05rem;
+    .lightbox img {
+      max-width: 94vw;
+      max-height: 90vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
     }
-
-    .contact-links {
-      margin-top:48px;
 
-      display:flex;
-
-      flex-wrap:wrap;
-
-      gap:15px;
+    .lightbox-close {
+      position: absolute;
+      top: 24px;
+      right: 30px;
+      border: none;
+      background: none;
+      color: white;
+      font-size: 2.2rem;
+      font-weight: 300;
+      cursor: pointer;
+      z-index: 10;
     }
-
 
-    /* =========================================================
-       FOOTER
-       ========================================================= */
+    /* FOOTER */
 
     footer {
-      border-top:1px solid var(--line);
-
-      padding:38px 0;
-
-      color:var(--muted);
-
-      font-size:.69rem;
-
-      background:var(--bg-deep);
+      background: var(--dark);
+      color: #8d9b9c;
+      border-top: 1px solid var(--line-light);
+      padding: 38px 0;
+      font-size: .69rem;
     }
 
     .footer-inner {
-      display:flex;
-
-      justify-content:space-between;
-      align-items:center;
-
-      gap:20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
     .footer-brand {
-      display:flex;
-
-      align-items:center;
-
-      gap:14px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
     }
 
     .footer-monogram {
-      color:var(--teal-light);
-
-      font-size:.72rem;
-
-      font-weight:500;
-
-      letter-spacing:.18em;
-
-      padding-right:16px;
-
-      border-right:1px solid var(--line-strong);
+      color: var(--teal-light);
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .18em;
+      padding-right: 16px;
+      border-right: 1px solid var(--line-light);
     }
 
     .footer-links {
-      display:flex;
-
-      align-items:center;
-
-      gap:28px;
-    }
-
-    .footer-links a {
-      transition:color .25s ease;
+      display: flex;
+      gap: 28px;
     }
 
     .footer-links a:hover {
-      color:var(--teal-light);
+      color: var(--teal-light);
     }
 
+    /* RESPONSIVE */
 
-    /* =========================================================
-       REVEAL
-       ========================================================= */
+    @media (max-width: 900px) {
+      .intro-bottom,
+      .gallery-intro-grid,
+      .statement-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
 
-    .reveal {
-      opacity:0;
+      .gallery-row,
+      .gallery-row.landscape-left {
+        gap: 12px;
+      }
 
-      transform:translateY(25px);
+      .artwork {
+        height: 430px;
+      }
 
-      transition:
-        opacity .8s ease,
-        transform .8s ease;
+      .gallery-row.single .artwork {
+        height: 520px;
+      }
+
+      .artwork-overlay {
+        opacity: 1;
+        transform: none;
+        padding: 70px 22px 20px;
+      }
     }
 
-    .reveal.visible {
-      opacity:1;
-
-      transform:translateY(0);
-    }
-
-
-    /* =========================================================
-       RESPONSIVE
-       ========================================================= */
-
-    @media(max-width:1150px) {
-
-      .nav-links {
-        gap:16px;
-      }
-
-      .hero-copy {
-        width:58%;
-      }
-
-    }
-
-
-    @media(max-width:950px) {
-
-      .nav-links a:not(.connect) {
-        display:none;
-      }
-
-      .hero {
-        display:block;
-      }
-
-      .hero-content {
-        min-height:auto;
-
-        padding-top:80px;
-        padding-bottom:70px;
-      }
-
-      .hero-copy {
-        width:100%;
-      }
-
-      .hero-image-side {
-        position:relative;
-
-        top:auto;
-        left:auto;
-        right:auto;
-        bottom:auto;
-
-        width:100%;
-        height:620px;
-      }
-
-      .hero-gradient {
-        background:
-          linear-gradient(
-            180deg,
-            var(--bg) 0%,
-            rgba(6,27,29,.98) 30%,
-            rgba(6,27,29,.80) 42%,
-            rgba(6,27,29,.35) 54%,
-            rgba(6,27,29,.08) 64%,
-            transparent 75%
-          );
-      }
-
-      section {
-        padding:95px 0;
-      }
-
-      .capabilities,
-      .impact-grid,
-      .articles,
-      .speaking-grid,
-      .about-grid,
-      .perspective-header,
-      .creative-grid {
-        grid-template-columns:1fr;
-      }
-
-      .capability:nth-child(odd),
-      .impact-item:nth-child(odd) {
-        border-right:none;
-
-        padding-right:0;
-      }
-
-      .capability:nth-child(even),
-      .impact-item:nth-child(even) {
-        padding-left:0;
-      }
-
-      .transformation-row {
-        grid-template-columns:1fr;
-
-        gap:32px;
-      }
-
-      .principle {
-        grid-template-columns:50px 1fr;
-      }
-
-      .principle p {
-        grid-column:2;
-      }
-
-      .about-grid,
-      .speaking-grid,
-      .perspective-header,
-      .creative-grid {
-        gap:50px;
-      }
-
-    }
-
-
-    @media(max-width:600px) {
-
+    @media (max-width: 600px) {
       .brand-name {
-        font-size:.74rem;
+        display: none;
       }
 
-      .brand-logo {
-        width:42px;
-        height:42px;
+      .intro {
+        padding-top: 150px;
       }
 
-      .connect {
-        padding:10px 13px;
+      h1 {
+        font-size: 4.3rem;
       }
 
-      .hero h1 {
-        font-size:3.25rem;
+      .gallery-intro {
+        padding-top: 80px;
       }
 
-      .hero-description {
-        margin-top:38px;
+      .gallery {
+        padding-bottom: 90px;
       }
 
-      .hero-image-side {
-        height:500px;
+      .gallery-list {
+        gap: 8px;
       }
 
-      .hero-image {
-        object-position:61% center;
+      .gallery-row,
+      .gallery-row.landscape-left {
+        gap: 8px;
       }
 
-      .career-item {
-        grid-template-columns:1fr;
+      .artwork {
+        height: 270px;
+      }
 
-        gap:7px;
+      .gallery-row.single .artwork {
+        height: 340px;
+      }
+
+      .artwork-overlay {
+        padding: 50px 12px 12px;
+      }
+
+      .artwork-title {
+        font-size: .8rem;
+      }
+
+      .artwork-meta {
+        font-size: .55rem;
+      }
+
+      .lightbox {
+        padding: 18px;
       }
 
       .footer-inner {
-        flex-direction:column;
-
-        align-items:flex-start;
+        flex-direction: column;
+        align-items: flex-start;
       }
 
       .footer-links {
-        flex-direction:column;
-
-        align-items:flex-start;
-
-        gap:10px;
+        flex-direction: column;
+        gap: 8px;
       }
-
     }
 
-  </style>
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
 
+      .artwork img,
+      .artwork-overlay {
+        transition: none;
+      }
+    }
+  </style>
 </head>
 
-
 <body>
-
 
   <!-- NAVIGATION -->
 
   <nav>
-
     <div class="container nav-inner">
-
-      <a href="#top" class="brand">
-
+      <a href="index.html" class="brand">
         <img
           src="LDTlogo.png"
           alt="Laila Dalla Torre"
           class="brand-logo"
         >
-
-        <span class="brand-name">
-          Laila Dalla Torre
-        </span>
-
+        <span class="brand-name">Laila Dalla Torre</span>
       </a>
 
-
-      <div class="nav-links">
-
-        <a href="#leadership">Leadership</a>
-
-        <a href="#transformation">Transformation</a>
-
-        <a href="#impact">Impact</a>
-
-        <a href="#perspectives">Perspectives</a>
-
-        <a href="#about">About</a>
-
-        <a href="#contact" class="connect">
-          Connect
-        </a>
-
-      </div>
-
+      <a href="index.html#creative" class="back">
+        ← Back to main site
+      </a>
     </div>
-
   </nav>
 
+  <!-- INTRO -->
 
-
-  <!-- HERO -->
-
-  <header class="hero" id="top">
-
-    <div class="hero-image-side">
-
-      <div class="hero-image-frame">
-
-        <img
-          src="LDTonSTAGE.png"
-          alt="Laila Dalla Torre"
-          class="hero-image"
-        >
-
-        <div class="portrait-atmosphere"></div>
-
-        <div class="portrait-vignette"></div>
-
-        <div class="image-caption">
-          Leadership · Transformation · Ideas
-        </div>
-
-      </div>
-
-    </div>
-
-
-    <div class="hero-gradient"></div>
-
-    <div class="hero-shape"></div>
-
-
+  <header class="intro">
     <div class="container">
-
-      <div class="hero-content">
-
-        <div class="hero-copy">
-
-          <div class="eyebrow">
-            Laila Dalla Torre · Leadership · Transformation · Intelligence
-          </div>
-
-
-          <h1>
-
-            Turning<br>
-
-            complexity<br>
-
-            into <span class="accent">direction.</span><br>
-
-            <span class="quiet">
-              Direction into<br>
-              execution.
-            </span>
-
-          </h1>
-
-
-          <p class="hero-description">
-
-            Complex organizations rarely lack ambition.
-            The challenge is turning it into clarity,
-            ownership and execution — connecting strategy,
-            operating models, people, data and technology
-            to deliver measurable outcomes.
-
-          </p>
-
-
-          <div class="hero-meta">
-
-            <span>Global Leadership</span>
-
-            <span>Strategy & Transformation</span>
-
-            <span>Operating Models</span>
-
-            <span>Digital & AI</span>
-
-            <span>Procurement</span>
-
-          </div>
-
-
-          <div class="hero-actions">
-
-            <a href="#leadership" class="button primary">
-              Explore
-            </a>
-
-            <a href="#perspectives" class="button">
-              Perspectives
-            </a>
-
-          </div>
-
-        </div>
-
+      <div class="eyebrow">
+        Beyond the Boardroom · Selected Creative Work
       </div>
 
-    </div>
+      <h1>
+        Art &<br>
+        <span>Murales.</span>
+      </h1>
 
+      <div class="intro-bottom">
+        <div class="intro-statement">
+          A different canvas for ideas.
+        </div>
+
+        <div class="intro-copy">
+          Creativity offers another way of exploring
+          perspective, scale and expression.
+
+          Murales turn ideas into physical spaces —
+          experienced rather than presented.
+        </div>
+      </div>
+    </div>
   </header>
 
-
-
-  <!-- LEADERSHIP -->
-
-  <section id="leadership">
-
-    <div class="container reveal">
-
-      <div class="section-number">
-        01 / Leadership
-      </div>
-
-      <h2 class="section-title">
-        Leadership that turns<br>
-        ambition into execution.
-      </h2>
-
-      <div class="leadership-statement">
-
-        Complexity needs more than management.
-        It needs direction, clear choices, strong ownership
-        and an organization capable of delivering them.
-
-      </div>
-
-
-      <div class="capabilities">
-
-        <div class="capability">
-
-          <div class="capability-number">01</div>
-
-          <h3>Strategy → Execution</h3>
-
-          <p>
-            Strategy creates value when priorities become
-            decisions, ownership and measurable outcomes.
-          </p>
-
-        </div>
-
-
-        <div class="capability">
-
-          <div class="capability-number">02</div>
-
-          <h3>Transformation Leadership</h3>
-
-          <p>
-            Transformation is an enterprise capability —
-            connecting functions, processes, technology and
-            people around a common direction.
-          </p>
-
-        </div>
-
-
-        <div class="capability">
-
-          <div class="capability-number">03</div>
-
-          <h3>Organizations & Operating Models</h3>
-
-          <p>
-            Clear accountability, governance and decision
-            rights create the conditions for organizations
-            to perform and scale.
-          </p>
-
-        </div>
-
-
-        <div class="capability">
-
-          <div class="capability-number">04</div>
-
-          <h3>Digital, Data & AI</h3>
-
-          <p>
-            Technology matters when it improves decisions,
-            simplifies work and creates measurable business
-            value.
-          </p>
-
-        </div>
-
-
-        <div class="capability">
-
-          <div class="capability-number">05</div>
-
-          <h3>Procurement Excellence</h3>
-
-          <p>
-            Modern procurement extends beyond savings —
-            connecting commercial value, resilience, suppliers,
-            sustainability, data and business strategy.
-          </p>
-
-        </div>
-
-
-        <div class="capability">
-
-          <div class="capability-number">06</div>
-
-          <h3>People & Change</h3>
-
-          <p>
-            Sustainable change is built through clarity,
-            ownership, capability and trust — not through
-            implementation plans alone.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- TRANSFORMATION -->
-
-  <section id="transformation">
-
-    <div class="container reveal">
-
-      <div class="section-number">
-        02 / Transformation
-      </div>
-
-
-      <h2 class="section-title">
-        From ambition<br>
-        to impact.
-      </h2>
-
-
-      <p class="section-intro">
-
-        Transformation is not a technology project.
-        It is the disciplined redesign of how an organization
-        works, decides, collaborates and creates value.
-
-      </p>
-
-
-      <div class="transformation-row">
-
-        <div>
-
-          <div class="transformation-label">
-            Set the direction
-          </div>
-
-          <h3>
-            Make the destination clear.
-          </h3>
-
-        </div>
-
-
-        <div class="transformation-copy">
-
-          <p>
-            Transformation starts with a business question:
-            what needs to change, why does it matter and what
-            measurable outcome will define success?
-          </p>
-
-          <div class="tags">
-            <span class="tag">Strategy</span>
-            <span class="tag">Priorities</span>
-            <span class="tag">Portfolio</span>
-            <span class="tag">Value</span>
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="transformation-row">
-
-        <div>
-
-          <div class="transformation-label">
-            Build the system
-          </div>
-
-          <h3>
-            Make strategy executable.
-          </h3>
-
-        </div>
-
-
-        <div class="transformation-copy">
-
-          <p>
-            Operating models, governance, processes,
-            capabilities, data and technology need to reinforce
-            one another. Otherwise transformation simply moves
-            complexity from one part of the organization to
-            another.
-          </p>
-
-          <div class="tags">
-            <span class="tag">Operating Models</span>
-            <span class="tag">Governance</span>
-            <span class="tag">Process Ownership</span>
-            <span class="tag">Capabilities</span>
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="transformation-row">
-
-        <div>
-
-          <div class="transformation-label">
-            Make it stick
-          </div>
-
-          <h3>
-            Turn change into capability.
-          </h3>
-
-        </div>
-
-
-        <div class="transformation-copy">
-
-          <p>
-            Implementation is only the beginning.
-            Sustainable transformation requires adoption,
-            accountability, measurement and the ability
-            to scale what works.
-          </p>
-
-          <div class="tags">
-            <span class="tag">People</span>
-            <span class="tag">Adoption</span>
-            <span class="tag">Performance</span>
-            <span class="tag">Scale</span>
-          </div>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- SELECTED IMPACT -->
-
-  <section id="impact">
-
-    <div class="container reveal">
-
-      <div class="section-number">
-        03 / Selected Impact
-      </div>
-
-
-      <h2 class="section-title">
-        Transformation measured<br>
-        by what changes.
-      </h2>
-
-
-      <p class="section-intro">
-
-        The strongest transformation portfolios connect
-        strategic intent with tangible organizational outcomes.
-
-      </p>
-
-
-      <div class="impact-grid">
-
-        <div class="impact-item">
-
-          <div class="impact-label">
-            Enterprise Transformation
-          </div>
-
-          <h3>
-            From strategic ambition to structured execution.
-          </h3>
-
-          <p>
-            Complex global initiatives translated into
-            structured portfolios with governance, ownership,
-            milestones and measurable outcomes.
-          </p>
-
-        </div>
-
-
-        <div class="impact-item">
-
-          <div class="impact-label">
-            Organizational Capability
-          </div>
-
-          <h3>
-            Building structures that outlast projects.
-          </h3>
-
-          <p>
-            Centers of Excellence and global process
-            organizations built to strengthen expertise,
-            standardization, governance and execution.
-          </p>
-
-        </div>
-
-
-        <div class="impact-item">
-
-          <div class="impact-label">
-            Digital Transformation
-          </div>
-
-          <h3>
-            Technology connected to business value.
-          </h3>
-
-          <p>
-            Digital, analytics and automation capabilities
-            connected to real business problems — improving
-            transparency, decisions and ways of working.
-          </p>
-
-        </div>
-
-
-        <div class="impact-item">
-
-          <div class="impact-label">
-            Executive Execution
-          </div>
-
-          <h3>
-            Alignment across organizational boundaries.
-          </h3>
-
-          <p>
-            Strategic priorities converted into operating
-            mechanisms that align functions, stakeholders
-            and delivery across complex global environments.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- LEADERSHIP PHILOSOPHY -->
-
-  <section id="philosophy">
-
-    <div class="container reveal">
-
-      <div class="section-number">
-        04 / Leadership Philosophy
-      </div>
-
-
-      <h2 class="section-title">
-        Clarity creates<br>
-        momentum.
-      </h2>
-
-
-      <p class="section-intro">
-
-        Leadership in complex environments is less about
-        having every answer and more about creating the
-        conditions in which the organization can find and
-        execute the right ones.
-
-      </p>
-
-
-      <div class="principle">
-
-        <div class="principle-number">01</div>
-
-        <h3>Understand the system</h3>
-
-        <p>
-          Optimize the whole before optimizing the parts.
-        </p>
-
-      </div>
-
-
-      <div class="principle">
-
-        <div class="principle-number">02</div>
-
-        <h3>Create clarity</h3>
-
-        <p>
-          Complexity becomes manageable when priorities,
-          decisions and outcomes are explicit.
-        </p>
-
-      </div>
-
-
-      <div class="principle">
-
-        <div class="principle-number">03</div>
-
-        <h3>Build ownership</h3>
-
-        <p>
-          Accountability should sit where decisions and
-          outcomes can genuinely be influenced.
-        </p>
-
-      </div>
-
-
-      <div class="principle">
-
-        <div class="principle-number">04</div>
-
-        <h3>Enable people</h3>
-
-        <p>
-          Strong structures create space for people to
-          contribute, challenge and perform.
-        </p>
-
-      </div>
-
-
-      <div class="principle">
-
-        <div class="principle-number">05</div>
-
-        <h3>Measure what changed</h3>
-
-        <p>
-          Activity demonstrates effort.
-          Outcomes demonstrate progress.
-        </p>
-
-      </div>
-
-
-      <div class="principle">
-
-        <div class="principle-number">06</div>
-
-        <h3>Scale what works</h3>
-
-        <p>
-          A successful project becomes valuable when the
-          organization turns it into capability.
-        </p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- PERSPECTIVES -->
-
-  <section id="perspectives">
-
-    <div class="container reveal">
-
-      <div class="section-number">
-        05 / Perspectives
-      </div>
-
-
-      <div class="perspective-header">
-
-        <h2 class="section-title">
-
-          Ideas shaped<br>
-          <span class="accent-title">by practice.</span>
-
+  <!-- GALLERY INTRO -->
+
+  <section class="gallery-intro">
+    <div class="container">
+      <div class="gallery-label">Selected Work</div>
+
+      <div class="gallery-intro-grid">
+        <h2>
+          Ideas that leave<br>
+          the page.
         </h2>
 
-
-        <div class="perspective-intro">
-
-          Transformation, leadership and technology create
-          better questions long before they create definitive
-          answers.
+        <p>
+          Large-scale work changes with its surroundings.
+          Architecture, surface, light and distance all
+          become part of the composition.
 
           <br><br>
 
-          Perspectives on the realities behind organizational
-          change — from operating models and procurement to
-          data, AI and the future of work.
-
-        </div>
-
+          A selection of murales and visual work.
+        </p>
       </div>
-
-
-      <div class="articles">
-
-        <article class="article-card">
-
-          <div class="article-category">
-            Artificial Intelligence
-          </div>
-
-          <h3>
-            AI will not fix a broken operating model.
-          </h3>
-
-          <div class="article-bottom">
-            Perspective · Coming soon
-          </div>
-
-        </article>
-
-
-        <article class="article-card">
-
-          <div class="article-category">
-            Transformation
-          </div>
-
-          <h3>
-            Why transformation programs confuse activity
-            with progress.
-          </h3>
-
-          <div class="article-bottom">
-            Perspective · Coming soon
-          </div>
-
-        </article>
-
-
-        <article class="article-card">
-
-          <div class="article-category">
-            Intelligence
-          </div>
-
-          <h3>
-            From more data to better decisions.
-          </h3>
-
-          <div class="article-bottom">
-            Perspective · Coming soon
-          </div>
-
-        </article>
-
-
-        <article class="article-card">
-
-          <div class="article-category">
-            Operating Models
-          </div>
-
-          <h3>
-            Process ownership before another system.
-          </h3>
-
-          <div class="article-bottom">
-            Perspective · Coming soon
-          </div>
-
-        </article>
-
-
-        <article class="article-card">
-
-          <div class="article-category">
-            Artificial Intelligence
-          </div>
-
-          <h3>
-            Agentic organizations: what should actually
-            become autonomous?
-          </h3>
-
-          <div class="article-bottom">
-            Perspective · Coming soon
-          </div>
-
-        </article>
-
-
-        <article class="article-card">
-
-          <div class="article-category">
-            Leadership
-          </div>
-
-          <h3>
-            What leaders get wrong about change.
-          </h3>
-
-          <div class="article-bottom">
-            Perspective · Coming soon
-          </div>
-
-        </article>
-
-      </div>
-
     </div>
-
   </section>
 
+  <!-- AUTOMATIC GALLERY -->
 
-
-  <!-- SPEAKING -->
-
-  <section id="speaking">
-
-    <div class="container reveal">
-
-      <div class="section-number">
-        06 / Speaking & Dialogue
-      </div>
-
-
-      <div class="speaking-grid">
-
-        <div class="speaking-statement">
-
-          Ideas become stronger
-          when challenged.
-
-        </div>
-
-
-        <div class="speaking-copy">
-
-          <p>
-            Conferences, leadership discussions and industry
-            forums create space to test assumptions, connect
-            different perspectives and turn emerging ideas
-            into practical questions for organizations.
-          </p>
-
-
-          <div class="speaking-topics">
-
-            <div class="speaking-topic">
-              AI & the Future of Work
-            </div>
-
-            <div class="speaking-topic">
-              AI in Procurement
-            </div>
-
-            <div class="speaking-topic">
-              Transformation Leadership
-            </div>
-
-            <div class="speaking-topic">
-              Future Operating Models
-            </div>
-
-            <div class="speaking-topic">
-              From Data to Decisions
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
+  <main class="gallery">
+    <div class="container">
+      <div
+        class="gallery-list"
+        id="gallery-list"
+        aria-label="Murales gallery"
+      ></div>
     </div>
+  </main>
 
+  <!-- STATEMENT -->
+
+  <section class="statement">
+    <div class="container">
+      <div class="statement-grid">
+        <div class="statement-label">Perspective</div>
+
+        <div class="statement-text">
+          Some ideas need a framework.<br>
+          Others need a wall.
+
+          <br><br>
+
+          <span>Both begin with perspective.</span>
+        </div>
+      </div>
+    </div>
   </section>
 
+  <!-- RETURN -->
 
-
-  <!-- ABOUT -->
-
-  <section id="about">
-
-    <div class="container reveal">
-
-      <div class="section-number">
-        07 / About
-      </div>
-
-
-      <div class="about-grid">
-
-        <div>
-
-          <div class="about-big">
-
-            Building organizations
-            capable of change.
-
-          </div>
-
-        </div>
-
-
-        <div class="about-copy">
-
-          <p>
-            A career spanning global procurement, process
-            leadership, Centers of Excellence and enterprise
-            transformation has increasingly converged around
-            one challenge: turning strategic ambition into
-            organizational capability.
-          </p>
-
-
-          <p>
-            Experience across strategy execution, operating-model
-            design, process governance, digital transformation,
-            analytics, organizational change, risk and
-            sustainability provides a broad perspective on how
-            complex organizations actually move.
-          </p>
-
-
-          <p>
-            Global teams and cross-functional transformation
-            portfolios have brought that work across organizational
-            and geographic boundaries — from defining direction
-            and governance to building the structures required
-            for execution.
-          </p>
-
-
-          <p>
-            The next evolution is already underway: data, AI
-            and agentic technologies are changing not only
-            tools and processes, but how organizations make
-            decisions, distribute accountability and create value.
-          </p>
-
-
-          <p>
-
-            <strong style="color:var(--text);font-weight:400;">
-
-              The opportunity is not simply to adopt new
-              technology. It is to design organizations
-              capable of using it well.
-
-            </strong>
-
-          </p>
-
-
-          <div class="career">
-
-            <div class="career-item">
-
-              <div class="career-year">
-                CURRENT
-              </div>
-
-              <div>
-
-                <strong>
-                  Global Procurement Leadership
-                </strong>
-
-                <span>
-                  Center of Excellence · Transformation · PMO
-                </span>
-
-              </div>
-
-            </div>
-
-
-            <div class="career-item">
-
-              <div class="career-year">
-                PREVIOUS
-              </div>
-
-              <div>
-
-                <strong>
-                  Global Processes & Technology
-                </strong>
-
-                <span>
-                  Procurement Transformation · Digital · Operating Model
-                </span>
-
-              </div>
-
-            </div>
-
-
-            <div class="career-item">
-
-              <div class="career-year">
-                EXPERIENCE
-              </div>
-
-              <div>
-
-                <strong>
-                  International Leadership
-                </strong>
-
-                <span>
-                  Strategy · Transformation · Procurement · Technology
-                </span>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-
+  <section class="return-section">
+    <div class="container">
+      <a href="index.html">
+        <span>Return to the main site</span>
+        <span class="return-arrow">→</span>
+      </a>
     </div>
-
   </section>
-
-
-
-  <!-- BEYOND THE BOARDROOM -->
-
-  <section id="creative">
-
-    <div class="container reveal">
-
-      <div class="section-number">
-        08 / Beyond the Boardroom
-      </div>
-
-
-      <div class="creative-grid">
-
-        <div>
-
-          <h2 class="section-title">
-
-            A different canvas<br>
-            for ideas.
-
-          </h2>
-
-        </div>
-
-
-        <div class="creative-copy">
-
-          <p class="creative-lead">
-            Art & Murales
-          </p>
-
-
-          <p>
-            Creativity offers another way of exploring
-            perspective, scale and expression.
-          </p>
-
-
-          <p>
-            Murales and visual work create a space with fewer
-            frameworks and different constraints — where an
-            idea has to work not on a slide, but in a physical
-            environment and for the people experiencing it.
-          </p>
-
-
-          <a href="murales.html" class="creative-link">
-
-            <span>
-              Selected murales & creative work
-            </span>
-
-            <span class="creative-arrow">
-              →
-            </span>
-
-          </a>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-
-  <!-- CONNECT -->
-
-  <section class="contact" id="contact">
-
-    <div class="container reveal">
-
-      <div class="section-number">
-        09 / Connect
-      </div>
-
-
-      <h2>
-
-        Good ideas rarely<br>
-
-        develop in <span>isolation.</span>
-
-      </h2>
-
-
-      <p class="contact-sub">
-
-        Leadership. Transformation. Technology. Art.
-        Different conversations often reveal unexpected
-        connections.
-
-      </p>
-
-
-      <div class="contact-links">
-
-        <a
-          href="https://www.linkedin.com/in/laila-dalla-torre/"
-          class="button primary"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
-        </a>
-
-
-        <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=laila.dalla.torre@gmail.com"
-          class="button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Email
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
 
   <!-- FOOTER -->
 
   <footer>
-
     <div class="container footer-inner">
-
-
       <div class="footer-brand">
-
-        <span class="footer-monogram">
-          LDT
-        </span>
-
+        <span class="footer-monogram">LDT</span>
         <span>
-          © <span id="year"></span>
-          Laila Dalla Torre
+          © <span id="year"></span> Laila Dalla Torre
         </span>
-
       </div>
-
 
       <div class="footer-links">
-
-        <span>
-          Leadership · Transformation · Intelligence
-        </span>
-
-        <a href="murales.html">
-          Art & Murales
-        </a>
-
-        <a href="privacy.html">
-          Privacy
-        </a>
-
+        <a href="index.html">Main site</a>
+        <a href="privacy.html">Privacy</a>
       </div>
-
     </div>
-
   </footer>
 
+  <!-- LIGHTBOX -->
 
+  <div
+    class="lightbox"
+    id="lightbox"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Enlarged murales"
+    aria-hidden="true"
+  >
+    <button
+      class="lightbox-close"
+      id="lightbox-close"
+      type="button"
+      aria-label="Close enlarged image"
+    >×</button>
+
+    <img
+      src=""
+      alt="Murales enlarged"
+      id="lightbox-image"
+    >
+  </div>
+
+  <!-- JAVASCRIPT -->
 
   <script>
-
     document.getElementById("year").textContent =
       new Date().getFullYear();
 
+    const gallery = document.getElementById("gallery-list");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const closeButton = document.getElementById("lightbox-close");
 
-    const revealElements =
-      document.querySelectorAll(".reveal");
+    let previousFocus = null;
 
+    /*
+      IMAGE SETTINGS
 
-    const observer =
-      new IntersectionObserver(
+      The website checks murales01.jpeg to murales15.jpeg.
 
-        (entries) => {
+      It automatically:
+      - ignores missing files
+      - reads real image dimensions
+      - separates portrait and landscape images
+      - pairs one portrait with one landscape
+      - alternates their positions
+      - displays remaining images in equal pairs
+      - displays one final image full width
 
-          entries.forEach((entry) => {
+      Square images are treated as landscape
+      for the purpose of grouping.
+    */
 
-            if (entry.isIntersecting) {
+    const MAX_MURALES = 15;
 
-              entry.target.classList.add("visible");
+    function loadImage(number) {
+      return new Promise(resolve => {
+        const filename =
+          "murales" + String(number).padStart(2, "0") + ".jpeg";
 
-            }
+        const img = new Image();
 
+        img.onload = function() {
+          resolve({
+            number,
+            filename,
+            width: img.naturalWidth,
+            height: img.naturalHeight,
+            orientation:
+              img.naturalHeight > img.naturalWidth
+                ? "portrait"
+                : "landscape"
           });
+        };
 
-        },
+        img.onerror = function() {
+          resolve(null);
+        };
 
-        {
-          threshold:.10
-        }
+        img.src = filename;
+      });
+    }
 
+    function createArtwork(item) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "artwork";
+
+      const number = String(item.number).padStart(2, "0");
+
+      button.setAttribute(
+        "aria-label",
+        "Enlarge Murales " + number
       );
 
+      const image = document.createElement("img");
+      image.src = item.filename;
+      image.alt = "Murales " + number + " by Laila Dalla Torre";
+      image.loading = "lazy";
+      image.decoding = "async";
 
-    revealElements.forEach((element) => {
+      const overlay = document.createElement("div");
+      overlay.className = "artwork-overlay";
 
-      observer.observe(element);
+      const title = document.createElement("div");
+      title.className = "artwork-title";
+      title.textContent = "Murales " + number;
 
+      const meta = document.createElement("div");
+      meta.className = "artwork-meta";
+      meta.textContent = "Selected work";
+
+      overlay.append(title, meta);
+      button.append(image, overlay);
+
+      button.addEventListener("click", function() {
+        openLightbox(item.filename, number);
+      });
+
+      return button;
+    }
+
+    function addRow(items, type, index) {
+      const row = document.createElement("div");
+      row.className = "gallery-row";
+
+      if (type === "mixed") {
+        /*
+          Even mixed rows: portrait left, landscape right.
+          Odd mixed rows: landscape left, portrait right.
+        */
+
+        if (index % 2 === 1) {
+          row.classList.add("landscape-left");
+          items.reverse();
+        }
+      } else if (type === "equal") {
+        row.classList.add("equal");
+      } else {
+        row.classList.add("single");
+      }
+
+      items.forEach(item => {
+        row.appendChild(createArtwork(item));
+      });
+
+      gallery.appendChild(row);
+    }
+
+    async function buildGallery() {
+      const numbers = Array.from(
+        { length: MAX_MURALES },
+        (_, index) => index + 1
+      );
+
+      const results = await Promise.all(
+        numbers.map(loadImage)
+      );
+
+      const available = results.filter(Boolean);
+
+      const portraits = available.filter(
+        item => item.orientation === "portrait"
+      );
+
+      const landscapes = available.filter(
+        item => item.orientation === "landscape"
+      );
+
+      gallery.replaceChildren();
+
+      let mixedIndex = 0;
+
+      /*
+        First: pair one portrait with one landscape.
+      */
+
+      while (portraits.length && landscapes.length) {
+        addRow(
+          [portraits.shift(), landscapes.shift()],
+          "mixed",
+          mixedIndex
+        );
+
+        mixedIndex++;
+      }
+
+      /*
+        Next: show any remaining images in equal pairs.
+        Nothing is omitted.
+      */
+
+      const remaining = [...portraits, ...landscapes]
+        .sort((a, b) => a.number - b.number);
+
+      while (remaining.length >= 2) {
+        addRow(
+          [remaining.shift(), remaining.shift()],
+          "equal",
+          0
+        );
+      }
+
+      /*
+        Finally: if there is one image left,
+        display it full width.
+      */
+
+      if (remaining.length === 1) {
+        addRow([remaining.shift()], "single", 0);
+      }
+    }
+
+    function openLightbox(filename, number) {
+      previousFocus = document.activeElement;
+
+      lightboxImage.src = filename;
+      lightboxImage.alt = "Murales " + number + " enlarged";
+
+      lightbox.classList.add("active");
+      lightbox.setAttribute("aria-hidden", "false");
+
+      document.body.style.overflow = "hidden";
+      closeButton.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove("active");
+      lightbox.setAttribute("aria-hidden", "true");
+
+      document.body.style.overflow = "";
+      lightboxImage.removeAttribute("src");
+
+      if (previousFocus && previousFocus.isConnected) {
+        previousFocus.focus();
+      }
+    }
+
+    closeButton.addEventListener("click", closeLightbox);
+
+    lightbox.addEventListener("click", function(event) {
+      if (event.target === lightbox) {
+        closeLightbox();
+      }
     });
 
+    document.addEventListener("keydown", function(event) {
+      if (!lightbox.classList.contains("active")) return;
+
+      if (event.key === "Escape") {
+        closeLightbox();
+      }
+
+      if (event.key === "Tab") {
+        event.preventDefault();
+        closeButton.focus();
+      }
+    });
+
+    buildGallery();
   </script>
 
-
 </body>
-
 </html>
